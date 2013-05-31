@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Quaternion.js</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+    <h1 class="page-title">Source: Quaternion.js</h1>
+    
+    
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source"><code>/**
+ Quaternion
+ @class
+ @constructor
+ @param {Number[]} [values] Array of values: x, y, z, w
+ @param {Quaternion} [quaternion] Quaternion to copy
+ @param {Vector3} [vector] Vector3, must be passed together with angle
+ @param {Number} [angle] Angle to be passed together with Vector3
+ @property {Number} 0|x X-Value
+ @property {Number} 1|y Y-Value
+ @property {Number} 2|z Z-Value
+ @property {Number} 3|w W-Value
+*/
+function Quaternion(){
+
+	/**
+	 Convertes Quaternion to a String
+	 @returns {String} 'x y z w'
+	*/
+	this.toString = function(){
+		//[native code]
+	};
+
+	/**
+	 Convertes Vector3 to a Array
+	 @returns {Array} [x, y, z, w]
+	*/
+	this.toJSON = function(){
+		//[native code]
+	};
+
+	/**
+	 Gets angle between Quaternion and another Quaternion,
+	 or the angle of this Quaternion
+	 This method does not modify the quaternions.
+	 @param {Quaternion} [quaternion] The quaternion between which the angle is calculated
+	 @returns {Number} The calculated angle 
+	*/
+	this.getAngle = function(){
+		//[native code]
+	};
+
+	/**
+	 Gets axis of quaternion
+	 @returns {Vector3} Vector3 representation of axis
+	*/
+	this.getAxis = function(){
+		//[native code]
+	};
+
+	/**
+	 Gets inverse quaternion
+	 @returns {Quaternion} Inverse Quaternion
+	*/
+	this.getInverse = function(){
+		//[native code]
+	}
+
+	/**
+	 Gets the sum of this quaternion and another.
+	 This method does not modify the quaternions.
+	 @param {Quaternion} quaternion The quaternion which is added
+	 @returns {Quaternion} The resulting quaternion
+	*/
+	this.getSum = function(){
+		//[native code]
+	}
+
+	/**
+	 Gets the difference between this quaternion and another.
+	 This method does not modify the quaternions.
+	 @param {Quaternion} quaternion The quaternion which is subtracted
+	 @returns {Quaternion} The resulting quaternion
+	*/
+	this.getDifference = function(){
+		//[native cde]
+	}
+
+	/**
+	 Multiplies quaternion with another quaternion or a scalar.
+	 You have to pass at least one of those arguments, but you can't pass both.
+	 This method does not modify the quaternion(s).
+	 @param {Quaternion} [quaternion] The quaternion to multiply with
+	 @param {Number} [scalar] The scalar to multiply with
+	 @returns {Quaternion} The resulting quaternion
+	*/
+	this.getProduct = function(){
+		//[native code]
+	}
+
+	/**
+	 Gets dot product of this quaternion and another.
+	 This method does not modify the quaternions.
+	 @param {Quaternion} quaternion The quaternion needed to calculate the dot product
+	 @returns {Number} The dot product
+	*/
+	this.getDotProduct = function(){
+		//[native code]
+	}
+
+	/**
+	 Gets the length of the quaternion.
+	 This method does not modify the quaternions.
+	 @returns {Number} Length of the quaternion
+	*/
+	this.getLength = function(){
+		//[native code]
+	}
+
+	/**
+	 Gets the normalized quaternion.
+	 This method does not modify the quaternions.
+	 @returns {Quaternion} The normalized quaternion
+	*/
+	this.getNormalized = function(){
+		//[native code]
+	}
+
+	/**
+	 ?
+	 This method does not modify the quaternions.
+	*/
+	this.getInterpolation = function(){
+		//[native code]
+	}
+
+	/**
+	 Gets euler angle representation of the quaternion.
+	 This method does not modify the quaternions.
+	 @returns {Number[]} z, y, x euler angles
+	*/
+	this.getEuler = function(){
+		//[native code]
+	}
+
+	/**
+     Sets rotation according to euler angles.
+     Be careful: The euler order is set to ZYX (This is why you don't want to use euler angles in the first place...). 
+     You can pass three numbers or an array of numbers, but not both.
+     @param {Number} [z] z-angle
+     @param {Number} [y] y-angle
+     @param {Number} [x] x-angle
+     @param {Number[]} [angles] An array with three elements representing z,y,x-angles
+	*/
+	this.setEuler = function(){
+		//[native code]
+	}
+
+	/**
+	 Sets the rotation via Vector3 and an angle.
+	 @param {Vector3} axis The rotation axis
+	 @param {Number} angle Angle
+	*/
+	this.setRotation = function(){
+		//[native code]
+	}
+
+ 	/**
+     Perfoms quaternion addition on this instance.
+     @param {Quaternion} quaternion Quaternion to add
+ 	*/	
+	this.add = function(){
+		//[native code]
+	}
+
+
+	/**
+     Perfoms quaternion subtraction on this instance.
+     @param {Quaternion} quaternion Quaternion to subtract
+	*/
+	this.sub = function(){
+		//[native code]
+	}
+
+
+	/**
+     Perfoms quaternion multiplication on this instance.
+     @param {Quaternion} quaternion Quaternion to muliply with
+	*/
+	this.mult = function(){
+		//[native code]
+	}
+
+
+	/**
+     Normalizes this instance.
+	*/
+	this.normalize = function(){
+		//[native code]
+	}
+
+}
+
+
+
+
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="GUIFramedView.html">GUIFramedView</a></li><li><a href="GUIRect.html">GUIRect</a></li><li><a href="GUIScreenView.html">GUIScreenView</a></li><li><a href="GUIScrollView.html">GUIScrollView</a></li><li><a href="GUIView.html">GUIView</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Matrix4.html">Matrix4</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="Quaternion.html">Quaternion</a></li><li><a href="Vector3.html">Vector3</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Fri May 31 2013 20:45:11 GMT+0200 (MESZ)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
