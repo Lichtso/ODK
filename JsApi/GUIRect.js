@@ -1,10 +1,10 @@
 /**
  GUIRect
  @class Prototype for all GUI elements, can't be constructed.
- @property {Number} x Position x
- @property {Number} y Position y
- @property {Number} width Self explaining, isn't it?
- @property {Number} height See above
+ @property {Integer} x Position x
+ @property {Integer} y Position y
+ @property {Integer} width Self explaining, isn't it?
+ @property {Integer} height See above
  @property {Boolean} visible Determines if element is visible
  @property {Boolean} focus Determines if element is focused
  @property {GUIRect} parent The parent element
@@ -22,6 +22,7 @@ function GUIRect(){
 
 	/**
 	 Moves this element (and all it's children) to another parent.
+	 @param {GUIRect} parent The new parent
 	 @returns {undefined}
 	*/
 	this.moveToParent = function(){

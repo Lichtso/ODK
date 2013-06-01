@@ -4,11 +4,11 @@
  @extends GUIFramedView 
  @constructor
  @param {GUIView} parent The parent view (master view is GUIScreenView())
- @property {Number} sliderX Slider position x
- @property {Number} sliderY Slider position y
- @property {Number} scrollX Scroll amount x
- @property {Number} scrollY Scroll amount y
- @property {Number} contentWidth Self explaining :)
- @property {Number} contentHeight See above
+ @property {Boolean} sliderX Determines if slider is visible)
+ @property {Boolean} sliderY Determines if slider is visible)
+ @property {Integer} scrollX Scroll amount x
+ @property {Integer} scrollY Scroll amount y
+ @property {Integer} contentWidth Self explaining :)
+ @property {Integer} contentHeight See above
 */
 function GUIScrollView(){};

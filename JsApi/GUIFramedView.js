@@ -4,8 +4,8 @@
  @extends GUIView 
  @constructor
  @param {GUIView} parent The parent view (master view is GUIScreenView())
- @property {Number} innerShadow The size of the inner shadow
- @property {Number} cornerRadius The corner radius (for rounded corners)
+ @property {Integer} innerShadow The size of the inner shadow
+ @property {Integer} cornerRadius The corner radius (for rounded corners)
 */
 function GUIFramedView(){
 

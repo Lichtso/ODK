@@ -42,10 +42,12 @@ function require(path) {
 }
 
 /**
- Saves the current loaded container (level)
+ Saves the current loaded container (level), 
+ localData and globalData are additional data, 
+ you can also pass two emtpy hashes if you don't want to store additional information.
  
- @param {String} localData
- @param {String} globalData
+ @param {String} localData Stores arbitrary data in the level file (can only be accessed when this levelis loaded)
+ @param {String} globalData Stores arbitrary data globally, can be accesed from everywhere.
  @return {Boolean} Success
 */
 function saveLevel(localData, globalData) {
