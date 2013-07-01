@@ -96,7 +96,13 @@
         </xsd:sequence>
     </xsd:group>
     <xsd:complexType name="PhysicLink">
-        <xsd:group ref="BaseLink"/>
+        <xsd:sequence>
+            <xsd:group ref="BaseObject"/>
+            <xsd:choice>
+                <xsd:group ref="BaseLink"/>
+                <xsd:element name="CollisionDisabled" minOccurs="0"/>
+            </xsd:choice>
+        </xsd:sequence>
         <xsd:attribute name="burstImpulse" type="xsd:decimal"/>
     </xsd:complexType>
     <xsd:attributeGroup name="PhysicsMotorAttributes">
