@@ -8,6 +8,7 @@ Newton.objectTemplates = new Array();
 Newton.containerTemplates = new Array(); 
 
 Newton.objects = new Array();
+Newton.lights = new Array();
 Newton.UIElements = new Array();
 Newton.animations = new Array();
 
@@ -57,8 +58,6 @@ Newton.initThree = function(){
 	this.threejs.renderer.shadowMapEnabled = true;
 	this.threejs.renderer.setClearColorHex( 0x848484, 1 );
 	this.DOMRefs.canvas.appendChild(this.threejs.renderer.domElement);
-	//var light = new THREE.AmbientLight( 0xFFFFFF );
-	//this.threejs.scene.add(light);
 
 }
 
@@ -162,16 +161,10 @@ Newton.initAnimation = function(){
 
 Newton.renderFrame = function(){
 
-	if(this.test)
-		console.log((JSON.stringify(this.test.mesh.matrix))+" b");
-
 	for (var i in this.animations) {
 		this.animations[i].tick();
 	}
 	this.threejs.renderer.render(this.threejs.scene, this.threejs.camera);
-
-	if(this.test)
-		console.log((JSON.stringify(this.test.mesh.matrix))+" b");
 
 }
 
@@ -189,15 +182,21 @@ Newton.start = function(){
 
 Newton.debug = function(){
 
-	this.test = new NewtonSpotLight();
+	//this.test = new NewtonDirectionalLight();
+	//this.test = new NewtonSpotLight();
+	this.test = new NewtonPositionalLight();
 	//test.mesh.position.y = 5;
-	this.test.mesh.matrix.makeRotationX(Math.PI);
-	console.log((JSON.stringify(this.test.mesh.matrix))+" a");
 	Newton.threejs.scene.add(this.test.mesh);
+	//this.test.setCutoff(Math.PI/2);
+	//this.test.setRange(40);
+	this.test.setColor(0, 1, 1);
+	//this.test.setTransform( new THREE.Matrix4().makeRotationX( -Math.PI/6 ) );
+	//this.test.setTransform( new THREE.Matrix4().makeTranslation( 0, 4, 0 ) );
+	//this.test.setOmniDirectional(false);
 
 	var lol = new THREE.Mesh(new THREE.SphereGeometry(1,6,6), new THREE.MeshLambertMaterial({color:'white'}));
 	lol.position.y = -5;
-	lol.receiveShadow = true;
+	//lol.receiveShadow = true;
 	Newton.threejs.scene.add(lol);
 
 }

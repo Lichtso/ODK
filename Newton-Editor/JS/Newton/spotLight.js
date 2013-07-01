@@ -9,9 +9,9 @@ var NewtonSpotLight = function(){
 
 	this.color = {
 
-		r: 255,
-		g: 255,
-		b: 255
+		r: 1,
+		g: 1,
+		b: 1
 
 	};
 
@@ -30,50 +30,84 @@ var NewtonSpotLight = function(){
 
 	};
 
-	var geometry = new THREE.Geometry();
+	this.setCutoff = function(cutoff){
 
-	var sphere = new THREE.SphereGeometry(0.5,16,16);
-	var cone = new THREE.CylinderGeometry(0,(Math.tan(this.bounds.cutoff*0.5)*this.bounds.range),this.bounds.range,4,0, false);
-	console.log(cone);
-	for (var i = cone.vertices.length - 1; i >= 0; i--) {
-		cone.vertices[i].y -=this.bounds.range/2;
-	};
-
-	THREE.GeometryUtils.merge(geometry, sphere);
-	THREE.GeometryUtils.merge(geometry, cone);
-
-	this.mesh = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
-
-		wireframe: true,
-		color: rgbToHex(this.color.r, this.color.g, this.color.b)
-
-	}));
-
-	this.spotTarget = new THREE.Object3D();
-
-	this.mesh.add(this.spotTarget);
-
-	this.spotTarget.position.y -= this.bounds.range;
-
-	this.spotlight = new THREE.SpotLight(rgbToHex(this.color.r, this.color.g, this.color.b));
-	this.mesh.add(this.spotlight);
-	this.spotlight.target = this.spotTarget;
-	this.spotlight.castShadow = true;
-	this.spotlight.shadowMapWidth = 1024;
-	this.spotlight.shadowMapHeight = 1024;
-
-	this.spotlight.shadowCameraNear = 500;
-	this.spotlight.shadowCameraFar = 4000;
-	this.spotlight.shadowCameraFov = 30;
-
-	this.mesh.matrix = this.transformation.matrix;
-
-	console.log(this.mesh);
-
-	this.update = function(){
-
-
+		this.bounds.cutoff = cutoff;
+		this.mesh.children[2].geometry.vertices = new THREE.CylinderGeometry(0,(Math.tan(this.bounds.cutoff*0.5)*this.bounds.range),this.bounds.range,4,0, false).vertices;
+		this.mesh.children[3].angle = cutoff/2;
 
 	}
+
+	this.setRange = function(range){
+
+		this.bounds.range = range;
+		this.mesh.children[2].geometry.vertices = new THREE.CylinderGeometry(0,(Math.tan(this.bounds.cutoff*0.5)*this.bounds.range),this.bounds.range,4,0, false).vertices;
+		this.mesh.children[2].position.y = -range/2;
+		this.mesh.children[3].distance = range;
+
+	}
+
+	this.setColor = function(r, g, b){
+
+		this.color.r = r;
+		this.color.g = g;
+		this.color.b = b;
+		this.mesh.children[3].color = this.color;
+		this.material.color = this.color;
+
+	}
+
+	this.setTransform = function(matrix){
+
+		this.mesh.applyMatrix(matrix);
+		this.transformation.matrix = this.mesh.matrix;
+
+	}
+
+	this.setScript = function(resource){
+
+		this.script.resource = resource;
+
+	}
+
+	this.mesh = new THREE.Object3D();
+
+	this.material = new THREE.MeshBasicMaterial({
+		wireframe: true,
+		color: this.color		
+	});
+
+	var sphere = new THREE.Mesh(
+		new THREE.SphereGeometry(0.5,6,6),
+		this.material
+	);
+
+	var cone = new THREE.Mesh(
+
+		new THREE.CylinderGeometry(0,(Math.tan(this.bounds.cutoff*0.5)*this.bounds.range),this.bounds.range,4,0, false),
+		this.material
+
+	); 
+
+	var spotTarget = new THREE.Object3D();
+
+	this.mesh.add(spotTarget);
+	this.mesh.add(sphere);
+	this.mesh.add(cone);
+
+	this.mesh.children[2].position.y -= this.bounds.range/2;
+	spotTarget.position.y = -this.bounds.range;
+	var spotlight = new THREE.SpotLight(this.color);
+	this.mesh.add(spotlight);
+
+	spotlight.target = spotTarget;
+	spotlight.angle = this.bounds.cutoff/2;
+	spotlight.distance = this.bounds.range;
+	spotlight.castShadow = true;
+	spotlight.shadowMapWidth = 1024;
+	spotlight.shadowMapHeight = 1024;
+	spotlight.shadowCameraNear = 500;
+	spotlight.shadowCameraFar = 4000;
+	spotlight.shadowCameraFov = 30;
 
 }
