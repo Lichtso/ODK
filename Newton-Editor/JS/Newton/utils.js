@@ -6,6 +6,17 @@ function animate() {
 
 }
 
+function hideObjectHierarchy(object){
+
+	object.traverse(function ( child ) { if(child)child.visible = false; } );
+
+}
+
+function showObjectHierarchy(object){
+
+	object.traverse(function ( child ) { if(child)child.visible = true; } );
+}
+
 function checkBrowserRequirements(){
 
 	Newton.log("Checking browser requirements...");
@@ -46,6 +57,14 @@ function vectorToString(vector){
 	retval += vector.y.toString() + " | ";
 	retval += vector.z.toString()+ " ] ";
 	return retval;
+
+}
+
+function getLongestElementOfVector(vector){
+
+	if((vector.x > vector.y)&&(vector.x > vector.z))return vector.x;
+	if((vector.y > vector.x)&&(vector.y > vector.z))return vector.y;
+	else return vector.z;
 
 }
 

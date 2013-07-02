@@ -3,16 +3,16 @@ var camTranslation = function(){
 	this.keydown = function(event){
 
 		if(event.which == 87){
-			Newton.animations['camera'].translateZ = -4;
+			Newton.animations['camera'].translateZ = -10;
 		}
 		if(event.which == 65){
-			Newton.animations['camera'].translateX = -4;
+			Newton.animations['camera'].translateX = -10;
 		}
 		if(event.which == 83){
-			Newton.animations['camera'].translateZ = 4;
+			Newton.animations['camera'].translateZ = 10;
 		}
 		if(event.which == 68){
-			Newton.animations['camera'].translateX = 4;
+			Newton.animations['camera'].translateX = 10;
 		}
 	}
 	this.keyup = function(event){

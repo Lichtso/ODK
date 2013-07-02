@@ -3,7 +3,7 @@ var NewtonPositionalLight = function(){
 	this.bounds = {
 
 		omniDirectional: true,
-		range: 10
+		range: 15
 
 	};
 
@@ -30,22 +30,21 @@ var NewtonPositionalLight = function(){
 
 	};
 
+	this.container = new THREE.Object3D();
+
 	this.setOmniDirectional = function(omni){
 
 		if(this.bounds.omniDirectional == omni)
 			return;
 		this.bounds.omniDirectional = omni;
-		this.setRange(this.bounds.range);
-		if(omni == true)
-			this.mesh.children[1].position.y = 0;
-		else
-			this.mesh.children[1].position.y = this.bounds.range/4;
+
 	}
 
 	this.setRange = function(range){
 
-		this.mesh.children[1].geometry.vertices = new THREE.CubeGeometry(range, (this.bounds.omniDirectional? range : range/2), range, 1, 1, 1).vertices;
-		this.mesh.children[2].distance = range;
+		this.light.distance = range;
+		console.log(this.container);
+		this.sphere.geometry.vertices = new THREE.SphereGeometry(range,8,8).vertices;
 		this.bounds.range = range;
 
 	}
@@ -55,8 +54,9 @@ var NewtonPositionalLight = function(){
 		this.color.r = r;
 		this.color.g = g;
 		this.color.b = b;
-		this.material.color = this.color;
-		this.mesh.children[2].color = this.color;
+		this.meshMaterial.color = this.color;
+		this.spriteMaterial.color = this.color;
+		this.light.color = this.color;
 
 	}
 
@@ -68,34 +68,48 @@ var NewtonPositionalLight = function(){
 
 	this.setTransform = function(matrix){
 
-		this.mesh.applyMatrix(matrix);
-		this.transformation.matrix = this.mesh.matrix;
+		this.container.applyMatrix(matrix);
+		this.transformation.matrix = this.container.matrix;
 
 	}
 
-	this.mesh = new THREE.Object3D();
-	this.material = new THREE.MeshBasicMaterial({
+	this.showUI = function(){
+
+		this.sphere.visible = true;
+
+	}
+
+	this.hideUI = function(){
+
+		this.sphere.visible = false;
+
+	}
+
+	this.meshMaterial = new THREE.MeshBasicMaterial({
 
 		color: this.color,
 		wireframe: true
 
 	});
 
-	var sphere = new THREE.Mesh(
-		new THREE.SphereGeometry(0.5,4,4),
-		this.material
+	this.sphere = new THREE.Mesh(
+		new THREE.SphereGeometry(this.bounds.range,8,8),
+		this.meshMaterial
 	);
 
-	var boundingVolume = new THREE.Mesh(
-		new THREE.SphereGeometry( this.bounds.range , 8, 8),
-		this.material
-	);
+	this.spriteTexture = THREE.ImageUtils.loadTexture( assets.positionalLight.textureSrc );
+	this.spriteMaterial = new THREE.SpriteMaterial( { map: this.spriteTexture, useScreenCoordinates: false, color: "#000000" } );
+	this.spriteMaterial.color = this.color;
+	this.sprite = new THREE.Sprite( this.spriteMaterial );
+	this.sprite.position.set( 0, 0, 0 );
+	this.sprite.scale.set( assets.positionalLight.textureWidth, assets.positionalLight.textureHeight, 1.0 ); // imageWidth, imageHeight
 
-	var pointlight = new THREE.PointLight(this.color);
-	pointlight.distance = this.bounds.range;
+	this.light = new THREE.PointLight(this.color);
+	this.light.distance = this.bounds.range;
 
-	this.mesh.add(sphere);
-	this.mesh.add(boundingVolume);
-	this.mesh.add(pointlight);
+	this.container.add(this.sphere);
+	this.container.add(this.sprite);
+	this.container.add(this.light);
+	Newton.threejs.scene.add(this.container);
 
 }

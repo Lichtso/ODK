@@ -33,17 +33,17 @@ var NewtonSpotLight = function(){
 	this.setCutoff = function(cutoff){
 
 		this.bounds.cutoff = cutoff;
-		this.mesh.children[2].geometry.vertices = new THREE.CylinderGeometry(0,(Math.tan(this.bounds.cutoff*0.5)*this.bounds.range),this.bounds.range,4,0, false).vertices;
-		this.mesh.children[3].angle = cutoff/2;
+		this.cone.geometry.vertices = new THREE.CylinderGeometry(0,(Math.tan(this.bounds.cutoff*0.5)*this.bounds.range),this.bounds.range,6,0, false).vertices;
+		this.light.angle = cutoff/2;
 
 	}
 
 	this.setRange = function(range){
 
 		this.bounds.range = range;
-		this.mesh.children[2].geometry.vertices = new THREE.CylinderGeometry(0,(Math.tan(this.bounds.cutoff*0.5)*this.bounds.range),this.bounds.range,4,0, false).vertices;
-		this.mesh.children[2].position.y = -range/2;
-		this.mesh.children[3].distance = range;
+		this.cone.geometry.vertices = new THREE.CylinderGeometry(0,(Math.tan(this.bounds.cutoff*0.5)*this.bounds.range),this.bounds.range,6,0, false).vertices;
+		this.cone.position.y = -range/2;
+		this.light.distance = range;
 
 	}
 
@@ -52,15 +52,15 @@ var NewtonSpotLight = function(){
 		this.color.r = r;
 		this.color.g = g;
 		this.color.b = b;
-		this.mesh.children[3].color = this.color;
-		this.material.color = this.color;
+		this.light.color = this.color;
+		this.wireframeMaterial.color = this.color;
 
 	}
 
 	this.setTransform = function(matrix){
 
-		this.mesh.applyMatrix(matrix);
-		this.transformation.matrix = this.mesh.matrix;
+		this.container.applyMatrix(matrix);
+		this.transformation.matrix = this.container.matrix;
 
 	}
 
@@ -70,44 +70,54 @@ var NewtonSpotLight = function(){
 
 	}
 
-	this.mesh = new THREE.Object3D();
+	this.showUI = function(){
 
-	this.material = new THREE.MeshBasicMaterial({
+		this.cone.visible = true;
+
+	}
+
+	this.hideUI = function(){
+
+		this.cone.visible = false;
+
+	}
+
+	this.container = new THREE.Object3D();
+
+	this.wireframeMaterial = new THREE.MeshBasicMaterial({
 		wireframe: true,
 		color: this.color		
 	});
 
-	var sphere = new THREE.Mesh(
-		new THREE.SphereGeometry(0.5,6,6),
-		this.material
+	this.cone = new THREE.Mesh(
+
+		new THREE.CylinderGeometry(0,(Math.tan(this.bounds.cutoff*0.5)*this.bounds.range),this.bounds.range,6,0, false),
+		this.wireframeMaterial
+
 	);
 
-	var cone = new THREE.Mesh(
+	this.spriteTexture = THREE.ImageUtils.loadTexture( assets.spotLight.textureSrc );
+	this.spriteMaterial = new THREE.SpriteMaterial( { map: this.spriteTexture, useScreenCoordinates: false, color: "#000000" } );
+	this.spriteMaterial.color = this.color;
+	this.sprite = new THREE.Sprite( this.spriteMaterial );
+	this.sprite.position.set( 0, 0, 0 );
+	this.sprite.scale.set( assets.spotLight.textureWidth, assets.spotLight.textureHeight, 1.0 ); 
 
-		new THREE.CylinderGeometry(0,(Math.tan(this.bounds.cutoff*0.5)*this.bounds.range),this.bounds.range,4,0, false),
-		this.material
+	this.spotTarget = new THREE.Object3D();
 
-	); 
+	this.cone.position.y -= this.bounds.range/2;
+	this.spotTarget.position.y = -this.bounds.range;
+	this.light = new THREE.SpotLight(this.color);
 
-	var spotTarget = new THREE.Object3D();
+	this.light.target = this.spotTarget;
+	this.light.angle = this.bounds.cutoff/2;
+	this.light.distance = this.bounds.range;
 
-	this.mesh.add(spotTarget);
-	this.mesh.add(sphere);
-	this.mesh.add(cone);
+	this.container.add(this.spotTarget);
+	this.container.add(this.sprite);
+	this.container.add(this.cone);
+	this.container.add(this.light);
 
-	this.mesh.children[2].position.y -= this.bounds.range/2;
-	spotTarget.position.y = -this.bounds.range;
-	var spotlight = new THREE.SpotLight(this.color);
-	this.mesh.add(spotlight);
-
-	spotlight.target = spotTarget;
-	spotlight.angle = this.bounds.cutoff/2;
-	spotlight.distance = this.bounds.range;
-	spotlight.castShadow = true;
-	spotlight.shadowMapWidth = 1024;
-	spotlight.shadowMapHeight = 1024;
-	spotlight.shadowCameraNear = 500;
-	spotlight.shadowCameraFar = 4000;
-	spotlight.shadowCameraFov = 30;
+	Newton.threejs.scene.add(this.container);
 
 }

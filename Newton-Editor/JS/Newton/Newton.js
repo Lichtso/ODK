@@ -183,19 +183,23 @@ Newton.start = function(){
 Newton.debug = function(){
 
 	//this.test = new NewtonDirectionalLight();
-	//this.test = new NewtonSpotLight();
-	this.test = new NewtonPositionalLight();
+	this.test = new NewtonSpotLight();
+	//this.test = new NewtonPositionalLight();
 	//test.mesh.position.y = 5;
-	Newton.threejs.scene.add(this.test.mesh);
-	//this.test.setCutoff(Math.PI/2);
-	//this.test.setRange(40);
-	this.test.setColor(0, 1, 1);
-	//this.test.setTransform( new THREE.Matrix4().makeRotationX( -Math.PI/6 ) );
-	//this.test.setTransform( new THREE.Matrix4().makeTranslation( 0, 4, 0 ) );
+	//Newton.threejs.scene.add(this.test.mesh);
+	this.test.setCutoff(Math.PI/8);
+	this.test.setRange(40);
+	this.test.setColor(0.02, 0.45, 0.48);
+	this.test.setTransform( new THREE.Matrix4().makeRotationX( -Math.PI/5 ) );
+	//this.test.setTransform( new THREE.Matrix4().makeTranslation( 4, 0, 0 ) );
 	//this.test.setOmniDirectional(false);
+	//this.test.setBounds(new THREE.Vector3(3,3,3));
+	this.test.hideUI();
+	this.test.showUI();
 
 	var lol = new THREE.Mesh(new THREE.SphereGeometry(1,6,6), new THREE.MeshLambertMaterial({color:'white'}));
-	lol.position.y = -5;
+	lol.position.y = -10;
+	lol.position.z = 10;
 	//lol.receiveShadow = true;
 	Newton.threejs.scene.add(lol);
 
