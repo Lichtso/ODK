@@ -55,7 +55,7 @@ Newton.initThree = function(){
 	this.threejs.camera.position.y = 6;
 	this.threejs.camera.rotation.x -= Math.PI/8;
 	this.threejs.renderer.setSize(prefs.sceneWidth, prefs.sceneHeight);
-	this.threejs.renderer.shadowMapEnabled = true;
+//	this.threejs.renderer.shadowMapEnabled = true;
 	this.threejs.renderer.setClearColorHex( 0x848484, 1 );
 	this.DOMRefs.canvas.appendChild(this.threejs.renderer.domElement);
 
@@ -119,10 +119,6 @@ Newton.initUI = function(){
 	var yAxis = new NewtonUIElement();
 	var zAxis = new NewtonUIElement();
 
-	var red = new THREE.LineBasicMaterial({color: 0xff0000,linewidth: 2, opacity: 0.5});
-	var green = new THREE.LineBasicMaterial({color: 0x00ff00,linewidth: 2, opacity: 0.5});
-	var blue = new THREE.LineBasicMaterial({color: 0x0000ff,linewidth: 2, opacity: 0.5});
-
 	var geometry_x = new THREE.Geometry();
 	geometry_x.vertices.push(new THREE.Vector3(-100, 0, 0));
 	geometry_x.vertices.push(new THREE.Vector3(100, 0, 0));
@@ -135,9 +131,9 @@ Newton.initUI = function(){
 	geometry_z.vertices.push(new THREE.Vector3(0, 0, -100));
 	geometry_z.vertices.push(new THREE.Vector3(0, 0, 100));
 
-	xAxis.mesh = new THREE.Line(geometry_x, green);
-	yAxis.mesh = new THREE.Line(geometry_y, blue);
-	zAxis.mesh = new THREE.Line(geometry_z, red);
+	xAxis.mesh = new THREE.Line(geometry_x, greenTranslucentLineMaterial);
+	yAxis.mesh = new THREE.Line(geometry_y, blueTranslucentLineMaterial);
+	zAxis.mesh = new THREE.Line(geometry_z, redTranslucentLineMaterial);
 
 	xAxis.identifier = "xAxis";
 	yAxis.identifier = "yAxis";
@@ -150,6 +146,9 @@ Newton.initUI = function(){
 	this.threejs.scene.add(xAxis.mesh);
 	this.threejs.scene.add(yAxis.mesh);
 	this.threejs.scene.add(zAxis.mesh);
+
+	this.objectTransformer = new ObjectTransformer();
+	//this.objectTransformer.changeMode(1);
 
 }
 
@@ -187,15 +186,17 @@ Newton.debug = function(){
 	//this.test = new NewtonPositionalLight();
 	//test.mesh.position.y = 5;
 	//Newton.threejs.scene.add(this.test.mesh);
-	this.test.setCutoff(Math.PI/8);
+	this.test.setCutoff(Math.PI/4);
 	this.test.setRange(40);
-	this.test.setColor(0.02, 0.45, 0.48);
+	this.test.setColor(0.80, 0.65, 0.2);
 	this.test.setTransform( new THREE.Matrix4().makeRotationX( -Math.PI/5 ) );
-	//this.test.setTransform( new THREE.Matrix4().makeTranslation( 4, 0, 0 ) );
+	this.test.setTransform( new THREE.Matrix4().makeTranslation( 0, 3.5, -3 ) );
 	//this.test.setOmniDirectional(false);
 	//this.test.setBounds(new THREE.Vector3(3,3,3));
 	this.test.hideUI();
-	this.test.showUI();
+	//this.test.showUI();
+	this.objectTransformer.changeMode(0);
+	this.objectTransformer.grabObject(this.test);
 
 	var lol = new THREE.Mesh(new THREE.SphereGeometry(1,6,6), new THREE.MeshLambertMaterial({color:'white'}));
 	lol.position.y = -10;

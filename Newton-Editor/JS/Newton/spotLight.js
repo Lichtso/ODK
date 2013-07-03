@@ -97,7 +97,7 @@ var NewtonSpotLight = function(){
 	);
 
 	this.spriteTexture = THREE.ImageUtils.loadTexture( assets.spotLight.textureSrc );
-	this.spriteMaterial = new THREE.SpriteMaterial( { map: this.spriteTexture, useScreenCoordinates: false, color: "#000000" } );
+	this.spriteMaterial = new THREE.SpriteMaterial( { map: this.spriteTexture, useScreenCoordinates: false, color: "#000000", depthWrite: false, depthTest: false } );
 	this.spriteMaterial.color = this.color;
 	this.sprite = new THREE.Sprite( this.spriteMaterial );
 	this.sprite.position.set( 0, 0, 0 );

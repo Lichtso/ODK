@@ -16,6 +16,10 @@ var assets = {
 		textureSrc: "../Images/assets/lightbulb6.png",
 		textureWidth: 1,
 		textureHeight: 1
+	},
+
+	sampleTexture: {
+		textureSrc: "../Images/assets/lightbulb6.png"
 	}
 
 };

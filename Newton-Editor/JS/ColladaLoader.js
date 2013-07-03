@@ -3123,7 +3123,7 @@ THREE.ColladaLoader = function () {
 
 									//var texture = THREE.ImageUtils.loadTexture(baseUrl + image.init_from);
 									Newton.colladaUploadHelper.filename = image.init_from;
-									var texture = THREE.ImageUtils.loadTexture("./Duck/sample.jpg");
+									var texture = THREE.ImageUtils.loadTexture(assets.sampleTexture.textureSrc);
 									texture.wrapS = cot.texOpts.wrapU ? THREE.RepeatWrapping : THREE.ClampToEdgeWrapping;
 									texture.wrapT = cot.texOpts.wrapV ? THREE.RepeatWrapping : THREE.ClampToEdgeWrapping;
 									texture.offset.x = cot.texOpts.offsetU;

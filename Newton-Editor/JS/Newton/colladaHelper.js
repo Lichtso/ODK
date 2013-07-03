@@ -76,7 +76,7 @@ var colladaUploadHelper = function(){
 			console.log("img onload");
 			texture.image = img;
 			texture.needsUpdate = true;
-			mesh.material = new THREE.MeshLambertMaterial({'map': texture});
+			mesh.material = new THREE.MeshPhongMaterial({'map': texture, 'perPixel': true});
 		}
 
 		textureName = textureName.replace("./","");
