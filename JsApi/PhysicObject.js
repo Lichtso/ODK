@@ -7,10 +7,10 @@
 function PhysicObject(){
 
 	/**
-	 Generates a hash containing information about the collision shape.
+	 Generates a hash map containing information about the collision shape.
 	 Contains the shape's type as well as type specific information as declared in
 	 CollisionShapes.xsd.
-	 @returns {Object} The shape's information as a hash
+	 @returns {Object} The shape's information as a hash map
 	*/
 	this.collisionShapeInfo = function(){
 		//[native code]

@@ -7,7 +7,7 @@
  @property {String} sizeAlignment "left", "middle", "right"
  @property {String} textAlignment "left", "middle", "right"
  @property {String} text The text of the label
- @property {String} font The name of the used font
+ @property {String} font The path of the used font
  @property {Integer} fontHeight The height of the used font
 */
 function GUILabel(){

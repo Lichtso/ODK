@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA>
+	<!-- IGNORED: --> <asset/>
+	<!-- IGNORED: --> <scene/>
+	<library_images>
+    	<image id="[image id: String]">
+    		<init_from><!-- url: String --></init_from>
+    	</image>
+	</library_images>
+	<library_effects>
+    	<effect id="[effect id: String]">
+			<profile_COMMON>
+				<newparam sid="[surface id: String]">
+					<surface type="2D">
+						<init_from><!-- image id: String --></init_from>
+					</surface>
+				</newparam>
+				<newparam sid="[sampler id: String]">
+					<sampler2D>
+						<source><!-- surface id: String --></source>
+					</sampler2D>
+				</newparam>
+				<technique>
+					<!-- Name is ignored: --> <phong>
+						<diffuse>
+							<texture texture="[sampler id: String]"/>
+							<!-- Diffuse map: Size must be 2^x * 2^x or 2^x * 2^x*depth for texture animation -->
+						</diffuse>
+						<specular>
+							<texture texture="[sampler id: String]"/>
+							<!-- Effect map: Size must be 2^x * 2^x -->
+						</specular>
+						<transparent>
+							<!-- Enables alpha channel of diffuse texture and refraction -->
+                		</transparent>
+						<transparency>
+        					<!-- Enables alpha channel of diffuse texture and refraction -->
+            			</transparency>
+            			<reflective>
+            				<!-- Enables plane reflections on shortest AABB axis -->
+                		</reflective>
+						<reflectivity>
+        					<!-- Enables enviornment reflections (not implemented yet) -->
+            			</reflectivity>
+            			<index_of_refraction>
+        					<!-- Enables plane reflections on shortest AABB axis and water like animated refraction -->
+            			</index_of_refraction>
+					</phong>
+					<!-- Name is ignored: --> <extra>
+						<technique>
+							<bump>
+								<texture texture="[sampler id: String]"/>
+								<!-- Height map: Size must be 2^x * 2^x -->
+							</bump>
+						</technique>
+					</extra>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<library_materials>
+		<material id="[material id: String]">
+    		<instance_effect url="#[effect id: String]"/>
+    	</material>
+	</library_materials>
+	<library_visual_scenes>
+		<visual_scene>
+			<node>
+				<!-- OPTIONAL: --> <instance_controller> <!-- OR <instance_geometry> -->
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="[material symbol: String]" target="#[material id: String]">
+								<!-- IGNORED: --> <bind_vertex_input/>
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller> <!-- OR </instance_geometry> -->
+				<!-- OPTIONAL: --> <node type="JOINT" id="[bone id: String]">
+					<!-- OPTIONAL transformation: --> <translate>0 0 0</translate>
+					<!-- OPTIONAL transformation: --> <rotate>0 0 1 0</rotate>
+					<!-- OPTIONAL transformation: --> <scale>1 1 1</scale>
+					<!-- OPTIONAL transformation: --> <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+					<!-- OPTIONAL Children Bones: --> <node type="JOINT">
+						<!-- RECURSIVE -->
+					</node>
+				</node>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<library_controllers>
+		<controller>
+			<skin>
+				<source>
+					<Name_array count="[data length: Integer]"><!-- bone ids: String[] --></Name_array>
+					<technique_common>
+						<accessor>
+							<param name="JOINT"/>
+						</accessor>
+					</technique_common>
+				</source>
+				<source>
+					<float_array count="[data length: Integer]"><!-- bone weights: Float[] --></float_array>
+					<technique_common>
+						<accessor>
+							<param name="WEIGHT"/>
+						</accessor>
+					</technique_common>
+				</source>
+				<vertex_weights count="[vcount length: Integer]">
+					<input semantic="JOINT" offset="0"/>
+        			<input semantic="WEIGHT" offset="1"/>
+        			<!-- Or -->
+        			<input semantic="JOINT" offset="1"/>
+        			<input semantic="WEIGHT" offset="0"/>
+        			<vcount>
+        				<!-- weights per bone: Integer[] -->
+        			</vcount>
+        			<v>
+        				<!-- joints and weights index: Integer[] -->
+        			</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+	</library_controllers>
+	<library_geometries>
+		<geometry>
+    		<mesh>
+    			<source id="[source id: String]">
+    				<technique_common>
+    					<float_array count="[data count * element stride: Integer]"><!-- vertices: Float[] --></float_array>
+        				<accessor count="[data count: Integer]" stride="[element stride: Integer]">
+
+        				</accessor>
+        			</technique_common>
+    			</source>
+    			<vertices id="[vertices id: String]">
+					<input semantic="POSITION" source="#[source id: String]"/>
+				</vertices>
+				<polylist material="[material symbol: String]" count="[data length: Integer]"> <!-- OR <triangles> -->
+        			<input semantic="VERTEX" source="#[vertices id: String]" offset="0"/>
+        			<input semantic="NORMAL" source="#[source id: String]" offset="1"/>
+        			<input semantic="TEXCOORD" source="#[source id: String]" offset="2"/>
+        			<!-- OPTIONAL: --> <vcount>
+        				<!-- vertices: Integer[] -->
+        			</vcount>
+        			<v> <!-- Or <p> -->
+        				<!-- vertices data index: Integer[] -->
+        			</v> <!-- Or </p> -->
+        		</polylist> <!-- OR </triangles> -->
+    		</mesh>
+    	</geometry>
+	</library_geometries>
+</COLLADA>

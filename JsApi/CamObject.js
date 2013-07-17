@@ -13,10 +13,10 @@ function CamObject(){
 
 	/**
 	 Gets a ray pointing away from the camera beginning at a certain point on the screen.
-	 The ray is represented as a hash, containing two vectors, .origin and .direction. 
+	 The ray is represented as a hash map, containing two vectors, .origin and .direction. 
 	 @param {Number} x The x value of the starting point
 	 @param {Number} y The y value of the satrting point
-	 @returns {Object} A hash respresenting the ray
+	 @returns {Object} A hash map respresenting the ray
 	*/
 	this.getViewRay = function(){
 		//[native code]
