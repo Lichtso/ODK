@@ -22,6 +22,7 @@ Newton.init = function(){
 
 	this.getDOMRefs();
 	this.initThree();
+	this.initTools();
 	this.initKeys();
 	this.initUI();
 	this.initAnimation(); 
@@ -33,6 +34,12 @@ Newton.getDOMRefs = function(){
 	this.DOMRefs.canvas = document.getElementById("mainCanvas");
 	this.DOMRefs.logConsole = document.getElementById("console");
 	this.DOMRefs.toolbox = document.getElementById("toolbox"); 
+
+}
+
+Newton.initTools = function(){
+
+	this.toolHandler = new ToolHandler();
 
 }
 
@@ -51,6 +58,7 @@ Newton.initThree = function(){
 	this.threejs.scene = new THREE.Scene();
 	this.threejs.scene.add(this.threejs.camera);
 	this.threejs.camera.useTarget = false;
+	this.threejs.camera.fov = 80;
 	this.threejs.camera.position.z = 10;
 	this.threejs.camera.position.y = 6;
 	this.threejs.camera.rotation.x -= Math.PI/8;
@@ -70,23 +78,24 @@ Newton.initKeys = function(){
 		receiver: new camTranslation(), 
 		id:"translation"
 	}));
-
 	this.canvasContext.add(new KEYS.KeyBinding({
-		keys:[2],
-		receiver: new camRotation(), 
-		id:"rotation"
+		keys:[1],
+		receiver: this.toolHandler, 
+		id:"mainTool",
+		preventDefault: false
 	}));
 	this.canvasContext.add(new KEYS.KeyBinding({
-		keys:[3],
+		keys:[2],
 		receiver: new objectPicker(), 
 		id:"picker"
 	}));
-	/*this.canvasContext.add(new KEYS.KeyBinding({
-		keys:[1],
-		receiver: mainTool, 
-		id:"tool",
-		preventDefault: false
-	}));*/
+	this.canvasContext.add(new KEYS.KeyBinding({
+		keys:[3],
+		receiver: new camRotation(), 
+		id:"rotation"
+	}));
+
+	console.log(this.canvasContext);
 
 }
 
@@ -182,20 +191,18 @@ Newton.start = function(){
 Newton.debug = function(){
 
 	//this.test = new NewtonDirectionalLight();
-	this.test = new NewtonSpotLight();
-	//this.test = new NewtonPositionalLight();
-	//test.mesh.position.y = 5;
-	//Newton.threejs.scene.add(this.test.mesh);
-	this.test.setCutoff(Math.PI/4);
-	this.test.setRange(40);
-	this.test.setColor(0.80, 0.65, 0.2);
-	this.test.setTransform( new THREE.Matrix4().makeRotationX( -Math.PI/5 ) );
+	//this.test = new NewtonSpotLight();
+	this.test = new NewtonPositionalLight();
+	//this.test.setCutoff(Math.PI/4);
+	this.test.setRange(20);
+	this.test.setColor(0.5, 0, 1);
+	//this.test.setTransform( new THREE.Matrix4().makeRotationX( -Math.PI/5 ) );
 	this.test.setTransform( new THREE.Matrix4().makeTranslation( 0, 3.5, -3 ) );
 	//this.test.setOmniDirectional(false);
 	//this.test.setBounds(new THREE.Vector3(3,3,3));
 	this.test.hideUI();
 	//this.test.showUI();
-	this.objectTransformer.changeMode(0);
+	this.objectTransformer.changeMode(2);
 	this.objectTransformer.grabObject(this.test);
 
 	var lol = new THREE.Mesh(new THREE.SphereGeometry(1,6,6), new THREE.MeshLambertMaterial({color:'white'}));

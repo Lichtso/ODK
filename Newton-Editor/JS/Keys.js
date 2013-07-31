@@ -34,7 +34,7 @@ function attach( elementId ){
 		domElement.addEventListener('keyup', this.handleEvent,false);
 		domElement.addEventListener('keydown', this.handleEvent,false);
 		domElement.addEventListener('keypress', this.handleEvent,false);
-		domElement.addEventListener('contextmenu', function(evt){evt.preventDefault();},false);
+		//domElement.addEventListener('contextmenu', function(evt){evt.preventDefault();},false);
 
 	}
 }
@@ -57,7 +57,7 @@ function destroy(){
 		domElement.removeEventListener('keyup', this.handleEvent,false);
 		domElement.removeEventListener('keydown', this.handleEvent,false);
 		domElement.removeEventListener('keypress', this.handleEvent,false);
-		domElement.removeEventListener('contextmenu', function(evt){evt.preventDefault();},false);
+		//domElement.removeEventListener('contextmenu', function(evt){evt.preventDefault();},false);
 
 	}
 
@@ -88,7 +88,7 @@ function handleEvent( event ){
 
 	var modifier = undefined;
 	var key = event.which;
-
+	console.log(key);
 	if (event.altKey) modifier = 'alt';
 	else if(event.ctrlKey) modifier = 'ctrl';
 	else if(event.shiftKey) modifier = 'shift';

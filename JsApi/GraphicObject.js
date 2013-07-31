@@ -2,6 +2,7 @@
  GraphicObject
  @class Can't be constructed. Objects are created by loading containers.
  @extends PhysicObject
+ @property {Number} integrity If the integrity drops below 0, the object will be deleted. 
 */
 function GraphicObject(){
 

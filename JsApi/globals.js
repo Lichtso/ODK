@@ -1,5 +1,5 @@
 /**
- Seconds elapsed since the last game tick.
+ (READONLY) Seconds elapsed since the last game tick.
  @type Number
 */
 var animationFactor = 0.0;

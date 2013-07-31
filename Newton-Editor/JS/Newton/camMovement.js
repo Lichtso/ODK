@@ -133,9 +133,6 @@ var objectPicker = function(){
 
 		if((currentPosRounded.x == initialPosRounded.x)&&(currentPosRounded.y == initialPosRounded.y)){
 
-			// This is truely retarded, but THREE.js will fail if I don't 
-			// put this inside a vector. Don't ask me why!
-
 			var mouse = new THREE.Vector2();
 
 			mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;

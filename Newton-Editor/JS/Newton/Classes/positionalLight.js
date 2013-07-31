@@ -43,7 +43,6 @@ var NewtonPositionalLight = function(){
 	this.setRange = function(range){
 
 		this.light.distance = range;
-		console.log(this.container);
 		this.sphere.geometry.vertices = new THREE.SphereGeometry(range,8,8).vertices;
 		this.bounds.range = range;
 
