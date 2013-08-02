@@ -26,7 +26,7 @@ function ParticlesObject(){
 	/**
 	 Can either set the minimum position via a Vector3,
      or get the minimum position as a cloned instance.
-     The min. and max. position define an area where particles are spawned.
+     The min. and max. position define a box in which the particles are spawned.
      @param {Vector3} [position] The minimum position
      @returns {Vector3} A clone of the system's minimum position
 	*/
@@ -37,7 +37,7 @@ function ParticlesObject(){
 	/**
 	 Can either set the maximum position via a Vector3,
      or get the maximum position as a cloned instance.
-     The min. and max. position define an area where particles are spawned.
+     The min. and max. position define a box in which the particles are spawned.
      @param {Vector3} [position] The maximum position
      @returns {Vector3} A clone of the system's maximum position
 	*/

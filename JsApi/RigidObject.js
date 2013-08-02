@@ -2,11 +2,11 @@
  RigidObject
  @class Can't be constructed. Objects are created by loading containers.
  @extends GraphicObject
- @property model {String}
- @property mass {Number}
- @property kinematic {Boolean}
- @property angularDamping {Number}
- @property linearDamping {Number}
+ @property model {String} Path to the model file
+ @property mass {Number} Mass in of this RigidObject in kg
+ @property kinematic {Boolean} If set to true, this RigidObject will push others away without changing its own transformation.
+ @property angularDamping {Number} Factor of damping applied to the rotation, from 0 (dampingless) to 1 (static)
+ @property linearDamping {Number} Factor of damping applied to the translation, from 0 (dampingless) to 1 (static)
 */
 function RigidObject(){
 
@@ -51,16 +51,6 @@ function RigidObject(){
 	}
 
 	/**
-	 Can either set the transformation via a Matrix4,
-     or get the transformation as a cloned instance.
-     @param {Matrix4} [transformation] The new transformation
-     @returns {Matrix4} The transformation of this object
-	*/
-	this.transformation = function(){
-		//[native code]
-	}
-
-	/**
      Applies an impulse at a given point relative the the object's transformation.
      (Applies a linear and an angular impulse)
      @param {Vector3} impulse The impulse to be applied
@@ -71,7 +61,7 @@ function RigidObject(){
 	}
 
 	/**
-	 Applies an angular impulse.
+	 Applies an angular impulse at the center of mass.
 	 @param {Vector3} angularImpulse The angular impulse to be applied
 	*/
 	this.applyAngularImpulse = function(){
@@ -99,7 +89,7 @@ function RigidObject(){
 
 	/**
      Can either set the animation time (like a playhead) in seconds,
-     or get the animation time as a cloned instance.
+     or get the animation time.
      @param {Number} [animationTime] Time in seconds elapsed since the start point of the animation
      @returns {Number} The time in seconds elapsed since the start point of the animation
 	*/

@@ -8,10 +8,10 @@
 function LightObject(){
 
 	/**
-	 Can either set the color via a quaternion representing the colors,
-     or get the colors as a cloned instance.
-     @param {Quaternion} [color4] The colors as a quaternion (RGBA)
-     @returns {Quaternion} A copy of the color quaternion
+	 Can either set the color via a Vector3 representing the color,
+     or get the color as a cloned instance.
+     @param {Vector3} [color3] The color as Vector3 (RGB)
+     @returns {Vector3} A copy of the color as Vector3
 	*/
 	this.color = function(){
 		//[native code]

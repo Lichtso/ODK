@@ -42,7 +42,7 @@ function BaseObject(){
 	}
 
 	/**
-	 Returns the link the this object's parent object (if any)
+	 Returns the link to this object's parent (if any)
 	 @returns {BaseLink} Link to the parent or undefined, if object has no parent
 	*/
 	this.getParentLink = function(){
