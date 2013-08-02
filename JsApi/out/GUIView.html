@@ -254,7 +254,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="moveToParent"><span class="type-signature"></span>moveToParent<span class="signature">(parent)</span><span class="type-signature"> &rarr; {undefined}</span></h4>
+    <h4 class="name" id="adopt"><span class="type-signature"></span>adopt<span class="signature">(element)</span><span class="type-signature"> &rarr; {undefined}</span></h4>
     
     
 </dt>
@@ -262,7 +262,7 @@
     
     
     <div class="description">
-        Moves this element (and all it's children) to another parent.
+        Adopts a element (and all it's children) from another parent.
     </div>
     
 
@@ -296,7 +296,7 @@
 	
         <tr>
             
-                <td class="name"><code>parent</code></td>
+                <td class="name"><code>element</code></td>
             
             
             <td class="type">
@@ -312,7 +312,7 @@
             
             
             
-            <td class="description last">The new parent</td>
+            <td class="description last">The element to be adopted</td>
         </tr>
 	
 	
@@ -329,11 +329,6 @@
     
 
     
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="GUIRect.html#moveToParent">GUIRect#moveToParent</a>
-    </li></dd>
-    
     
     
     
@@ -348,7 +343,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="GUIRect.js.html">GUIRect.js</a>, <a href="GUIRect.js.html#line28">line 28</a>
+        <a href="GUIView.js.html">GUIView.js</a>, <a href="GUIView.js.html#line17">line 17</a>
     </li></ul></dd>
     
     
@@ -440,7 +435,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="GUIRect.js.html">GUIRect.js</a>, <a href="GUIRect.js.html#line19">line 19</a>
+        <a href="GUIRect.js.html">GUIRect.js</a>, <a href="GUIRect.js.html#line18">line 18</a>
     </li></ul></dd>
     
     
@@ -494,7 +489,7 @@
     
     
     <div class="description">
-        Updates tis elements content, useful when the content is changed directly.
+        Updates this elements content, useful when the content is changed directly.
     </div>
     
 
@@ -532,7 +527,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="GUIRect.js.html">GUIRect.js</a>, <a href="GUIRect.js.html#line35">line 35</a>
+        <a href="GUIRect.js.html">GUIRect.js</a>, <a href="GUIRect.js.html#line25">line 25</a>
     </li></ul></dd>
     
     
@@ -573,13 +568,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="BaseClass.html">BaseClass</a></li><li><a href="BaseObject.html">BaseObject</a></li><li><a href="BoneObject.html">BoneObject</a></li><li><a href="CamObject.html">CamObject</a></li><li><a href="GUIButton.html">GUIButton</a></li><li><a href="GUICheckBox.html">GUICheckBox</a></li><li><a href="GUIFramedView.html">GUIFramedView</a></li><li><a href="GUIImage.html">GUIImage</a></li><li><a href="GUILabel.html">GUILabel</a></li><li><a href="GUIProgressBar.html">GUIProgressBar</a></li><li><a href="GUIRect.html">GUIRect</a></li><li><a href="GUIScreenView.html">GUIScreenView</a></li><li><a href="GUIScrollView.html">GUIScrollView</a></li><li><a href="GUISlider.html">GUISlider</a></li><li><a href="GUITabs.html">GUITabs</a></li><li><a href="GUITextField.html">GUITextField</a></li><li><a href="GUIView.html">GUIView</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Matrix4.html">Matrix4</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="ParticlesObject.html">ParticlesObject</a></li><li><a href="PhysicObject.html">PhysicObject</a></li><li><a href="Quaternion.html">Quaternion</a></li><li><a href="SoundObject.html">SoundObject</a></li><li><a href="Vector3.html">Vector3</a></li></ul><h3>Global</h3><ul><li><a href="global.html#animationFactor">animationFactor</a></li><li><a href="global.html#levelID">levelID</a></li><li><a href="global.html#loadContainer">loadContainer</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#require">require</a></li><li><a href="global.html#saveLevel">saveLevel</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="Animation.html">Animation</a></li><li><a href="BaseClass.html">BaseClass</a></li><li><a href="BaseLink.html">BaseLink</a></li><li><a href="BaseObject.html">BaseObject</a></li><li><a href="BoneObject.html">BoneObject</a></li><li><a href="CamObject.html">CamObject</a></li><li><a href="DirectionalLight.html">DirectionalLight</a></li><li><a href="GearPhysicLink.html">GearPhysicLink</a></li><li><a href="GraphicObject.html">GraphicObject</a></li><li><a href="GUIButton.html">GUIButton</a></li><li><a href="GUICheckBox.html">GUICheckBox</a></li><li><a href="GUIFramedView.html">GUIFramedView</a></li><li><a href="GUIImage.html">GUIImage</a></li><li><a href="GUILabel.html">GUILabel</a></li><li><a href="GUIProgressBar.html">GUIProgressBar</a></li><li><a href="GUIRect.html">GUIRect</a></li><li><a href="GUIScreenView.html">GUIScreenView</a></li><li><a href="GUIScrollView.html">GUIScrollView</a></li><li><a href="GUISlider.html">GUISlider</a></li><li><a href="GUITabs.html">GUITabs</a></li><li><a href="GUITextField.html">GUITextField</a></li><li><a href="GUIView.html">GUIView</a></li><li><a href="HingePhysicLink.html">HingePhysicLink</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="LightObject.html">LightObject</a></li><li><a href="Matrix4.html">Matrix4</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="ParticlesObject.html">ParticlesObject</a></li><li><a href="PhysicLink.html">PhysicLink</a></li><li><a href="PhysicObject.html">PhysicObject</a></li><li><a href="PointPhysicLink.html">PointPhysicLink</a></li><li><a href="PositionalLight.html">PositionalLight</a></li><li><a href="Quaternion.html">Quaternion</a></li><li><a href="RigidObject.html">RigidObject</a></li><li><a href="SoundObject.html">SoundObject</a></li><li><a href="SpotLight.html">SpotLight</a></li><li><a href="TerrainObject.html">TerrainObject</a></li><li><a href="Vector3.html">Vector3</a></li></ul><h3>Global</h3><ul><li><a href="global.html#animationFactor">animationFactor</a></li><li><a href="global.html#levelID">levelID</a></li><li><a href="global.html#loadContainer">loadContainer</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#require">require</a></li><li><a href="global.html#saveLevel">saveLevel</a></li></ul>
 </nav>
 
 <br clear="both">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Sat Jun 01 2013 22:08:38 GMT+0200 (MESZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Fri Aug 02 2013 23:48:37 GMT+0200 (MESZ)
 </footer>
 
 <script> prettyPrint(); </script>

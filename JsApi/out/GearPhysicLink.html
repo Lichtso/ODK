@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: GearPhysicLink</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+    <h1 class="page-title">Class: GearPhysicLink</h1>
+    
+    
+
+
+
+<section>
+    
+<header>
+    <h2>
+    GearPhysicLink
+    </h2>
+    
+        <div class="class-description">Represents two gears. Doesn't fix the objects in place, you are free to place them wherever you want.</div>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+<dt>
+    <h4 class="name" id="GearPhysicLink"><span class="type-signature"></span>new GearPhysicLink<span class="signature">(objectA, objectB, axisA, axisB, ratio)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        GearPhysicLink
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>objectA</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="RigidObject.html">RigidObject</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The first object</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>objectB</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="RigidObject.html">RigidObject</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The second object</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>axisA</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The axis the first object rotates around</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>axisB</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The axis the second object rotates around</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>ratio</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The ratio of the gears radii (objectA to objectB). 1 means that they rotate equally.</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+        <h5 class="subsection-title">Properties:</h5>
+        
+        <dl>
+
+<table class="props">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>axisA</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The axis the first object rotates around</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>axisB</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The axis the second object rotates around</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>ratio</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The ratio of the gears radii (objectA to objectB). 1 means that they rotate equally.</td>
+        </tr>
+	
+	
+	</tbody>
+</table></dl>
+        
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="GearPhysicLink.js.html">GearPhysicLink.js</a>, <a href="GearPhysicLink.js.html#line14">line 14</a>
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+    
+    </div>
+    
+    
+        <h3 class="subsection-title">Extends</h3>
+        
+        <ul>
+            <li><a href="PhysicLink.html">PhysicLink</a></li>
+        </ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</article>
+
+</section>  
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="Animation.html">Animation</a></li><li><a href="BaseClass.html">BaseClass</a></li><li><a href="BaseLink.html">BaseLink</a></li><li><a href="BaseObject.html">BaseObject</a></li><li><a href="BoneObject.html">BoneObject</a></li><li><a href="CamObject.html">CamObject</a></li><li><a href="DirectionalLight.html">DirectionalLight</a></li><li><a href="GearPhysicLink.html">GearPhysicLink</a></li><li><a href="GraphicObject.html">GraphicObject</a></li><li><a href="GUIButton.html">GUIButton</a></li><li><a href="GUICheckBox.html">GUICheckBox</a></li><li><a href="GUIFramedView.html">GUIFramedView</a></li><li><a href="GUIImage.html">GUIImage</a></li><li><a href="GUILabel.html">GUILabel</a></li><li><a href="GUIProgressBar.html">GUIProgressBar</a></li><li><a href="GUIRect.html">GUIRect</a></li><li><a href="GUIScreenView.html">GUIScreenView</a></li><li><a href="GUIScrollView.html">GUIScrollView</a></li><li><a href="GUISlider.html">GUISlider</a></li><li><a href="GUITabs.html">GUITabs</a></li><li><a href="GUITextField.html">GUITextField</a></li><li><a href="GUIView.html">GUIView</a></li><li><a href="HingePhysicLink.html">HingePhysicLink</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="LightObject.html">LightObject</a></li><li><a href="Matrix4.html">Matrix4</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="ParticlesObject.html">ParticlesObject</a></li><li><a href="PhysicLink.html">PhysicLink</a></li><li><a href="PhysicObject.html">PhysicObject</a></li><li><a href="PointPhysicLink.html">PointPhysicLink</a></li><li><a href="PositionalLight.html">PositionalLight</a></li><li><a href="Quaternion.html">Quaternion</a></li><li><a href="RigidObject.html">RigidObject</a></li><li><a href="SoundObject.html">SoundObject</a></li><li><a href="SpotLight.html">SpotLight</a></li><li><a href="TerrainObject.html">TerrainObject</a></li><li><a href="Vector3.html">Vector3</a></li></ul><h3>Global</h3><ul><li><a href="global.html#animationFactor">animationFactor</a></li><li><a href="global.html#levelID">levelID</a></li><li><a href="global.html#loadContainer">loadContainer</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#require">require</a></li><li><a href="global.html#saveLevel">saveLevel</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Fri Aug 02 2013 23:48:36 GMT+0200 (MESZ)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
