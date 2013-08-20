@@ -52,6 +52,7 @@ function RigidObject(){
 
 	/**
      Applies an impulse at a given point relative the the object's transformation.
+     The vector is measured relative to world space.
      (Applies a linear and an angular impulse)
      @param {Vector3} impulse The impulse to be applied
      @param {Vector3} point The point where the impulse will be applied
@@ -70,6 +71,7 @@ function RigidObject(){
 
 	/**
 	 Applies a linear impulse at the center of mass.
+	 The vector is measured relative to world space.
 	 @param {Vector3} linearImpulse The linear impulse to be applied
 	*/
 	this.applyLinearImpulse = function(){
@@ -79,8 +81,8 @@ function RigidObject(){
 	/**
      Gets a child node of the object's skeleton by it's name.
      Returns undefined if the node is not found.
-     Node names are separated by '/'.
-     @param {String} name The node's name
+     The whole path needs to be specified (i.e. ['Back','Hip','Thigh_Right','Shin_Right']).
+     @param {String[]} name The node's name
      @returns {BoneObject} The node
 	*/
 	this.findBoneByPath = function(){

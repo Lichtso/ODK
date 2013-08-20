@@ -2,6 +2,8 @@ var camTranslation = function(){
 
 	this.keydown = function(event){
 
+		console.log(event);
+
 		if(event.which == 87){
 			Newton.animations['camera'].translateZ = -10;
 		}

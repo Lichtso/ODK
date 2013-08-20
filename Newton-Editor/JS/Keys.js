@@ -24,17 +24,17 @@ function attach( elementId ){
 
 		domElement.keyContext = this;
 
-		domElement.addEventListener('mouseclick', this.handleEvent,false)
-		domElement.addEventListener('mousedown', this.handleEvent, false);
-		domElement.addEventListener('mouseup', this.handleEvent,false);
-		domElement.addEventListener('mouseover', this.handleEvent,false);
-		domElement.addEventListener('mousemove', this.handleEvent,false);
-		domElement.addEventListener('DOMMouseScroll', this.handleEvent,false);
-		domElement.addEventListener('mousewheel', this.handleEvent,false);
-		domElement.addEventListener('keyup', this.handleEvent,false);
-		domElement.addEventListener('keydown', this.handleEvent,false);
-		domElement.addEventListener('keypress', this.handleEvent,false);
-		//domElement.addEventListener('contextmenu', function(evt){evt.preventDefault();},false);
+		domElement.addEventListener('mouseclick', this.handleEvent,true)
+		domElement.addEventListener('mousedown', this.handleEvent, true);
+		domElement.addEventListener('mouseup', this.handleEvent,true);
+		domElement.addEventListener('mouseover', this.handleEvent,true);
+		domElement.addEventListener('mousemove', this.handleEvent,true);
+		domElement.addEventListener('DOMMouseScroll', this.handleEvent,true);
+		domElement.addEventListener('mousewheel', this.handleEvent,true);
+		domElement.addEventListener('keyup', this.handleEvent,true);
+		domElement.addEventListener('keydown', this.handleEvent,true);
+		domElement.addEventListener('keypress', this.handleEvent,true);
+		domElement.addEventListener('contextmenu', function(evt){evt.preventDefault();},true);
 
 	}
 }
@@ -47,17 +47,17 @@ function destroy(){
 
 		domElement.keyContext = undefined;
 
-		domElement.removeEventListener('mouseclick', this.handleEvent,false)
-		domElement.removeEventListener('mousedown', this.handleEvent, false);
-		domElement.removeEventListener('mouseup', this.handleEvent,false);
-		domElement.removeEventListener('mouseover', this.handleEvent,false);
-		domElement.removeEventListener('mousemove', this.handleEvent,false);
-		domElement.removeEventListener('DOMMouseScroll', this.handleEvent,false);
-		domElement.removeEventListener('mousewheel', this.handleEvent,false);
-		domElement.removeEventListener('keyup', this.handleEvent,false);
-		domElement.removeEventListener('keydown', this.handleEvent,false);
-		domElement.removeEventListener('keypress', this.handleEvent,false);
-		//domElement.removeEventListener('contextmenu', function(evt){evt.preventDefault();},false);
+		domElement.removeEventListener('mouseclick', this.handleEvent,true)
+		domElement.removeEventListener('mousedown', this.handleEvent, true);
+		domElement.removeEventListener('mouseup', this.handleEvent,true);
+		domElement.removeEventListener('mouseover', this.handleEvent,true);
+		domElement.removeEventListener('mousemove', this.handleEvent,true);
+		domElement.removeEventListener('DOMMouseScroll', this.handleEvent,true);
+		domElement.removeEventListener('mousewheel', this.handleEvent,true);
+		domElement.removeEventListener('keyup', this.handleEvent,true);
+		domElement.removeEventListener('keydown', this.handleEvent,true);
+		domElement.removeEventListener('keypress', this.handleEvent,true);
+		domElement.removeEventListener('contextmenu', function(evt){evt.preventDefault();},true);
 
 	}
 
@@ -88,16 +88,15 @@ function handleEvent( event ){
 
 	var modifier = undefined;
 	var key = event.which;
-	console.log(key);
 	if (event.altKey) modifier = 'alt';
 	else if(event.ctrlKey) modifier = 'ctrl';
 	else if(event.shiftKey) modifier = 'shift';
 
 	for(var i in ctx.keyBindings){
 
-		if(( ctx.keyBindings[i].keys.indexOf(key) > -1 )&&( ctx.keyBindings[i].modifier == modifier )){
+		if((ctx.keyBindings[i].keys.indexOf(key) > -1 )&&(ctx.keyBindings[i].modifier == modifier)){
 
-			if( ctx.keyBindings[i].preventDefault )event.preventDefault();
+			if(ctx.keyBindings[i].preventDefault)event.preventDefault();
 
 			if(event.type==='mousedown')ctx.keyBindings[i].receiver.mousedown(event);
 			if(event.type==='mouseup')ctx.keyBindings[i].receiver.mouseup(event);

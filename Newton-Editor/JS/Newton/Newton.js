@@ -85,12 +85,13 @@ Newton.initKeys = function(){
 		preventDefault: false
 	}));
 	this.canvasContext.add(new KEYS.KeyBinding({
-		keys:[2],
+		keys:[3],
 		receiver: new objectPicker(), 
-		id:"picker"
+		id:"picker",
+		preventDefault: true
 	}));
 	this.canvasContext.add(new KEYS.KeyBinding({
-		keys:[3],
+		keys:[2],
 		receiver: new camRotation(), 
 		id:"rotation"
 	}));
