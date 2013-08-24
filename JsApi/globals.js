@@ -42,14 +42,25 @@ function require(path) {
 }
 
 /**
+ Localizes a given string in the selected language.
+ 
+ @param {String} key The key in the language table.
+ @return {String} The localize value in the language table.
+*/
+function localizeString(key) {
+	//[native code]
+}
+
+/**
  Saves the current loaded container (level), 
  localData and globalData are additional data, 
  you can also pass null if you don't want to store additional information.
  
- @param {String} localData Stores arbitrary data in the level file (can only be accessed when this levelis loaded)
+ @param {String} localData Stores arbitrary data in the level file (can only access the loaded level).
  @param {String} globalData Stores arbitrary data globally, can be accesed from everywhere.
+ @param {String} description Stores a human readable description of the save game, can be accesed from everywhere.
  @return {Boolean} Success
 */
-function saveLevel(localData, globalData) {
+function saveLevel(localData, globalData, description) {
 	//[native code]
 }

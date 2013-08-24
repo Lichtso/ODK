@@ -140,6 +140,8 @@
                                                     <xsd:attribute name="fov" type="NonNegativeScalar" use="required"/>
                                                     <xsd:attribute name="near" type="PositiveScalar" use="required"/>
                                                     <xsd:attribute name="far" type="PositiveScalar" use="required"/>
+                                                    <xsd:attribute name="width" type="PositiveScalar"/>
+                                                    <xsd:attribute name="height" type="PositiveScalar"/>
                                                 </xsd:complexType>
                                             </xsd:element>
                                         </xsd:choice>
