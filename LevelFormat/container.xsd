@@ -9,6 +9,12 @@
                         <xsd:all>
                             <xsd:element name="Gravity" type="Vector3"/>
                             <xsd:element name="Ambient" type="Color3" minOccurs="0"/>
+                            <xsd:element name="Fog" minOccurs="0">
+                                <xsd:complexType>
+                                    <xsd:attribute name="color" type="Color3" use="required"/>
+                                    <xsd:attribute name="distance" type="PositiveScalar" use="required"/>
+                                </xsd:complexType>
+                            </xsd:element>
                             <xsd:element name="Data" type="xsd:string" minOccurs="0"/>
                         </xsd:all>
                     </xsd:complexType>

@@ -153,6 +153,71 @@
         
             
 <dt>
+    <h4 class="name" id="gamePaused"><span class="type-signature"></span>gamePaused<span class="type-signature"> :Boolean</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Is the game paused.
+ May change with the event onpause();
+    </div>
+    
+    
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Boolean</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="globals.js.html">globals.js</a>, <a href="globals.js.html#line12">line 12</a>
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
     <h4 class="name" id="levelID"><span class="type-signature"></span>levelID<span class="type-signature"> :String</span></h4>
     
     
@@ -200,7 +265,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="globals.js.html">globals.js</a>, <a href="globals.js.html#line12">line 12</a>
+        <a href="globals.js.html">globals.js</a>, <a href="globals.js.html#line19">line 19</a>
     </li></ul></dd>
     
     
@@ -222,6 +287,195 @@
         <h3 class="subsection-title">Methods</h3>
         
         <dl>
+            
+<dt>
+    <h4 class="name" id="accessSceneProperty"><span class="type-signature"></span>accessSceneProperty<span class="signature">(key, <span class="optional">value</span>)</span><span class="type-signature"> &rarr; {Number|<a href="Vector3.html">Vector3</a>}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        Gives you access to the properties of the scene.
+ Returns the value of the given key and overwrites it, if a second parameter is given.
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Argument</th>
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last">'Gravity', 'Ambient', 'FogColor' or 'FogDistance'</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+|
+
+<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last">The new value</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="globals.js.html">globals.js</a>, <a href="globals.js.html#line83">line 83</a>
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The value of the key now (probably after being overwritten)
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">Number</span>
+|
+
+<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+
+
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
             
 <dt>
     <h4 class="name" id="loadContainer"><span class="type-signature"></span>loadContainer<span class="signature">(transformation, path)</span><span class="type-signature"> &rarr; {Array}</span></h4>
@@ -336,7 +590,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="globals.js.html">globals.js</a>, <a href="globals.js.html#line21">line 21</a>
+        <a href="globals.js.html">globals.js</a>, <a href="globals.js.html#line28">line 28</a>
     </li></ul></dd>
     
     
@@ -373,6 +627,145 @@
 	<dd>
 		
 <span class="param-type">Array</span>
+
+
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="localizeString"><span class="type-signature"></span>localizeString<span class="signature">(key)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        Localizes a given string in the selected language.
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The key in the language table.</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="globals.js.html">globals.js</a>, <a href="globals.js.html#line57">line 57</a>
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The localize value in the language table.
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">String</span>
 
 
 	</dd>
@@ -475,7 +868,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="globals.js.html">globals.js</a>, <a href="globals.js.html#line30">line 30</a>
+        <a href="globals.js.html">globals.js</a>, <a href="globals.js.html#line37">line 37</a>
     </li></ul></dd>
     
     
@@ -592,7 +985,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="globals.js.html">globals.js</a>, <a href="globals.js.html#line40">line 40</a>
+        <a href="globals.js.html">globals.js</a>, <a href="globals.js.html#line47">line 47</a>
     </li></ul></dd>
     
     
@@ -642,7 +1035,7 @@
         
             
 <dt>
-    <h4 class="name" id="saveLevel"><span class="type-signature"></span>saveLevel<span class="signature">(localData, globalData)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    <h4 class="name" id="saveLevel"><span class="type-signature"></span>saveLevel<span class="signature">(localData, globalData, description)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
     
     
 </dt>
@@ -702,7 +1095,7 @@
             
             
             
-            <td class="description last">Stores arbitrary data in the level file (can only be accessed when this levelis loaded)</td>
+            <td class="description last">Stores arbitrary data in the level file (can only access the loaded level).</td>
         </tr>
 	
 	
@@ -726,6 +1119,29 @@
             
             
             <td class="description last">Stores arbitrary data globally, can be accesed from everywhere.</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>description</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">Stores a human readable description of the save game, can be accesed from everywhere.</td>
         </tr>
 	
 	
@@ -756,7 +1172,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="globals.js.html">globals.js</a>, <a href="globals.js.html#line53">line 53</a>
+        <a href="globals.js.html">globals.js</a>, <a href="globals.js.html#line71">line 71</a>
     </li></ul></dd>
     
     
@@ -819,13 +1235,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="Animation.html">Animation</a></li><li><a href="BaseClass.html">BaseClass</a></li><li><a href="BaseLink.html">BaseLink</a></li><li><a href="BaseObject.html">BaseObject</a></li><li><a href="BoneObject.html">BoneObject</a></li><li><a href="CamObject.html">CamObject</a></li><li><a href="DirectionalLight.html">DirectionalLight</a></li><li><a href="GearPhysicLink.html">GearPhysicLink</a></li><li><a href="GraphicObject.html">GraphicObject</a></li><li><a href="GUIButton.html">GUIButton</a></li><li><a href="GUICheckBox.html">GUICheckBox</a></li><li><a href="GUIFramedView.html">GUIFramedView</a></li><li><a href="GUIImage.html">GUIImage</a></li><li><a href="GUILabel.html">GUILabel</a></li><li><a href="GUIProgressBar.html">GUIProgressBar</a></li><li><a href="GUIRect.html">GUIRect</a></li><li><a href="GUIScreenView.html">GUIScreenView</a></li><li><a href="GUIScrollView.html">GUIScrollView</a></li><li><a href="GUISlider.html">GUISlider</a></li><li><a href="GUITabs.html">GUITabs</a></li><li><a href="GUITextField.html">GUITextField</a></li><li><a href="GUIView.html">GUIView</a></li><li><a href="HingePhysicLink.html">HingePhysicLink</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="LightObject.html">LightObject</a></li><li><a href="Matrix4.html">Matrix4</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="ParticlesObject.html">ParticlesObject</a></li><li><a href="PhysicLink.html">PhysicLink</a></li><li><a href="PhysicObject.html">PhysicObject</a></li><li><a href="PointPhysicLink.html">PointPhysicLink</a></li><li><a href="PositionalLight.html">PositionalLight</a></li><li><a href="Quaternion.html">Quaternion</a></li><li><a href="RigidObject.html">RigidObject</a></li><li><a href="SoundObject.html">SoundObject</a></li><li><a href="SpotLight.html">SpotLight</a></li><li><a href="TerrainObject.html">TerrainObject</a></li><li><a href="Vector3.html">Vector3</a></li></ul><h3>Global</h3><ul><li><a href="global.html#animationFactor">animationFactor</a></li><li><a href="global.html#levelID">levelID</a></li><li><a href="global.html#loadContainer">loadContainer</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#require">require</a></li><li><a href="global.html#saveLevel">saveLevel</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="Animation.html">Animation</a></li><li><a href="BaseClass.html">BaseClass</a></li><li><a href="BaseLink.html">BaseLink</a></li><li><a href="BaseObject.html">BaseObject</a></li><li><a href="BoneObject.html">BoneObject</a></li><li><a href="CamObject.html">CamObject</a></li><li><a href="DirectionalLight.html">DirectionalLight</a></li><li><a href="GearPhysicLink.html">GearPhysicLink</a></li><li><a href="GraphicObject.html">GraphicObject</a></li><li><a href="GUIButton.html">GUIButton</a></li><li><a href="GUICheckBox.html">GUICheckBox</a></li><li><a href="GUIFramedView.html">GUIFramedView</a></li><li><a href="GUIImage.html">GUIImage</a></li><li><a href="GUILabel.html">GUILabel</a></li><li><a href="GUIProgressBar.html">GUIProgressBar</a></li><li><a href="GUIRect.html">GUIRect</a></li><li><a href="GUIScreenView.html">GUIScreenView</a></li><li><a href="GUIScrollView.html">GUIScrollView</a></li><li><a href="GUISlider.html">GUISlider</a></li><li><a href="GUITabs.html">GUITabs</a></li><li><a href="GUITextField.html">GUITextField</a></li><li><a href="GUIView.html">GUIView</a></li><li><a href="HingePhysicLink.html">HingePhysicLink</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="LightObject.html">LightObject</a></li><li><a href="Matrix4.html">Matrix4</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="ParticlesObject.html">ParticlesObject</a></li><li><a href="PhysicLink.html">PhysicLink</a></li><li><a href="PhysicObject.html">PhysicObject</a></li><li><a href="PointPhysicLink.html">PointPhysicLink</a></li><li><a href="PositionalLight.html">PositionalLight</a></li><li><a href="Quaternion.html">Quaternion</a></li><li><a href="RigidObject.html">RigidObject</a></li><li><a href="SoundObject.html">SoundObject</a></li><li><a href="SpotLight.html">SpotLight</a></li><li><a href="TerrainObject.html">TerrainObject</a></li><li><a href="Vector3.html">Vector3</a></li></ul><h3>Global</h3><ul><li><a href="global.html#accessSceneProperty">accessSceneProperty</a></li><li><a href="global.html#animationFactor">animationFactor</a></li><li><a href="global.html#gamePaused">gamePaused</a></li><li><a href="global.html#levelID">levelID</a></li><li><a href="global.html#loadContainer">loadContainer</a></li><li><a href="global.html#localizeString">localizeString</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#require">require</a></li><li><a href="global.html#saveLevel">saveLevel</a></li></ul>
 </nav>
 
 <br clear="both">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Fri Aug 02 2013 23:48:36 GMT+0200 (MESZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Sat Sep 21 2013 14:37:28 GMT+0200 (MESZ)
 </footer>
 
 <script> prettyPrint(); </script>

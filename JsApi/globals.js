@@ -5,6 +5,13 @@
 var animationFactor = 0.0;
 
 /**
+ Is the game paused.
+ May change with the event onpause();
+ @type Boolean
+*/
+var gamePaused = '';
+
+/**
  Path to the current loaded container (level).
  Can also be written to load another one
  @type String
@@ -62,5 +69,17 @@ function localizeString(key) {
  @return {Boolean} Success
 */
 function saveLevel(localData, globalData, description) {
+	//[native code]
+}
+
+/**
+ Gives you access to the properties of the scene.
+ Returns the value of the given key and overwrites it, if a second parameter is given.
+ 
+ @param {String} key 'Gravity', 'Ambient', 'FogColor' or 'FogDistance'
+ @param {Number|Vector3} [value] The new value
+ @return {Number|Vector3} The value of the key now (probably after being overwritten)
+*/
+function accessSceneProperty(key, value) {
 	//[native code]
 }
