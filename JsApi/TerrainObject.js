@@ -1,7 +1,7 @@
 /**
  TerrainObject
  @class Can't be constructed. Objects are created by loading containers.
- @extends GraphicObject
+ @extends MatterObject
  @property {Number} [] The heights of the cells serialized as 1D array (indexed property)
  @property width {Integer} The number of cells along the width axis
  @property length {Integer} The number of cells along the length axis

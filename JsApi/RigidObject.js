@@ -1,7 +1,7 @@
 /**
  RigidObject
  @class Can't be constructed. Objects are created by loading containers.
- @extends GraphicObject
+ @extends MatterObject
  @property model {String} Path to the model file
  @property mass {Number} Mass in of this RigidObject in kg
  @property kinematic {Boolean} If set to true, this RigidObject will push others away without changing its own transformation.
