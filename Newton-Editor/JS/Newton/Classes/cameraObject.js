@@ -1,4 +1,4 @@
-var NewtonCamObject = function(){
+var NewtonCameraObject = function(){
 
 	this.transformation = {
 
@@ -11,7 +11,7 @@ var NewtonCamObject = function(){
 
 	this.script = {
 
-		resource: null;
+		resource: null
 
 	};
 
@@ -24,5 +24,7 @@ var NewtonCamObject = function(){
 		height: 10
 
 	};
+
+	this.mesh = {};
 
 }

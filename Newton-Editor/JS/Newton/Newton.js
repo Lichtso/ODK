@@ -15,17 +15,20 @@ Newton.animations = new Array();
 Newton.currentTool = undefined;
 Newton.selectedObject = undefined;
 
-Newton.nextId = 0;
+Newton.IdCount = 0;
 
+Newton.cameraDispatcher = new NewtonCameraDispatcher();
+Newton.objectDispatcher = new NewtonObjectDispatcher();
 
 Newton.init = function(){
 
 	this.getDOMRefs();
 	this.initThree();
+	this.initCamera();
 	this.initTools();
 	this.initKeys();
-	this.initUI();
-	this.initAnimation(); 
+	this.initUI(); 
+	this.initAnimation();
 
 }
 
@@ -49,10 +52,10 @@ Newton.initThree = function(){
 	this.threejs.renderer = new THREE.WebGLRenderer();
 	this.threejs.projector = new THREE.Projector();
 	this.threejs.camera = new THREE.PerspectiveCamera(
-														prefs.camViewAngle,
-														prefs.camAspect,
-														prefs.camNear,
-														prefs.camFar
+														prefs.cameraViewAngle,
+														prefs.cameraAspect,
+														prefs.cameraNear,
+														prefs.cameraFar
 													)
 	this.threejs.camera.eulerOrder = 'ZYX';
 	this.threejs.scene = new THREE.Scene();
@@ -75,7 +78,7 @@ Newton.initKeys = function(){
 	this.canvasContext.attach("mainCanvas");
 	this.canvasContext.add(new KEYS.KeyBinding({
 		keys:[87,65,83,68],
-		receiver: new camTranslation(), 
+		receiver: new cameraTranslation(), 
 		id:"translation"
 	}));
 	this.canvasContext.add(new KEYS.KeyBinding({
@@ -92,7 +95,7 @@ Newton.initKeys = function(){
 	}));
 	this.canvasContext.add(new KEYS.KeyBinding({
 		keys:[2],
-		receiver: new camRotation(), 
+		receiver: new cameraRotation(), 
 		id:"rotation"
 	}));
 
@@ -168,6 +171,12 @@ Newton.initAnimation = function(){
 
 }
 
+Newton.initCamera = function(){
+
+	this.selectCamera(this.cameraDispatcher.dispatchCamera());
+
+}
+
 Newton.renderFrame = function(){
 
 	for (var i in this.animations) {
@@ -175,6 +184,27 @@ Newton.renderFrame = function(){
 	}
 	this.threejs.renderer.render(this.threejs.scene, this.threejs.camera);
 
+}
+
+Newton.nextId = function(){
+
+	Newton.IdCount++;
+	return Newton.IdCount-1;
+
+}
+
+Newton.selectObject = function(id){
+
+	this.selectedObject = this.objectDispatcher.objectForId(id);
+
+}
+
+Newton.selectCamera = function(id){
+
+	this.selectedCamera = id;
+	this.threejs.camera.matrix.set(this.objectDispatcher.objectForId(id).transformation.matrix);
+	this.threejs.camera.updateMatrixWorld(true);
+	console.log(Newton);
 }
 
 Newton.start = function(){

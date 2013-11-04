@@ -1,8 +1,6 @@
-var camTranslation = function(){
+var cameraTranslation = function(){
 
 	this.keydown = function(event){
-
-		console.log(event);
 
 		if(event.which == 87){
 			Newton.animations['camera'].translateZ = -10;
@@ -16,8 +14,13 @@ var camTranslation = function(){
 		if(event.which == 68){
 			Newton.animations['camera'].translateX = 10;
 		}
+
+		Newton.objectDispatcher.objectForId(Newton.selectedCamera).transformation.matrix = Newton.animations['camera'].matrix;
+	
 	}
+
 	this.keyup = function(event){
+
 		if(event.which == 87){
 			Newton.animations['camera'].translateZ = false;
 		}
@@ -30,11 +33,14 @@ var camTranslation = function(){
 		if(event.which == 68){
 			Newton.animations['camera'].translateX = false;
 		}
+
+		Newton.objectDispatcher.objectForId(Newton.selectedCamera).transformation.matrix = Newton.animations['camera'].matrix;
+	
 	}
 
 }
 
-var camRotation = function(){
+var cameraRotation = function(){
 
 	this.isMouseDown = false;
 	this.lastPosition = new THREE.Vector2();
@@ -50,11 +56,14 @@ var camRotation = function(){
 			Newton.threejs.camera.rotation.x += diff.y*(Math.PI/180)/8;
 			Newton.threejs.camera.rotation.y += diff.x*(Math.PI/180)/8;
 			this.lastPosition.set(event.layerX, event.layerY);
+			Newton.objectDispatcher.objectForId(Newton.selectedCamera).transformation.matrix = Newton.animations['camera'].matrix;
+
 		}
 	}
 
 	this.mouseup = function(event){
 		this.isMouseDown = false;
+		Newton.objectDispatcher.objectForId(Newton.selectedCamera).transformation.matrix = Newton.animations['camera'].matrix;
 	}
 
 }

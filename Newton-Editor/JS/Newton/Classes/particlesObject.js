@@ -18,7 +18,7 @@ var NewtonParticlesObject = function(){
 
 	this.script = {
 
-		resource: null;
+		resource: null
 
 	};
 

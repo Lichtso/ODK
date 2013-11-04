@@ -42,6 +42,8 @@ Newton.updateOutlineView = function(){
 			var label = document.createTextNode(name);
 			node.appendChild(label);
 			node.id = name;
+			node.newtonId = this.objects[i].identifier;
+			node.onclick = handleInstanceClick;
 			$("#object-instances").append(node);						
 			$("#object-instances").treeview({add:node});
 			Newton.log("Instance added: "+node.id);
@@ -60,6 +62,14 @@ function modal(divId, encapsulated){
 
 function handleTemplateClick(event){
 
-	Newton.newInstanceForTemplate(event.target.id);
+	Newton.objectDispatcher.dispatchInstanceForTemplate(event.target.id);
 
 }
+
+function handleInstanceClick(event){
+
+	console.log(Newton);
+	Newton.selectObject(event.target.newtonId);
+
+}
+
