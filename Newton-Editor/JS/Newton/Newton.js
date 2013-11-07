@@ -14,11 +14,9 @@ Newton.animations = new Array();
 
 Newton.currentTool = undefined;
 Newton.selectedObject = undefined;
+Newton.selectedCamera = undefined;
 
 Newton.IdCount = 0;
-
-Newton.cameraDispatcher = new NewtonCameraDispatcher();
-Newton.objectDispatcher = new NewtonObjectDispatcher();
 
 Newton.init = function(){
 
@@ -173,7 +171,12 @@ Newton.initAnimation = function(){
 
 Newton.initCamera = function(){
 
-	this.selectCamera(this.cameraDispatcher.dispatchCamera());
+	var c = new NewtonCameraObject();
+	this.objects.push(c);
+	this.selectCamera(c.identifier);
+	var c1 = new NewtonCameraObject;
+	this.objects.push(c1);
+	this.updateOutlineView();
 
 }
 
@@ -195,16 +198,34 @@ Newton.nextId = function(){
 
 Newton.selectObject = function(id){
 
-	this.selectedObject = this.objectDispatcher.objectForId(id);
+	this.selectedObject = this.objectForId(id);
 
 }
 
 Newton.selectCamera = function(id){
 
 	this.selectedCamera = id;
-	this.threejs.camera.matrix.set(this.objectDispatcher.objectForId(id).transformation.matrix);
-	this.threejs.camera.updateMatrixWorld(true);
 	console.log(Newton);
+	var rotation = new THREE.Matrix4();
+
+	this.threejs.camera.position.getPositionFromMatrix(this.objectForId(id).transformation.matrix);
+	rotation.extractRotation(this.objectForId(id).transformation.matrix);
+	this.threejs.camera.quaternion.setFromRotationMatrix(this.objectForId(id).transformation.matrix);
+
+	this.threejs.camera.updateMatrixWorld(true);
+
+	console.log("CAM DATA:");
+	console.log(Newton.objects);
+	console.log(Newton.threejs.camera);
+
+}
+
+Newton.objectForId = function(id){
+		for(i in this.objects){
+			if(this.objects[i].identifier == id)
+				return this.objects[i];
+		}
+		return undefined;
 }
 
 Newton.start = function(){

@@ -3,6 +3,8 @@ Newton.resizeCanvasToDiv = function(){
 	var width = $("#mainCanvas").width(); 
 	var height = $("#mainCanvas").height();
 	this.threejs.camera.aspect = width/height;
+	this.objectForId(this.selectedCamera).bounds.width = width;
+	this.objectForId(this.selectedCamera).bounds.height = height;
 	this.threejs.camera.updateProjectionMatrix();
 	this.threejs.renderer.setSize(width, height);
 	
@@ -33,10 +35,8 @@ Newton.updateOutlineView = function(){
 		}
 	}
 	for(i in this.objects){
-		console.log(this.objects[i]);
-		var name = this.objects[i].mesh.name +"-"+ this.objects[i].identifier;
+		var name = this.objects[i].mesh.name +"_"+ this.objects[i].identifier;
 		var divName = "#" + name;
-		console.log(divName);
 		if(!$(divName).length > 0){
 			var node = document.createElement("li");
 			var label = document.createTextNode(name);
@@ -68,8 +68,8 @@ function handleTemplateClick(event){
 
 function handleInstanceClick(event){
 
-	console.log(Newton);
-	Newton.selectObject(event.target.newtonId);
+	//Newton.selectObject(event.target.newtonId);
+	Newton.selectCamera(event.target.newtonId);
 
 }
 

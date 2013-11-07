@@ -25,6 +25,9 @@ var NewtonCameraObject = function(){
 
 	};
 
+	this.identifier = Newton.nextId();
 	this.mesh = {};
+	this.mesh.NewtonID = this.identifier;
+	this.mesh.name = "camera";
 
 }

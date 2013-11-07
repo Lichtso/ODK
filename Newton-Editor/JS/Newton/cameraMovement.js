@@ -15,8 +15,10 @@ var cameraTranslation = function(){
 			Newton.animations['camera'].translateX = 10;
 		}
 
-		Newton.objectDispatcher.objectForId(Newton.selectedCamera).transformation.matrix = Newton.animations['camera'].matrix;
-	
+		var matrix = new THREE.Matrix4();
+		matrix.elements.set(Newton.threejs.camera.matrix.elements);
+		Newton.objectForId(Newton.selectedCamera).transformation.matrix.elements.set(matrix.elements);
+		delete matrix;
 	}
 
 	this.keyup = function(event){
@@ -34,8 +36,10 @@ var cameraTranslation = function(){
 			Newton.animations['camera'].translateX = false;
 		}
 
-		Newton.objectDispatcher.objectForId(Newton.selectedCamera).transformation.matrix = Newton.animations['camera'].matrix;
-	
+		var matrix = new THREE.Matrix4();
+		matrix.elements.set(Newton.threejs.camera.matrix.elements);
+		Newton.objectForId(Newton.selectedCamera).transformation.matrix.elements.set(matrix.elements);
+		delete matrix;
 	}
 
 }
@@ -56,14 +60,18 @@ var cameraRotation = function(){
 			Newton.threejs.camera.rotation.x += diff.y*(Math.PI/180)/8;
 			Newton.threejs.camera.rotation.y += diff.x*(Math.PI/180)/8;
 			this.lastPosition.set(event.layerX, event.layerY);
-			Newton.objectDispatcher.objectForId(Newton.selectedCamera).transformation.matrix = Newton.animations['camera'].matrix;
-
 		}
+		var matrix = new THREE.Matrix4();
+		console.log(JSON.stringify(matrix));
+		matrix.elements.set(Newton.threejs.camera.matrix.elements);
+		console.log(JSON.stringify(matrix));
+		Newton.objectForId(Newton.selectedCamera).transformation.matrix.elements.set(matrix.elements);
+		console.log(JSON.stringify(Newton.objects[1].transformation.matrix));
+		delete matrix;
 	}
 
 	this.mouseup = function(event){
 		this.isMouseDown = false;
-		Newton.objectDispatcher.objectForId(Newton.selectedCamera).transformation.matrix = Newton.animations['camera'].matrix;
 	}
 
 }
