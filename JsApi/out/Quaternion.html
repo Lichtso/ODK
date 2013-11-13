@@ -494,7 +494,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line162">line 162</a>
+        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line143">line 143</a>
     </li></ul></dd>
     
     
@@ -1046,7 +1046,7 @@
         
             
 <dt>
-    <h4 class="name" id="getEuler"><span class="type-signature"></span>getEuler<span class="signature">()</span><span class="type-signature"> &rarr; {Number[]}</span></h4>
+    <h4 class="name" id="getInterpolation"><span class="type-signature"></span>getInterpolation<span class="signature">(quaternion, t)</span><span class="type-signature"> &rarr; {<a href="Quaternion.html">Quaternion</a>}</span></h4>
     
     
 </dt>
@@ -1054,7 +1054,7 @@
     
     
     <div class="description">
-        Gets euler angle representation of the quaternion.
+        Calculates the spherical linear interpolation between this and another Quaternion.
 	 This method does not modify the quaternions.
     </div>
     
@@ -1063,6 +1063,77 @@
     
     
     
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>quaternion</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Quaternion.html">Quaternion</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">Quaternion to interpolate to</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>t</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">Interpolation from 0.0 (only self) to 1.0 (only other)</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
     
     
     
@@ -1088,7 +1159,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line132">line 132</a>
+        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line126">line 126</a>
     </li></ul></dd>
     
     
@@ -1112,10 +1183,6 @@
     <h5>Returns:</h5>
     
             
-<div class="param-desc">
-    z, y, x euler angles
-</div>
-
 
 
 <dl>
@@ -1124,83 +1191,13 @@
 	</dt>
 	<dd>
 		
-<span class="param-type">Number[]</span>
+<span class="param-type"><a href="Quaternion.html">Quaternion</a></span>
 
 
 	</dd>
 </dl>
 
         
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="getInterpolation"><span class="type-signature"></span>getInterpolation<span class="signature">()</span><span class="type-signature"></span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        ?
-	 This method does not modify the quaternions.
-    </div>
-    
-
-    
-    
-    
-    
-    
-    
-    
-<dl class="details">
-    
-        
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line123">line 123</a>
-    </li></ul></dd>
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
     
     
 </dd>
@@ -1898,7 +1895,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line180">line 180</a>
+        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line161">line 161</a>
     </li></ul></dd>
     
     
@@ -1967,237 +1964,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line188">line 188</a>
-    </li></ul></dd>
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="setEuler"><span class="type-signature"></span>setEuler<span class="signature">(<span class="optional">z</span>, <span class="optional">y</span>, <span class="optional">x</span>, <span class="optional">angles</span>)</span><span class="type-signature"></span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        Sets rotation according to euler angles.
-     Be careful: The euler order is set to ZYX (This is why you don't want to use euler angles in the first place...). 
-     You can pass three numbers or an array of numbers, but not both.
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		<th>Argument</th>
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>z</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-                    
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last">z-angle</td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>y</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-                    
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last">y-angle</td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>x</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-                    
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last">x-angle</td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>angles</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Number[]</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-                    
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last">An array with three elements representing z,y,x-angles</td>
-        </tr>
-	
-	
-	</tbody>
-</table>
-    
-    
-    
-<dl class="details">
-    
-        
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line145">line 145</a>
+        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line169">line 169</a>
     </li></ul></dd>
     
     
@@ -2337,7 +2104,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line154">line 154</a>
+        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line135">line 135</a>
     </li></ul></dd>
     
     
@@ -2454,7 +2221,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line171">line 171</a>
+        <a href="Quaternion.js.html">Quaternion.js</a>, <a href="Quaternion.js.html#line152">line 152</a>
     </li></ul></dd>
     
     
@@ -2677,13 +2444,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="Animation.html">Animation</a></li><li><a href="BaseClass.html">BaseClass</a></li><li><a href="BaseLink.html">BaseLink</a></li><li><a href="BaseObject.html">BaseObject</a></li><li><a href="BoneObject.html">BoneObject</a></li><li><a href="CamObject.html">CamObject</a></li><li><a href="DirectionalLight.html">DirectionalLight</a></li><li><a href="GearPhysicLink.html">GearPhysicLink</a></li><li><a href="GraphicObject.html">GraphicObject</a></li><li><a href="GUIButton.html">GUIButton</a></li><li><a href="GUICheckBox.html">GUICheckBox</a></li><li><a href="GUIFramedView.html">GUIFramedView</a></li><li><a href="GUIImage.html">GUIImage</a></li><li><a href="GUILabel.html">GUILabel</a></li><li><a href="GUIProgressBar.html">GUIProgressBar</a></li><li><a href="GUIRect.html">GUIRect</a></li><li><a href="GUIScreenView.html">GUIScreenView</a></li><li><a href="GUIScrollView.html">GUIScrollView</a></li><li><a href="GUISlider.html">GUISlider</a></li><li><a href="GUITabs.html">GUITabs</a></li><li><a href="GUITextField.html">GUITextField</a></li><li><a href="GUIView.html">GUIView</a></li><li><a href="HingePhysicLink.html">HingePhysicLink</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="LightObject.html">LightObject</a></li><li><a href="Matrix4.html">Matrix4</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="ParticlesObject.html">ParticlesObject</a></li><li><a href="PhysicLink.html">PhysicLink</a></li><li><a href="PhysicObject.html">PhysicObject</a></li><li><a href="PointPhysicLink.html">PointPhysicLink</a></li><li><a href="PositionalLight.html">PositionalLight</a></li><li><a href="Quaternion.html">Quaternion</a></li><li><a href="RigidObject.html">RigidObject</a></li><li><a href="SoundObject.html">SoundObject</a></li><li><a href="SpotLight.html">SpotLight</a></li><li><a href="TerrainObject.html">TerrainObject</a></li><li><a href="Vector3.html">Vector3</a></li></ul><h3>Global</h3><ul><li><a href="global.html#accessSceneProperty">accessSceneProperty</a></li><li><a href="global.html#animationFactor">animationFactor</a></li><li><a href="global.html#gamePaused">gamePaused</a></li><li><a href="global.html#levelID">levelID</a></li><li><a href="global.html#loadContainer">loadContainer</a></li><li><a href="global.html#localizeString">localizeString</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#require">require</a></li><li><a href="global.html#saveLevel">saveLevel</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="Animation.html">Animation</a></li><li><a href="BaseClass.html">BaseClass</a></li><li><a href="BaseLink.html">BaseLink</a></li><li><a href="BaseObject.html">BaseObject</a></li><li><a href="BoneLink.html">BoneLink</a></li><li><a href="CamObject.html">CamObject</a></li><li><a href="ConeTwistPhysicLink.html">ConeTwistPhysicLink</a></li><li><a href="DirectionalLight.html">DirectionalLight</a></li><li><a href="Dof6PhysicLink.html">Dof6PhysicLink</a></li><li><a href="GearPhysicLink.html">GearPhysicLink</a></li><li><a href="GUIButton.html">GUIButton</a></li><li><a href="GUICheckBox.html">GUICheckBox</a></li><li><a href="GUIFramedView.html">GUIFramedView</a></li><li><a href="GUIImage.html">GUIImage</a></li><li><a href="GUILabel.html">GUILabel</a></li><li><a href="GUIProgressBar.html">GUIProgressBar</a></li><li><a href="GUIRect.html">GUIRect</a></li><li><a href="GUIScreenView.html">GUIScreenView</a></li><li><a href="GUIScrollView.html">GUIScrollView</a></li><li><a href="GUISlider.html">GUISlider</a></li><li><a href="GUITabs.html">GUITabs</a></li><li><a href="GUITextField.html">GUITextField</a></li><li><a href="GUIView.html">GUIView</a></li><li><a href="HingePhysicLink.html">HingePhysicLink</a></li><li><a href="Intersection.html">Intersection</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="LightObject.html">LightObject</a></li><li><a href="Matrix4.html">Matrix4</a></li><li><a href="MatterObject.html">MatterObject</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="ParticlesObject.html">ParticlesObject</a></li><li><a href="PhysicLink.html">PhysicLink</a></li><li><a href="PhysicObject.html">PhysicObject</a></li><li><a href="PointPhysicLink.html">PointPhysicLink</a></li><li><a href="PositionalLight.html">PositionalLight</a></li><li><a href="Quaternion.html">Quaternion</a></li><li><a href="RigidObject.html">RigidObject</a></li><li><a href="SimpleObject.html">SimpleObject</a></li><li><a href="SliderPhysicLink.html">SliderPhysicLink</a></li><li><a href="SoundObject.html">SoundObject</a></li><li><a href="SpotLight.html">SpotLight</a></li><li><a href="TerrainObject.html">TerrainObject</a></li><li><a href="TransformLink.html">TransformLink</a></li><li><a href="Vector3.html">Vector3</a></li></ul><h3>Global</h3><ul><li><a href="global.html#accessSceneProperty">accessSceneProperty</a></li><li><a href="global.html#animationFactor">animationFactor</a></li><li><a href="global.html#gamePaused">gamePaused</a></li><li><a href="global.html#levelID">levelID</a></li><li><a href="global.html#loadContainer">loadContainer</a></li><li><a href="global.html#localizeString">localizeString</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#require">require</a></li><li><a href="global.html#saveLevel">saveLevel</a></li></ul>
 </nav>
 
 <br clear="both">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Sat Sep 21 2013 14:37:29 GMT+0200 (MESZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Wed Nov 13 2013 09:01:13 GMT+0100 (MEZ)
 </footer>
 
 <script> prettyPrint(); </script>

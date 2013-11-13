@@ -13,16 +13,10 @@ function Intersection(){
 		//[native code]
 	}
 
-	/**
-
-	*/
 	this.aabbIntersection = function(){
 		//[native code]
 	}
 
-	/**
-
-	*/
 	this.sphereIntersection = function(){
 		//[native code]
 	}

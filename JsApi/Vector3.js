@@ -95,8 +95,8 @@ function Vector3() {
 	/**
 	 Calculates the linear interpolation between this and another Vector3.
 	 This method does not modify the vectors.
-	 @param {Vector3} vec
-	 @param {Number} t
+	 @param {Vector3} vec Vector3 to interpolate to
+	 @param {Number} t Interpolation from 0.0 (only self) to 1.0 (only other)
 	 @return {Vector3}
 	*/
 	this.getInterpolation = function(vec, t) {

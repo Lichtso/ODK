@@ -117,32 +117,13 @@ function Quaternion(){
 	}
 
 	/**
-	 ?
+	 Calculates the spherical linear interpolation between this and another Quaternion.
 	 This method does not modify the quaternions.
+	 @param {Quaternion} quaternion Quaternion to interpolate to
+	 @param {Number} t Interpolation from 0.0 (only self) to 1.0 (only other)
+	 @return {Quaternion}
 	*/
 	this.getInterpolation = function(){
-		//[native code]
-	}
-
-	/**
-	 Gets euler angle representation of the quaternion.
-	 This method does not modify the quaternions.
-	 @returns {Number[]} z, y, x euler angles
-	*/
-	this.getEuler = function(){
-		//[native code]
-	}
-
-	/**
-     Sets rotation according to euler angles.
-     Be careful: The euler order is set to ZYX (This is why you don't want to use euler angles in the first place...). 
-     You can pass three numbers or an array of numbers, but not both.
-     @param {Number} [z] z-angle
-     @param {Number} [y] y-angle
-     @param {Number} [x] x-angle
-     @param {Number[]} [angles] An array with three elements representing z,y,x-angles
-	*/
-	this.setEuler = function(){
 		//[native code]
 	}
 
