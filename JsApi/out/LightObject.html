@@ -458,6 +458,176 @@
         
             
 <dt>
+    <h4 class="name" id="delete"><span class="type-signature"></span>delete<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        Deletes the instance immediately.
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="PhysicObject.html#delete">PhysicObject#delete</a>
+    </li></dd>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="BaseClass.js.html">BaseClass.js</a>, <a href="BaseClass.js.html#line11">line 11</a>
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getBoneUpLink"><span class="type-signature"></span>getBoneUpLink<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="BoneLink.html">BoneLink</a>}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        Returns the BoneLink to this object's parent (if any)
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="PhysicObject.html#getBoneUpLink">PhysicObject#getBoneUpLink</a>
+    </li></dd>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="BaseObject.js.html">BaseObject.js</a>, <a href="BaseObject.js.html#line47">line 47</a>
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    Link to the parent or undefined, if object has no parent
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="BoneLink.html">BoneLink</a></span>
+
+
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
     <h4 class="name" id="getLink"><span class="type-signature"></span>getLink<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="BaseLink.html">BaseLink</a>}</span></h4>
     
     
@@ -504,7 +674,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="BaseObject.js.html">BaseObject.js</a>, <a href="BaseObject.js.html#line32">line 32</a>
+        <a href="BaseObject.js.html">BaseObject.js</a>, <a href="BaseObject.js.html#line23">line 23</a>
     </li></ul></dd>
     
     
@@ -600,7 +770,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="BaseObject.js.html">BaseObject.js</a>, <a href="BaseObject.js.html#line40">line 40</a>
+        <a href="BaseObject.js.html">BaseObject.js</a>, <a href="BaseObject.js.html#line31">line 31</a>
     </li></ul></dd>
     
     
@@ -650,7 +820,7 @@
         
             
 <dt>
-    <h4 class="name" id="getParentLink"><span class="type-signature"></span>getParentLink<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="TransformLink.html">TransformLink</a>}</span></h4>
+    <h4 class="name" id="getTransformUpLink"><span class="type-signature"></span>getTransformUpLink<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="TransformLink.html">TransformLink</a>}</span></h4>
     
     
 </dt>
@@ -658,7 +828,7 @@
     
     
     <div class="description">
-        Returns the link to this object's parent (if any)
+        Returns the TransformLink to this object's parent (if any)
     </div>
     
 
@@ -679,7 +849,7 @@
     
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="PhysicObject.html#getParentLink">PhysicObject#getParentLink</a>
+        <a href="PhysicObject.html#getTransformUpLink">PhysicObject#getTransformUpLink</a>
     </li></dd>
     
     
@@ -696,7 +866,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="BaseObject.js.html">BaseObject.js</a>, <a href="BaseObject.js.html#line48">line 48</a>
+        <a href="BaseObject.js.html">BaseObject.js</a>, <a href="BaseObject.js.html#line39">line 39</a>
     </li></ul></dd>
     
     
@@ -733,150 +903,6 @@
 	<dd>
 		
 <span class="param-type"><a href="TransformLink.html">TransformLink</a></span>
-
-
-	</dd>
-</dl>
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="removeLink"><span class="type-signature"></span>removeLink<span class="signature">(index)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        Removes a link by it's index.
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>index</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Integer</span>
-
-
-            
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last">The link's index</td>
-        </tr>
-	
-	
-	</tbody>
-</table>
-    
-    
-    
-<dl class="details">
-    
-        
-    
-    
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="PhysicObject.html#removeLink">PhysicObject#removeLink</a>
-    </li></dd>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="BaseObject.js.html">BaseObject.js</a>, <a href="BaseObject.js.html#line23">line 23</a>
-    </li></ul></dd>
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    success True if the link was removed successfully
-</div>
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-<span class="param-type">Boolean</span>
 
 
 	</dd>
@@ -1066,7 +1092,7 @@
 <br clear="both">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Wed Nov 13 2013 09:01:12 GMT+0100 (MEZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Sun Nov 17 2013 20:56:37 GMT+0100 (MEZ)
 </footer>
 
 <script> prettyPrint(); </script>

@@ -128,7 +128,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="rayCast"><span class="type-signature"></span>rayCast<span class="signature">(origin, direction)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="aabbIntersection"><span class="type-signature"></span>aabbIntersection<span class="signature">(min, may, filterMask)</span><span class="type-signature"> &rarr; {BaseObject[]}</span></h4>
     
     
 </dt>
@@ -136,7 +136,192 @@
     
     
     <div class="description">
-        Casts a ray and returns
+        Tests all objects against a AABB
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>min</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The minimum position of the AABB</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>may</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The maximum position of the AABB</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>filterMask</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Integer</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">Default is 0xFFFF</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Intersection.js.html">Intersection.js</a>, <a href="Intersection.js.html#line26">line 26</a>
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A array containing the objects that intersect with the AABB
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">BaseObject[]</span>
+
+
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="rayCast"><span class="type-signature"></span>rayCast<span class="signature">(origin, direction, filterMask, nearest)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        Tests all objects against a ray
     </div>
     
 
@@ -213,6 +398,52 @@
         </tr>
 	
 	
+	
+        <tr>
+            
+                <td class="name"><code>filterMask</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Integer</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">Default is 0xFFFF</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>nearest</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">If true then only the first object in the direction of the ray will be returned</td>
+        </tr>
+	
+	
 	</tbody>
 </table>
     
@@ -240,7 +471,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Intersection.js.html">Intersection.js</a>, <a href="Intersection.js.html#line12">line 12</a>
+        <a href="Intersection.js.html">Intersection.js</a>, <a href="Intersection.js.html#line15">line 15</a>
     </li></ul></dd>
     
     
@@ -261,6 +492,213 @@
     
     
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A hash map containing the objects that intersect with the ray, the hit points and hit normals
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">Object</span>
+
+
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="sphereIntersection"><span class="type-signature"></span>sphereIntersection<span class="signature">(center, radius, filterMask)</span><span class="type-signature"> &rarr; {BaseObject[]}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        Tests all objects against a sphere
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>center</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The center position of the sphere</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>radius</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The radius of the sphere</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>filterMask</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Integer</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">Default is 0xFFFF</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Intersection.js.html">Intersection.js</a>, <a href="Intersection.js.html#line37">line 37</a>
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A array containing the objects that intersect with the sphere
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">BaseObject[]</span>
+
+
+	</dd>
+</dl>
+
+        
     
     
 </dd>
@@ -287,7 +725,7 @@
 <br clear="both">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Wed Nov 13 2013 09:01:12 GMT+0100 (MEZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Sun Nov 17 2013 20:56:37 GMT+0100 (MEZ)
 </footer>
 
 <script> prettyPrint(); </script>

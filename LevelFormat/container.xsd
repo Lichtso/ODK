@@ -220,7 +220,11 @@
                                 <xsd:complexType>
                                     <xsd:sequence>
                                         <xsd:group ref="BaseLink"/>
-                                        <xsd:group ref="Transformation"/>
+                                        <xsd:element name="Frame" minOccurs="1" maxOccurs="unbounded">
+                                            <xsd:complexType>
+                                                <xsd:group ref="Transformation"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
                                     </xsd:sequence>
                                 </xsd:complexType>
                             </xsd:element>

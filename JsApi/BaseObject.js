@@ -16,15 +16,6 @@ function BaseObject(){
 	}
 
 	/**
-     Removes a link by it's index.
-     @param {Integer} index The link's index
-     @returns {Boolean} success True if the link was removed successfully
-	*/
-	this.removeLink = function(){
-		//[native code]
-	}
-
-	/**
      Gets a link by it's index.
      @params {Integer} index The link's index
      @returns {BaseLink} The requested link
@@ -42,10 +33,18 @@ function BaseObject(){
 	}
 
 	/**
-	 Returns the link to this object's parent (if any)
+	 Returns the TransformLink to this object's parent (if any)
 	 @returns {TransformLink} Link to the parent or undefined, if object has no parent
 	*/
-	this.getParentLink = function(){
+	this.getTransformUpLink = function(){
+		//[native code]
+	}
+
+	/**
+	 Returns the BoneLink to this object's parent (if any)
+	 @returns {BoneLink} Link to the parent or undefined, if object has no parent
+	*/
+	this.getBoneUpLink = function(){
 		//[native code]
 	}
 

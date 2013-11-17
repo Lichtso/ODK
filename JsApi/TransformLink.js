@@ -6,8 +6,9 @@
 function TransformLink(){
 
 	/**
-	 Can either set the transformation via a Matrix4,
-     or get the transformation as a cloned instance of the object's transformation matrix.
+	 Can either set a transformation via a Matrix4,
+     or get a transformation as a cloned instance of the object's transformation matrices.
+     @param {Integer} index The index of the transformation
      @param {Matrix4} [transformation] The transformation matrix
      @returns {Matrix4} A copy of the transformation matrix
 	*/
