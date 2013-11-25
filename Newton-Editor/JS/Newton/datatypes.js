@@ -1,8 +1,16 @@
 // Newton Object Template for storing collada object describtions
 var NewtonObjectTemplate = function(){
 
-	// We will keep dae data for duplication
-	this.daeData = undefined;
+	this.templateInstance = undefined;
+
+	this.setTemplate = function(obj){
+
+		this.templateInstance = JSON.parse(JSON.stringify(obj));
+
+	}
+
+	
+
 }
 
 // Newton Object instance

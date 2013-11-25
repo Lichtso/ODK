@@ -53,6 +53,7 @@ Newton.updateOutlineView = function(){
 }
 
 function modal(divId, encapsulated){
+	
 	encapsulated = encapsulated || false;
 	if(encapsulated)
 		$.modal.close();
@@ -62,14 +63,28 @@ function modal(divId, encapsulated){
 
 function handleTemplateClick(event){
 
-	Newton.objectDispatcher.dispatchInstanceForTemplate(event.target.id);
+	//TODO
 
 }
 
 function handleInstanceClick(event){
 
 	//Newton.selectObject(event.target.newtonId);
-	Newton.selectCamera(event.target.newtonId);
+	//Newton.selectCamera(event.target.newtonId);
+
+	switch(Newton.objectForId(event.target.newtonId).objectType){
+
+		case "cameraObject":
+			Newton.selectCamera(event.target.newtonId);
+			console.log(event);
+
+			event.target.innerText += " [selected]";
+		break;
+
+		default:
+			console.log(Newton.objectForId(event.target.newtonId).objectType);
+
+	}
 
 }
 

@@ -14,7 +14,7 @@
  * NOTE: For best code readability, view this with a fixed-space font and tabs equal to 4-chars
  */
 
-/* Some Custom code by @strangedev for the icarus edior*/
+/* Some Custom code by @strangedev for the newton edior*/
 
 .dropdown {
 
@@ -149,6 +149,14 @@
 }
 
 .panel-divider {
+
+	color: #424242;
+	border-color: #424242;
+	background-color: #424242;
+
+}
+
+hr {
 
 	color: #424242;
 	border-color: #424242;

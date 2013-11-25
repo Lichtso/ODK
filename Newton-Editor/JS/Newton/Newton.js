@@ -242,6 +242,9 @@ Newton.start = function(){
 
 Newton.debug = function(){
 
+	var foo = new NewtonPhysicObject();
+	foo.showParameterGUI("parameters");
+
 	//this.test = new NewtonDirectionalLight();
 	//this.test = new NewtonSpotLight();
 	this.test = new NewtonPositionalLight();
