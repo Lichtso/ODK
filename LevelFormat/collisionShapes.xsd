@@ -8,6 +8,7 @@
                     <xsd:complexType>
                         <xsd:attribute name="id" type="xsd:string" use="required"/>
                         <xsd:attribute name="size" type="Vector3" use="required"/>
+                        <xsd:attribute name="direction" type="AxisName" use="required"/>
                     </xsd:complexType>
                 </xsd:element>
                 <xsd:element name="Box" minOccurs="0" maxOccurs="unbounded">
