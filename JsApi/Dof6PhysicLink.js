@@ -1,112 +1,131 @@
 /**
  Dof6PhysicLink
- @class [Description text]
- @param {RigidObject} objectA The first object
- @param {RigidObject} objectB The second object
- @param {Matrix4} frameA [Parameter Description]
- @param {Matrix4} frameB [Parameter Description]
- @param {Boolean} frameB [Parameter Description]
+ @class Represents a three axis linear and three axis angular constraint.
+ @param {Matrix4} frameA A matrix as description of dof6 relative to objectA
+ @param {Matrix4} frameB A matrix as description of dof6 relative to objectB
  @extends PhysicLink
- @property {Matrix4} frameA [Property decription]
- @property {Matrix4} frameB [Property decription]
 */
 function Dof6PhysicLink(){
 
 	/**
-	 Can either set the spring stiffness via a Vector3 representing the color,
-     or get the color as a cloned instance.
-     @param {Vector3} [color3] The color as Vector3 (RGB)
-     @returns {Vector3} A copy of the color as Vector3
+	 Can set the frameA via a Matrix4
+     or get the frameA as a cloned instance.
+     @param {Matrix4} [frameA] The new frameA matrix
+     @returns {Matrix4} A copy of the frameA matrix
+	*/
+	this.frameA = function(){
+		//[native code]
+	}
+
+	/**
+	 Can set the frameB via a Matrix4
+     or get the frameB as a cloned instance.
+     @param {Matrix4} [frameB] The new frameB matrix
+     @returns {Matrix4} A copy of the frameB matrix
+	*/
+	this.frameB = function(){
+		//[native code]
+	}
+
+	/**
+	 Can set the stiffness of a spring,
+     or get the current value.
+     A value below or equal to 0.0 deactivates the spring.
+     @param {Integer} [index] The index of the spring
+     @param {Number} [stiffness] The new stiffness
+     @returns {Number} The stiffness
 	*/
 	this.springStiffness = function(){
 		//[native code]
 	}
 
 	/**
-	 Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
-     @param {Vector3} [color3] The color as Vector3 (RGB)
-     @returns {Vector3} A copy of the color as Vector3
+	 Can set the damping of a spring,
+     or get the current value.
+     @param {Integer} [index] The index of the spring
+     @param {Number} [damping] The new damping
+     @returns {Number} The damping
 	*/
 	this.springDamping = function(){
 		//[native code]
 	}
 
 	/**
-	 Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
-     @param {Vector3} [color3] The color as Vector3 (RGB)
-     @returns {Vector3} A copy of the color as Vector3
+	 Can set the equilibrium point of a spring,
+     or get the current value.
+     @param {Integer} [index] The index of the spring
+     @param {Number} [equilibrium] The new equilibrium point
+     @returns {Number} The equilibrium point
 	*/
 	this.springEquilibrium = function(){
 		//[native code]
 	}
 
 	/**
-	 Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
-     @param {Vector3} [color3] The color as Vector3 (RGB)
-     @returns {Vector3} A copy of the color as Vector3
+	 Can enable or disable a motor.
+	 @param {Integer} [index] The index of the motor
+     @param {Boolean} [enabled]
+     @returns {Boolean} Ture if the motor is enabled
 	*/
 	this.motorEnabled = function(){
 		//[native code]
 	}
 
 	/**
-	 Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
-     @param {Vector3} [color3] The color as Vector3 (RGB)
-     @returns {Vector3} A copy of the color as Vector3
+	 Can set or get the velocity of a motor.
+	 @param {Integer} [index] The index of the motor
+     @param {Number} [velocity]
+     @returns {Number} The velocity of the motor
 	*/
 	this.motorVelocity = function(){
 		//[native code]
 	}
 
 	/**
-	 Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
-     @param {Vector3} [color3] The color as Vector3 (RGB)
-     @returns {Vector3} A copy of the color as Vector3
+	 Can set or get the force of a motor.
+	 @param {Integer} [index] The index of the motor
+     @param {Number} [force]
+     @returns {Number} The force of the motor
 	*/
 	this.motorForce = function(){
 		//[native code]
 	}
 
 	/**
-	 Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
-     @param {Vector3} [color3] The color as Vector3 (RGB)
-     @returns {Vector3} A copy of the color as Vector3
+	 Can set the lower angular limit via a Vector3
+     or get the lower angular limit as a cloned instance.
+     @param {Vector3} [frameA] The new lower angular limit
+     @returns {Vector3} A copy of the lower angular limit
 	*/
 	this.angularLimitMin = function(){
 		//[native code]
 	}
 
 	/**
-	 Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
-     @param {Vector3} [color3] The color as Vector3 (RGB)
-     @returns {Vector3} A copy of the color as Vector3
+	 Can set the upper angular limit via a Vector3
+     or get the upper angular limit as a cloned instance.
+     @param {Vector3} [frameA] The new upper angular limit
+     @returns {Vector3} A copy of the upper angular limit
 	*/
 	this.angularLimitMax = function(){
 		//[native code]
 	}
 
 	/**
-	 Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
-     @param {Vector3} [color3] The color as Vector3 (RGB)
-     @returns {Vector3} A copy of the color as Vector3
+	 Can set the lower linear limit via a Vector3
+     or get the lower linear limit as a cloned instance.
+     @param {Vector3} [frameA] The new lower linear limit
+     @returns {Vector3} A copy of the lower linear limit
 	*/
 	this.linearLimitMin = function(){
 		//[native code]
 	}
 
 	/**
-	 Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
-     @param {Vector3} [color3] The color as Vector3 (RGB)
-     @returns {Vector3} A copy of the color as Vector3
+	 Can set the upper linear limit via a Vector3
+     or get the upper v limit as a cloned instance.
+     @param {Vector3} [frameA] The new upper linear limit
+     @returns {Vector3} A copy of the upper linear limit
 	*/
 	this.linearLimitMax = function(){
 		//[native code]

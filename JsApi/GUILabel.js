@@ -13,7 +13,7 @@
 function GUILabel(){
 
 	/**
-	 Can either set the color via a quaternion representing the colors,
+	 Can set the color via a quaternion representing the colors,
      or get the colors as a cloned instance.
      @param {Quaternion} [color4] The colors as a quaternion (RGBA)
      @returns {Quaternion} A copy of the color quaternion

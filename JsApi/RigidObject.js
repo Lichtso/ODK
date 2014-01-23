@@ -11,7 +11,7 @@
 function RigidObject(){
 
 	/**
-	 Can either set the angular velocity via a Vector3,
+	 Can set the angular velocity via a Vector3,
      or get the angular velocity as a cloned instance.
      @param {Vector3} [angularVelocity] The new angular velocity
      @returns {Vector3} The angular velocity of this object
@@ -21,7 +21,7 @@ function RigidObject(){
 	}
 
 	/**
-	 Can either set the linear velocity via a Vector3,
+	 Can set the linear velocity via a Vector3,
      or get the linear velocity as a cloned instance.
      @param {Vector3} [linearVelocity] The new linear velocity
      @returns {Vector3} The linear velocity of this object
@@ -31,7 +31,7 @@ function RigidObject(){
 	}
 
 	/**
-	 Can either set the angular factor via a Vector3,
+	 Can set the angular factor via a Vector3,
      or get the angular factor as a cloned instance.
      @param {Vector3} [angularFactor] The new angular factor
      @returns {Vector3} The angular factor of this object
@@ -41,7 +41,7 @@ function RigidObject(){
 	}
 
 	/**
-	 Can either set the linear factor via a Vector3,
+	 Can set the linear factor via a Vector3,
      or get the linear factor as a cloned instance.
      @param {Vector3} [linearFactor] The new linear factor
      @returns {Vector3} The linear factor of this object
@@ -90,7 +90,7 @@ function RigidObject(){
 	}
 
 	/**
-     Can either set the animation time (like a playhead) in seconds,
+     Can set the animation time (like a playhead) in seconds,
      or get the animation time.
      @param {Number} [animationTime] Time in seconds elapsed since the start point of the animation
      @returns {Number} The time in seconds elapsed since the start point of the animation

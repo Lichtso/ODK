@@ -4,13 +4,58 @@
  @constructor
  @param {Number[]} [values] 16-element Array
  @param {Matrix4} [matrix] matrix to copy
- @property {Vector3} x RowX
- @property {Vector3} y RowY
- @property {Vector3} z RowZ
- @property {Vector3} w RowW
- @property {Quaternion} rotation Rotation quaternion
 */
 function Matrix4(){
+
+	/**
+ 	 Can set x via a Vector3,
+     or get x as a cloned instance.
+     @param {Vector3} [x] The x vector
+     @returns {Vector3} A clone of x vector
+	*/
+	this.x = function(){
+		//[native code]
+	}
+
+	/**
+ 	 Can set y via a Vector3,
+     or get y as a cloned instance.
+     @param {Vector3} [y] The y vector
+     @returns {Vector3} A clone of y vector
+	*/
+	this.y = function(){
+		//[native code]
+	}
+
+	/**
+ 	 Can set z via a Vector3,
+     or get z as a cloned instance.
+     @param {Vector3} [z] The z vector
+     @returns {Vector3} A clone of z vector
+	*/
+	this.z = function(){
+		//[native code]
+	}
+
+	/**
+ 	 Can set w via a Vector3,
+     or get w as a cloned instance.
+     @param {Vector3} [w] The w vector
+     @returns {Vector3} A clone of w vector
+	*/
+	this.w = function(){
+		//[native code]
+	}
+
+	/**
+ 	 Can set the rotation via a Quaternion,
+     or get the rotation as a cloned instance.
+     @param {Quaternion} [w] The rotation quaternion
+     @returns {Quaternion} A clone of the rotation quaternion
+	*/
+	this.rotation = function(){
+		//[native code]
+	}
 
 	/**
 	 Gets string representation of matrix.

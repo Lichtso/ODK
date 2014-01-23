@@ -7,8 +7,28 @@
  @param {Vector3} axisB The axis the second object rotates around
  @param {Number} ratio The ratio of the gears radii (objectA to objectB). 1 means that they rotate equally.
  @extends PhysicLink
- @property {Vector3} axisA The axis the first object rotates around
- @property {Vector3} axisB The axis the second object rotates around
  @property {Number} ratio The ratio of the gears radii (objectA to objectB). 1 means that they rotate equally.
 */
-function GearPhysicLink(){}
+function GearPhysicLink(){
+
+	/**
+	 Can set the axisA via a Vector3,
+     or get the axisA as a cloned instance.
+     @param {Matrix4} [axisA] The new axisA vector
+     @returns {Matrix4} A copy of the axisA vector
+	*/
+	this.axisA = function(){
+		//[native code]
+	}
+
+	/**
+	 Can set the axisB via a Vector3,
+     or get the axisB as a cloned instance.
+     @param {Matrix4} [axisB] The new axisB vector
+     @returns {Matrix4} A copy of the axisB vector
+	*/
+	this.axisB = function(){
+		//[native code]
+	}
+	
+}

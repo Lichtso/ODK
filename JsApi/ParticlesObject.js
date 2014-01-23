@@ -14,7 +14,7 @@
 function ParticlesObject(){
 
 	/**
- 	 Can either set the global force (e.g. gravity) via a Vector3,
+ 	 Can set the global force (e.g. gravity) via a Vector3,
      or get the gloal force as a cloned instance.
      @param {Vector3} [force] The gloabl force to be applied
      @returns {Vector3} A clone of the system's global force
@@ -24,7 +24,7 @@ function ParticlesObject(){
 	}
 
 	/**
-	 Can either set the minimum position via a Vector3,
+	 Can set the minimum position via a Vector3,
      or get the minimum position as a cloned instance.
      The min. and max. position define a box in which the particles are spawned.
      @param {Vector3} [position] The minimum position
@@ -35,7 +35,7 @@ function ParticlesObject(){
 	}
 
 	/**
-	 Can either set the maximum position via a Vector3,
+	 Can set the maximum position via a Vector3,
      or get the maximum position as a cloned instance.
      The min. and max. position define a box in which the particles are spawned.
      @param {Vector3} [position] The maximum position
@@ -46,7 +46,7 @@ function ParticlesObject(){
 	}
 
 	/**
-	 Can either set the minimum direction via a Vector3,
+	 Can set the minimum direction via a Vector3,
      or get the minimum direction as a cloned instance.
      The min. and max. direction define a vector space, the particles will be spawned
      with a constant velocity that is a member of this vector space.
@@ -58,7 +58,7 @@ function ParticlesObject(){
 	}
 
 	/**
-	 Can either set the maximum direction via a Vector3,
+	 Can set the maximum direction via a Vector3,
      or get the maximum direction as a cloned instance.
      The min. and max. direction define a vector space, the particles will be spawned
      with a constant velocity that is a member of this vector space.

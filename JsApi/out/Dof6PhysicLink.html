@@ -30,7 +30,7 @@
     Dof6PhysicLink
     </h2>
     
-        <div class="class-description">[Description text]</div>
+        <div class="class-description">Represents a three axis linear and three axis angular constraint.</div>
     
 </header>  
 
@@ -41,7 +41,7 @@
     
         
 <dt>
-    <h4 class="name" id="Dof6PhysicLink"><span class="type-signature"></span>new Dof6PhysicLink<span class="signature">(objectA, objectB, frameA, frameB, frameB)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Dof6PhysicLink"><span class="type-signature"></span>new Dof6PhysicLink<span class="signature">(frameA, frameB)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -83,52 +83,6 @@
 	
         <tr>
             
-                <td class="name"><code>objectA</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type"><a href="RigidObject.html">RigidObject</a></span>
-
-
-            
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last">The first object</td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>objectB</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type"><a href="RigidObject.html">RigidObject</a></span>
-
-
-            
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last">The second object</td>
-        </tr>
-	
-	
-	
-        <tr>
-            
                 <td class="name"><code>frameA</code></td>
             
             
@@ -145,7 +99,7 @@
             
             
             
-            <td class="description last">[Parameter Description]</td>
+            <td class="description last">A matrix as description of dof6 relative to objectA</td>
         </tr>
 	
 	
@@ -168,30 +122,7 @@
             
             
             
-            <td class="description last">[Parameter Description]</td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>frameB</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-            
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last">[Parameter Description]</td>
+            <td class="description last">A matrix as description of dof6 relative to objectB</td>
         </tr>
 	
 	
@@ -201,80 +132,6 @@
     
     
 <dl class="details">
-    
-        
-        <h5 class="subsection-title">Properties:</h5>
-        
-        <dl>
-
-<table class="props">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>frameA</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Matrix4.html">Matrix4</a></span>
-
-
-            
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last">[Property decription]</td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>frameB</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Matrix4.html">Matrix4</a></span>
-
-
-            
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last">[Property decription]</td>
-        </tr>
-	
-	
-	</tbody>
-</table></dl>
-        
     
         
     
@@ -296,7 +153,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line13">line 13</a>
+        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line8">line 8</a>
     </li></ul></dd>
     
     
@@ -348,7 +205,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="angularLimitMax"><span class="type-signature"></span>angularLimitMax<span class="signature">(<span class="optional">color3</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
+    <h4 class="name" id="angularLimitMax"><span class="type-signature"></span>angularLimitMax<span class="signature">(<span class="optional">frameA</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
     
     
 </dt>
@@ -356,8 +213,8 @@
     
     
     <div class="description">
-        Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
+        Can set the upper angular limit via a Vector3
+     or get the upper angular limit as a cloned instance.
     </div>
     
 
@@ -393,7 +250,7 @@
 	
         <tr>
             
-                <td class="name"><code>color3</code></td>
+                <td class="name"><code>frameA</code></td>
             
             
             <td class="type">
@@ -419,7 +276,7 @@
             
             
             
-            <td class="description last">The color as Vector3 (RGB)</td>
+            <td class="description last">The new upper angular limit</td>
         </tr>
 	
 	
@@ -450,7 +307,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line91">line 91</a>
+        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line110">line 110</a>
     </li></ul></dd>
     
     
@@ -475,7 +332,7 @@
     
             
 <div class="param-desc">
-    A copy of the color as Vector3
+    A copy of the upper angular limit
 </div>
 
 
@@ -500,7 +357,7 @@
         
             
 <dt>
-    <h4 class="name" id="angularLimitMin"><span class="type-signature"></span>angularLimitMin<span class="signature">(<span class="optional">color3</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
+    <h4 class="name" id="angularLimitMin"><span class="type-signature"></span>angularLimitMin<span class="signature">(<span class="optional">frameA</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
     
     
 </dt>
@@ -508,8 +365,8 @@
     
     
     <div class="description">
-        Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
+        Can set the lower angular limit via a Vector3
+     or get the lower angular limit as a cloned instance.
     </div>
     
 
@@ -545,7 +402,7 @@
 	
         <tr>
             
-                <td class="name"><code>color3</code></td>
+                <td class="name"><code>frameA</code></td>
             
             
             <td class="type">
@@ -571,7 +428,7 @@
             
             
             
-            <td class="description last">The color as Vector3 (RGB)</td>
+            <td class="description last">The new lower angular limit</td>
         </tr>
 	
 	
@@ -602,7 +459,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line81">line 81</a>
+        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line100">line 100</a>
     </li></ul></dd>
     
     
@@ -627,7 +484,7 @@
     
             
 <div class="param-desc">
-    A copy of the color as Vector3
+    A copy of the lower angular limit
 </div>
 
 
@@ -726,7 +583,7 @@
         
             
 <dt>
-    <h4 class="name" id="linearLimitMax"><span class="type-signature"></span>linearLimitMax<span class="signature">(<span class="optional">color3</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
+    <h4 class="name" id="frameA"><span class="type-signature"></span>frameA<span class="signature">(<span class="optional">frameA</span>)</span><span class="type-signature"> &rarr; {<a href="Matrix4.html">Matrix4</a>}</span></h4>
     
     
 </dt>
@@ -734,8 +591,8 @@
     
     
     <div class="description">
-        Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
+        Can set the frameA via a Matrix4
+     or get the frameA as a cloned instance.
     </div>
     
 
@@ -771,13 +628,13 @@
 	
         <tr>
             
-                <td class="name"><code>color3</code></td>
+                <td class="name"><code>frameA</code></td>
             
             
             <td class="type">
             
                 
-<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+<span class="param-type"><a href="Matrix4.html">Matrix4</a></span>
 
 
             
@@ -797,7 +654,7 @@
             
             
             
-            <td class="description last">The color as Vector3 (RGB)</td>
+            <td class="description last">The new frameA matrix</td>
         </tr>
 	
 	
@@ -828,7 +685,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line111">line 111</a>
+        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line16">line 16</a>
     </li></ul></dd>
     
     
@@ -853,7 +710,311 @@
     
             
 <div class="param-desc">
-    A copy of the color as Vector3
+    A copy of the frameA matrix
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Matrix4.html">Matrix4</a></span>
+
+
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="frameB"><span class="type-signature"></span>frameB<span class="signature">(<span class="optional">frameB</span>)</span><span class="type-signature"> &rarr; {<a href="Matrix4.html">Matrix4</a>}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        Can set the frameB via a Matrix4
+     or get the frameB as a cloned instance.
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Argument</th>
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>frameB</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Matrix4.html">Matrix4</a></span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last">The new frameB matrix</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line26">line 26</a>
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A copy of the frameB matrix
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Matrix4.html">Matrix4</a></span>
+
+
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="linearLimitMax"><span class="type-signature"></span>linearLimitMax<span class="signature">(<span class="optional">frameA</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        Can set the upper linear limit via a Vector3
+     or get the upper v limit as a cloned instance.
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Argument</th>
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>frameA</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last">The new upper linear limit</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line130">line 130</a>
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A copy of the upper linear limit
 </div>
 
 
@@ -878,7 +1039,7 @@
         
             
 <dt>
-    <h4 class="name" id="linearLimitMin"><span class="type-signature"></span>linearLimitMin<span class="signature">(<span class="optional">color3</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
+    <h4 class="name" id="linearLimitMin"><span class="type-signature"></span>linearLimitMin<span class="signature">(<span class="optional">frameA</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
     
     
 </dt>
@@ -886,8 +1047,8 @@
     
     
     <div class="description">
-        Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
+        Can set the lower linear limit via a Vector3
+     or get the lower linear limit as a cloned instance.
     </div>
     
 
@@ -923,7 +1084,7 @@
 	
         <tr>
             
-                <td class="name"><code>color3</code></td>
+                <td class="name"><code>frameA</code></td>
             
             
             <td class="type">
@@ -949,7 +1110,7 @@
             
             
             
-            <td class="description last">The color as Vector3 (RGB)</td>
+            <td class="description last">The new lower linear limit</td>
         </tr>
 	
 	
@@ -980,7 +1141,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line101">line 101</a>
+        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line120">line 120</a>
     </li></ul></dd>
     
     
@@ -1005,7 +1166,7 @@
     
             
 <div class="param-desc">
-    A copy of the color as Vector3
+    A copy of the lower linear limit
 </div>
 
 
@@ -1030,7 +1191,7 @@
         
             
 <dt>
-    <h4 class="name" id="motorEnabled"><span class="type-signature"></span>motorEnabled<span class="signature">(<span class="optional">color3</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
+    <h4 class="name" id="motorEnabled"><span class="type-signature"></span>motorEnabled<span class="signature">(<span class="optional">index</span>, <span class="optional">enabled</span>)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
     
     
 </dt>
@@ -1038,8 +1199,7 @@
     
     
     <div class="description">
-        Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
+        Can enable or disable a motor.
     </div>
     
 
@@ -1075,13 +1235,13 @@
 	
         <tr>
             
-                <td class="name"><code>color3</code></td>
+                <td class="name"><code>index</code></td>
             
             
             <td class="type">
             
                 
-<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+<span class="param-type">Integer</span>
 
 
             
@@ -1101,7 +1261,40 @@
             
             
             
-            <td class="description last">The color as Vector3 (RGB)</td>
+            <td class="description last">The index of the motor</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>enabled</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last"></td>
         </tr>
 	
 	
@@ -1132,7 +1325,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line51">line 51</a>
+        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line70">line 70</a>
     </li></ul></dd>
     
     
@@ -1157,7 +1350,7 @@
     
             
 <div class="param-desc">
-    A copy of the color as Vector3
+    Ture if the motor is enabled
 </div>
 
 
@@ -1168,7 +1361,7 @@
 	</dt>
 	<dd>
 		
-<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+<span class="param-type">Boolean</span>
 
 
 	</dd>
@@ -1182,7 +1375,7 @@
         
             
 <dt>
-    <h4 class="name" id="motorForce"><span class="type-signature"></span>motorForce<span class="signature">(<span class="optional">color3</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
+    <h4 class="name" id="motorForce"><span class="type-signature"></span>motorForce<span class="signature">(<span class="optional">index</span>, <span class="optional">force</span>)</span><span class="type-signature"> &rarr; {Number}</span></h4>
     
     
 </dt>
@@ -1190,8 +1383,7 @@
     
     
     <div class="description">
-        Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
+        Can set or get the force of a motor.
     </div>
     
 
@@ -1227,13 +1419,13 @@
 	
         <tr>
             
-                <td class="name"><code>color3</code></td>
+                <td class="name"><code>index</code></td>
             
             
             <td class="type">
             
                 
-<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+<span class="param-type">Integer</span>
 
 
             
@@ -1253,7 +1445,40 @@
             
             
             
-            <td class="description last">The color as Vector3 (RGB)</td>
+            <td class="description last">The index of the motor</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>force</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last"></td>
         </tr>
 	
 	
@@ -1284,7 +1509,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line71">line 71</a>
+        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line90">line 90</a>
     </li></ul></dd>
     
     
@@ -1309,7 +1534,7 @@
     
             
 <div class="param-desc">
-    A copy of the color as Vector3
+    The force of the motor
 </div>
 
 
@@ -1320,7 +1545,7 @@
 	</dt>
 	<dd>
 		
-<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+<span class="param-type">Number</span>
 
 
 	</dd>
@@ -1334,7 +1559,7 @@
         
             
 <dt>
-    <h4 class="name" id="motorVelocity"><span class="type-signature"></span>motorVelocity<span class="signature">(<span class="optional">color3</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
+    <h4 class="name" id="motorVelocity"><span class="type-signature"></span>motorVelocity<span class="signature">(<span class="optional">index</span>, <span class="optional">velocity</span>)</span><span class="type-signature"> &rarr; {Number}</span></h4>
     
     
 </dt>
@@ -1342,8 +1567,7 @@
     
     
     <div class="description">
-        Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
+        Can set or get the velocity of a motor.
     </div>
     
 
@@ -1379,13 +1603,13 @@
 	
         <tr>
             
-                <td class="name"><code>color3</code></td>
+                <td class="name"><code>index</code></td>
             
             
             <td class="type">
             
                 
-<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+<span class="param-type">Integer</span>
 
 
             
@@ -1405,7 +1629,40 @@
             
             
             
-            <td class="description last">The color as Vector3 (RGB)</td>
+            <td class="description last">The index of the motor</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>velocity</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last"></td>
         </tr>
 	
 	
@@ -1436,7 +1693,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line61">line 61</a>
+        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line80">line 80</a>
     </li></ul></dd>
     
     
@@ -1461,7 +1718,7 @@
     
             
 <div class="param-desc">
-    A copy of the color as Vector3
+    The velocity of the motor
 </div>
 
 
@@ -1472,7 +1729,7 @@
 	</dt>
 	<dd>
 		
-<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+<span class="param-type">Number</span>
 
 
 	</dd>
@@ -1486,7 +1743,7 @@
         
             
 <dt>
-    <h4 class="name" id="springDamping"><span class="type-signature"></span>springDamping<span class="signature">(<span class="optional">color3</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
+    <h4 class="name" id="springDamping"><span class="type-signature"></span>springDamping<span class="signature">(<span class="optional">index</span>, <span class="optional">damping</span>)</span><span class="type-signature"> &rarr; {Number}</span></h4>
     
     
 </dt>
@@ -1494,8 +1751,8 @@
     
     
     <div class="description">
-        Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
+        Can set the damping of a spring,
+     or get the current value.
     </div>
     
 
@@ -1531,13 +1788,13 @@
 	
         <tr>
             
-                <td class="name"><code>color3</code></td>
+                <td class="name"><code>index</code></td>
             
             
             <td class="type">
             
                 
-<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+<span class="param-type">Integer</span>
 
 
             
@@ -1557,7 +1814,40 @@
             
             
             
-            <td class="description last">The color as Vector3 (RGB)</td>
+            <td class="description last">The index of the spring</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>damping</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last">The new damping</td>
         </tr>
 	
 	
@@ -1588,7 +1878,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line31">line 31</a>
+        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line49">line 49</a>
     </li></ul></dd>
     
     
@@ -1613,7 +1903,7 @@
     
             
 <div class="param-desc">
-    A copy of the color as Vector3
+    The damping
 </div>
 
 
@@ -1624,7 +1914,7 @@
 	</dt>
 	<dd>
 		
-<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+<span class="param-type">Number</span>
 
 
 	</dd>
@@ -1638,7 +1928,7 @@
         
             
 <dt>
-    <h4 class="name" id="springEquilibrium"><span class="type-signature"></span>springEquilibrium<span class="signature">(<span class="optional">color3</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
+    <h4 class="name" id="springEquilibrium"><span class="type-signature"></span>springEquilibrium<span class="signature">(<span class="optional">index</span>, <span class="optional">equilibrium</span>)</span><span class="type-signature"> &rarr; {Number}</span></h4>
     
     
 </dt>
@@ -1646,8 +1936,8 @@
     
     
     <div class="description">
-        Can either set the color via a Vector3 representing the color,
-     or get the color as a cloned instance.
+        Can set the equilibrium point of a spring,
+     or get the current value.
     </div>
     
 
@@ -1683,13 +1973,13 @@
 	
         <tr>
             
-                <td class="name"><code>color3</code></td>
+                <td class="name"><code>index</code></td>
             
             
             <td class="type">
             
                 
-<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+<span class="param-type">Integer</span>
 
 
             
@@ -1709,7 +1999,40 @@
             
             
             
-            <td class="description last">The color as Vector3 (RGB)</td>
+            <td class="description last">The index of the spring</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>equilibrium</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last">The new equilibrium point</td>
         </tr>
 	
 	
@@ -1740,7 +2063,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line41">line 41</a>
+        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line60">line 60</a>
     </li></ul></dd>
     
     
@@ -1765,7 +2088,7 @@
     
             
 <div class="param-desc">
-    A copy of the color as Vector3
+    The equilibrium point
 </div>
 
 
@@ -1776,7 +2099,7 @@
 	</dt>
 	<dd>
 		
-<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+<span class="param-type">Number</span>
 
 
 	</dd>
@@ -1790,7 +2113,7 @@
         
             
 <dt>
-    <h4 class="name" id="springStiffness"><span class="type-signature"></span>springStiffness<span class="signature">(<span class="optional">color3</span>)</span><span class="type-signature"> &rarr; {<a href="Vector3.html">Vector3</a>}</span></h4>
+    <h4 class="name" id="springStiffness"><span class="type-signature"></span>springStiffness<span class="signature">(<span class="optional">index</span>, <span class="optional">stiffness</span>)</span><span class="type-signature"> &rarr; {Number}</span></h4>
     
     
 </dt>
@@ -1798,8 +2121,9 @@
     
     
     <div class="description">
-        Can either set the spring stiffness via a Vector3 representing the color,
-     or get the color as a cloned instance.
+        Can set the stiffness of a spring,
+     or get the current value.
+     A value below or equal to 0.0 deactivates the spring.
     </div>
     
 
@@ -1835,13 +2159,13 @@
 	
         <tr>
             
-                <td class="name"><code>color3</code></td>
+                <td class="name"><code>index</code></td>
             
             
             <td class="type">
             
                 
-<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+<span class="param-type">Integer</span>
 
 
             
@@ -1861,7 +2185,40 @@
             
             
             
-            <td class="description last">The color as Vector3 (RGB)</td>
+            <td class="description last">The index of the spring</td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>stiffness</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last">The new stiffness</td>
         </tr>
 	
 	
@@ -1892,7 +2249,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line21">line 21</a>
+        <a href="Dof6PhysicLink.js.html">Dof6PhysicLink.js</a>, <a href="Dof6PhysicLink.js.html#line38">line 38</a>
     </li></ul></dd>
     
     
@@ -1917,7 +2274,7 @@
     
             
 <div class="param-desc">
-    A copy of the color as Vector3
+    The stiffness
 </div>
 
 
@@ -1928,7 +2285,7 @@
 	</dt>
 	<dd>
 		
-<span class="param-type"><a href="Vector3.html">Vector3</a></span>
+<span class="param-type">Number</span>
 
 
 	</dd>
@@ -1955,13 +2312,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="Animation.html">Animation</a></li><li><a href="BaseClass.html">BaseClass</a></li><li><a href="BaseLink.html">BaseLink</a></li><li><a href="BaseObject.html">BaseObject</a></li><li><a href="BoneLink.html">BoneLink</a></li><li><a href="CamObject.html">CamObject</a></li><li><a href="ConeTwistPhysicLink.html">ConeTwistPhysicLink</a></li><li><a href="DirectionalLight.html">DirectionalLight</a></li><li><a href="Dof6PhysicLink.html">Dof6PhysicLink</a></li><li><a href="GearPhysicLink.html">GearPhysicLink</a></li><li><a href="GUIButton.html">GUIButton</a></li><li><a href="GUICheckBox.html">GUICheckBox</a></li><li><a href="GUIFramedView.html">GUIFramedView</a></li><li><a href="GUIImage.html">GUIImage</a></li><li><a href="GUILabel.html">GUILabel</a></li><li><a href="GUIProgressBar.html">GUIProgressBar</a></li><li><a href="GUIRect.html">GUIRect</a></li><li><a href="GUIScreenView.html">GUIScreenView</a></li><li><a href="GUIScrollView.html">GUIScrollView</a></li><li><a href="GUISlider.html">GUISlider</a></li><li><a href="GUITabs.html">GUITabs</a></li><li><a href="GUITextField.html">GUITextField</a></li><li><a href="GUIView.html">GUIView</a></li><li><a href="HingePhysicLink.html">HingePhysicLink</a></li><li><a href="Intersection.html">Intersection</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="LightObject.html">LightObject</a></li><li><a href="Matrix4.html">Matrix4</a></li><li><a href="MatterObject.html">MatterObject</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="ParticlesObject.html">ParticlesObject</a></li><li><a href="PhysicLink.html">PhysicLink</a></li><li><a href="PhysicObject.html">PhysicObject</a></li><li><a href="PointPhysicLink.html">PointPhysicLink</a></li><li><a href="PositionalLight.html">PositionalLight</a></li><li><a href="Quaternion.html">Quaternion</a></li><li><a href="RigidObject.html">RigidObject</a></li><li><a href="SimpleObject.html">SimpleObject</a></li><li><a href="SliderPhysicLink.html">SliderPhysicLink</a></li><li><a href="SoundObject.html">SoundObject</a></li><li><a href="SpotLight.html">SpotLight</a></li><li><a href="TerrainObject.html">TerrainObject</a></li><li><a href="TransformLink.html">TransformLink</a></li><li><a href="Vector3.html">Vector3</a></li></ul><h3>Global</h3><ul><li><a href="global.html#accessSceneProperty">accessSceneProperty</a></li><li><a href="global.html#animationFactor">animationFactor</a></li><li><a href="global.html#gamePaused">gamePaused</a></li><li><a href="global.html#levelID">levelID</a></li><li><a href="global.html#loadContainer">loadContainer</a></li><li><a href="global.html#localizeString">localizeString</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#require">require</a></li><li><a href="global.html#saveLevel">saveLevel</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="Animation.html">Animation</a></li><li><a href="BaseClass.html">BaseClass</a></li><li><a href="BaseLink.html">BaseLink</a></li><li><a href="BaseObject.html">BaseObject</a></li><li><a href="BoneLink.html">BoneLink</a></li><li><a href="CamObject.html">CamObject</a></li><li><a href="ConeTwistPhysicLink.html">ConeTwistPhysicLink</a></li><li><a href="DirectionalLight.html">DirectionalLight</a></li><li><a href="Dof6PhysicLink.html">Dof6PhysicLink</a></li><li><a href="GearPhysicLink.html">GearPhysicLink</a></li><li><a href="GUIButton.html">GUIButton</a></li><li><a href="GUICheckBox.html">GUICheckBox</a></li><li><a href="GUIFramedView.html">GUIFramedView</a></li><li><a href="GUIImage.html">GUIImage</a></li><li><a href="GUILabel.html">GUILabel</a></li><li><a href="GUIProgressBar.html">GUIProgressBar</a></li><li><a href="GUIRect.html">GUIRect</a></li><li><a href="GUIScreenView.html">GUIScreenView</a></li><li><a href="GUIScrollView.html">GUIScrollView</a></li><li><a href="GUISlider.html">GUISlider</a></li><li><a href="GUITabs.html">GUITabs</a></li><li><a href="GUITextField.html">GUITextField</a></li><li><a href="GUIView.html">GUIView</a></li><li><a href="HingePhysicLink.html">HingePhysicLink</a></li><li><a href="Intersection.html">Intersection</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="LightObject.html">LightObject</a></li><li><a href="Matrix4.html">Matrix4</a></li><li><a href="MatterObject.html">MatterObject</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="ParticlesObject.html">ParticlesObject</a></li><li><a href="PhysicLink.html">PhysicLink</a></li><li><a href="PhysicObject.html">PhysicObject</a></li><li><a href="PositionalLight.html">PositionalLight</a></li><li><a href="Quaternion.html">Quaternion</a></li><li><a href="RigidObject.html">RigidObject</a></li><li><a href="SimpleObject.html">SimpleObject</a></li><li><a href="SliderPhysicLink.html">SliderPhysicLink</a></li><li><a href="SoundObject.html">SoundObject</a></li><li><a href="SpotLight.html">SpotLight</a></li><li><a href="TerrainObject.html">TerrainObject</a></li><li><a href="TransformLink.html">TransformLink</a></li><li><a href="Vector3.html">Vector3</a></li></ul><h3>Global</h3><ul><li><a href="global.html#accessSceneProperty">accessSceneProperty</a></li><li><a href="global.html#animationFactor">animationFactor</a></li><li><a href="global.html#gamePaused">gamePaused</a></li><li><a href="global.html#levelID">levelID</a></li><li><a href="global.html#loadContainer">loadContainer</a></li><li><a href="global.html#localizeString">localizeString</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#require">require</a></li><li><a href="global.html#saveLevel">saveLevel</a></li></ul>
 </nav>
 
 <br clear="both">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Sun Nov 17 2013 20:56:37 GMT+0100 (MEZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Thu Jan 23 2014 18:52:37 GMT+0100 (MEZ)
 </footer>
 
 <script> prettyPrint(); </script>

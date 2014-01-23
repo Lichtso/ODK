@@ -6,8 +6,8 @@
 function BaseObject(){
 
 	/**
-	 Can either set the transformation via a Matrix4,
-     or get the transformation as a cloned instance of the object's transformation matrix.
+	 Can set the transformation via a Matrix4,
+     or get the transformation as a cloned instance.
      @param {Matrix4} [transformation] The transformation matrix
      @returns {Matrix4} A copy of the transformation matrix
 	*/
