@@ -64,6 +64,13 @@
                                                     <xsd:attribute name="linear" type="xsd:decimal" use="required"/>
                                                 </xsd:complexType>
                                             </xsd:element>
+                                            <xsd:element name="Friction" minOccurs="0">
+                                                <xsd:complexType>
+                                                    <xsd:attribute name="angular" type="xsd:decimal" use="required"/>
+                                                    <xsd:attribute name="linear" type="xsd:decimal" use="required"/>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="Restitution" type="xsd:decimal" minOccurs="0"/>
                                         </xsd:choice>
                                     </xsd:sequence>
                                 </xsd:complexType>
@@ -201,6 +208,13 @@
                                             </xsd:choice>
                                             <xsd:element name="Bounds" type="Vector3" minOccurs="1"/>
                                             <xsd:element name="TextureScale" type="Vector2" minOccurs="1"/>
+                                            <xsd:element name="Friction" minOccurs="0">
+                                                <xsd:complexType>
+                                                    <xsd:attribute name="angular" type="xsd:decimal" use="required"/>
+                                                    <xsd:attribute name="linear" type="xsd:decimal" use="required"/>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="Restitution" type="xsd:decimal" minOccurs="0"/>
                                         </xsd:choice>
                                     </xsd:sequence>
                                 </xsd:complexType>
