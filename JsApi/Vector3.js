@@ -2,10 +2,15 @@
  3D vector
  @class
  @constructor
- @param {Array|Object|Number[]} coords x, y, z
- @property {Number} 0|x X-Coord
- @property {Number} 1|y Y-Coord
- @property {Number} 2|z Z-Coord
+ @param {Vector3} [vector] Vector3 to copy
+ @param {Object} [map] Map with keys: "x", "y", "z"
+ @param {Number[]} [values] Array of values: [x, y, z]
+ @param {Number} [x] Must be passed together as x, y, z
+ @param {Number} [y] Must be passed together as x, y, z
+ @param {Number} [z] Must be passed together as x, y, z
+ @property {Number} x X-Coord
+ @property {Number} y Y-Coord
+ @property {Number} z Z-Coord
 */
 function Vector3() {
 	/**

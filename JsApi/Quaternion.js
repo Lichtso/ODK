@@ -2,14 +2,24 @@
  Quaternion
  @class
  @constructor
- @param {Number[]} [values] Array of values: x, y, z, w
  @param {Quaternion} [quaternion] Quaternion to copy
- @param {Vector3} [vector] Vector3, must be passed together with angle
- @param {Number} [angle] Angle to be passed together with Vector3
- @property {Number} 0|x X-Value
- @property {Number} 1|y Y-Value
- @property {Number} 2|z Z-Value
- @property {Number} 3|w W-Value
+ @param {Object} [map] Map with keys: "x", "y", "z" (for yaw, pitch, roll)
+ @param {Number[]} [values] Array of values: [yaw, pitch, roll]
+ @param {Number} [yaw] Must be passed together as yaw, pitch, roll
+ @param {Number} [pitch] Must be passed together as yaw, pitch, roll
+ @param {Number} [roll] Must be passed together as yaw, pitch, roll
+ @param {Object} [map] Map with keys: "x", "y", "z", "w"
+ @param {Number[]} [values] Array of values: [x, y, z, w]
+ @param {Number} [x] Must be passed together as x, y, z, w
+ @param {Number} [y] Must be passed together as x, y, z, w
+ @param {Number} [z] Must be passed together as x, y, z, w
+ @param {Number} [w] Must be passed together as x, y, z, w
+ @param {Vector3} [vector] Must be passed together as vector, angle
+ @param {Number} [angle] Must be passed together as vector, angle
+ @property {Number} x X-Value
+ @property {Number} y Y-Value
+ @property {Number} z Z-Value
+ @property {Number} w W-Value
 */
 function Quaternion(){
 

@@ -2,6 +2,7 @@
  BaseObject
  @class Can't be constructed. Objects are created by loading containers.
  @extends BaseClass
+ @property {Integer} linkCount Gets the number of connected links
 */
 function BaseObject(){
 
@@ -12,23 +13,6 @@ function BaseObject(){
      @returns {Matrix4} A copy of the transformation matrix
 	*/
 	this.transformation = function(){
-		//[native code]
-	}
-
-	/**
-     Gets a link by it's index.
-     @params {Integer} index The link's index
-     @returns {BaseLink} The requested link
-	*/
-	this.getLink = function(){
-		//[native code]
-	}
-
-	/**
-     Gets the number of links for this object.
-     @returns {Integer} Number of links
-	*/
-	this.getLinkCount = function(){
 		//[native code]
 	}
 
@@ -45,6 +29,14 @@ function BaseObject(){
 	 @returns {BoneLink} Link to the parent or undefined, if object has no parent
 	*/
 	this.getBoneUpLink = function(){
+		//[native code]
+	}
+
+	/**
+	 Iterates the connected BaseLinks.
+     @param {Function} [callback] Callback function called for each link
+	*/
+	this.iterateLinks = function(){
 		//[native code]
 	}
 
