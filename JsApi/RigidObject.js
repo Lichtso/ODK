@@ -7,9 +7,6 @@
  @property kinematic {Boolean} If set to true, this RigidObject will push others away without changing its own transformation.
  @property angularDamping {Number} Factor of damping applied to the rotation, from 0 (dampingless) to 1 (static)
  @property linearDamping {Number} Factor of damping applied to the translation, from 0 (dampingless) to 1 (static)
- @property {Number} angularFriction Rolling friction
- @property {Number} linearFriction Sliding friction
- @property {Number} restitution Coefficient of restitution
 */
 function RigidObject(){
 

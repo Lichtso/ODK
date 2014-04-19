@@ -1,6 +1,6 @@
 /**
  Animation
- @class Globally accessible singleton, does not need to be constructed.
+ @class Is part of the singleton Engine. Globally accessible singleton, does not need to be constructed.
 */
 function Animation(){
 

@@ -3,6 +3,9 @@
  @class Can't be constructed. Objects are created by loading containers.
  @extends PhysicObject
  @property {Number} integrity If the integrity drops below 0, the object will be deleted. 
+ @property {Number} angularFriction Rolling friction
+ @property {Number} linearFriction Sliding friction
+ @property {Number} restitution Coefficient of restitution
 */
 function MatterObject(){
 

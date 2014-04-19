@@ -5,8 +5,7 @@
  @property {Number} fov The camera's field of view in radians
  @property {Number} near The camera's near plane
  @property {Number} far The camera's far plane
- @property {Number} width The camera's width (needed for aspect ratio or for orthogonal projection, set automatically)
- @property {Number} height The camera's height (needed for aspect ratio or for orthogonal projection, set automatically)
+ @property {Boolean} isMainCam Is this CamObject as the main camera
 */
 
 function CamObject(){
@@ -22,20 +21,4 @@ function CamObject(){
 		//[native code]
 	}
 
-	/**
-	 Sets this CamObject as the main camera.
-	 @returns {Undefined}
-	*/
-	this.setMainCam = function(){
-		//[native code]
-	}
-
 }
-
-/**
- Gets the current main camera.
- @function getMainCam
- @memberof CamObject
- @static
-*/
-function getMainCam(){}

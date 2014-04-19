@@ -1,6 +1,6 @@
 /**
  Intersection
- @class Contains functions to do intersection tests. Globally Accessible singleton, can't be instantiated.
+ @class Is part of the singleton Engine. Globally Accessible singleton, can't be instantiated.
 */
 function Intersection(){
 

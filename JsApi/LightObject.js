@@ -1,9 +1,8 @@
 /**
  LightObject
  @class Can't be constructed. Objects are created by loading containers.
- @extends PhysicObject
+ @extends BaseObject
  @property {Number} range (READONLY) The range of the light source
- @property {String} collisionShape (Not accessible for light objects)
 */
 function LightObject(){
 

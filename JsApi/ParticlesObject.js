@@ -5,7 +5,7 @@
  @property {Integer} maxParticles (Readonly) The maximum number of particles
  @property {String} texture The filename of the used texture
  @property {Boolean} transformAligned Wether the particles are aligned towards the camera or towards their own transformation
- @property {Number} systemLife The lifetime of the particle system in seconds
+ @property {Number} systemLife The lifetime of the particle system in seconds (or -1.0 for eternal life)
  @property {Number} lifeMin The minimum lifetime of a particle in seconds
  @property {Number} lifeMax The maximum lifetime of a particle in seconds
  @property {Number} sizeMin The minimum size of a particle

@@ -122,6 +122,7 @@ function Matrix4(){
 	/**
 	 Multiplies this matrix with another.
 	 @param {Matrix4} matrix the matrix to multiply with
+	 @returns {Matrix4} its self as result
 	*/
 	this.mult = function(){
 		//[native code]
@@ -130,6 +131,7 @@ function Matrix4(){
 	/**
 	 Scales the matrix using a vector.
 	 @param {Vector3} vector The vector to scale with
+	 @returns {Matrix4} its self as result
 	*/
 	this.scale = function(){
 		//[native code]
@@ -140,6 +142,7 @@ function Matrix4(){
  	 @param {Quaternion} [quaternion] The quaternion to perform the rotation with
  	 @param {Vector3} [vector] The vector to perform the rotation with, must be passed together with an angle
  	 @param {Number} [angle] The angle to be passed together with the vector
+ 	 @returns {Matrix4} its self as result
 	*/
 	this.rotate = function(){
 		//[native code]
@@ -148,10 +151,18 @@ function Matrix4(){
 	/**
      Translates the matrix using a Vector3.
      @param {Vector3} vector The Vector representing the translation
+     @returns {Matrix4} its self as result
 	*/
 	this.translate = function(){
 		//[native code]
 	}
 
+	/**
+ 	 Inverts this instance.
+ 	 @returns {Matrix4} its self as result
+	*/
+	this.invert = function(){
+		//[native code]
+	}
 
 }

@@ -137,18 +137,10 @@ function Quaternion(){
 		//[native code]
 	}
 
-	/**
-	 Sets the rotation via Vector3 and an angle.
-	 @param {Vector3} axis The rotation axis
-	 @param {Number} angle Angle
-	*/
-	this.setRotation = function(){
-		//[native code]
-	}
-
  	/**
      Perfoms quaternion addition on this instance.
      @param {Quaternion} quaternion Quaternion to add
+     @returns {Quaternion} its self as result
  	*/	
 	this.add = function(){
 		//[native code]
@@ -158,6 +150,7 @@ function Quaternion(){
 	/**
      Perfoms quaternion subtraction on this instance.
      @param {Quaternion} quaternion Quaternion to subtract
+     @returns {Quaternion} its self as result
 	*/
 	this.sub = function(){
 		//[native code]
@@ -167,14 +160,23 @@ function Quaternion(){
 	/**
      Perfoms quaternion multiplication on this instance.
      @param {Quaternion} quaternion Quaternion to muliply with
+     @returns {Quaternion} its self as result
 	*/
 	this.mult = function(){
 		//[native code]
 	}
 
+	/**
+	 Inverts this instance.
+	 @returns {Quaternion} its self as result
+	*/
+	this.invert = function(){
+		//[native code]
+	}
 
 	/**
      Normalizes this instance.
+     @returns {Quaternion} its self as result
 	*/
 	this.normalize = function(){
 		//[native code]

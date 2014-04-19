@@ -13,6 +13,23 @@
  @property {Number} z Z-Coord
 */
 function Vector3() {
+
+	/**
+	 Convertes Vector3 to a String
+	 @return {String} 'x y z'
+	*/
+	this.toString = function() {
+		//[native code]
+	};
+
+	/**
+	 Convertes Vector3 to a Array
+	 @return {Array} [x, y, z]
+	*/
+	this.toJSON = function() {
+		//[native code]
+	};
+
 	/**
 	 Calculates the angle between this and another Vector3.
 	 This method does not modify the vectors.
@@ -20,9 +37,9 @@ function Vector3() {
 	 @return {Number} radians
 	*/
 	this.getAngle = function(vec) {
-		//[native code] does something like:
-		return Math.acos(this.getDot(vec));
+		//[native code]
 	};
+
 	/**
 	 Calculates the sum of this and another Vector3.
 	 This method does not modify the vectors.
@@ -30,9 +47,9 @@ function Vector3() {
 	 @return {Vector3}
 	*/
 	this.getSum = function(vec) {
-		//[native code] does something like:
-		return new Vector3(this.x+vec.x, this.y+vec.y, this.z+vec.z);
+		//[native code]
 	};
+
 	/**
 	 Calculates the difference between this and another Vector3.
 	 This method does not modify the vectors.
@@ -40,9 +57,9 @@ function Vector3() {
 	 @return {Vector3}
 	*/
 	this.getDiff = function(vec) {
-		//[native code] does something like:
-		return new Vector3(this.x-vec.x, this.y-vec.y, this.z-vec.z);
+		//[native code]
 	};
+
 	/**
 	 Calculates the product of this and another Vector3 or a Number.
 	 This method does not modify the vectors.
@@ -52,6 +69,7 @@ function Vector3() {
 	this.getProduct = function(vec) {
 		//[native code]
 	};
+
 	/**
 	 Calculates the quotient of this and another Vector3 or a Number.
 	 This method does not modify the vectors.
@@ -61,6 +79,7 @@ function Vector3() {
 	this.getQuotient = function(vec) {
 		//[native code]
 	};
+
 	/**
 	 Calculates the dot product of this and another Vector3.
 	 This method does not modify the vectors.
@@ -68,9 +87,9 @@ function Vector3() {
 	 @return {Number}
 	*/
 	this.getDot = function(vec) {
-		//[native code] does something like:
-		return this.x*vec.x + this.y*vec.y + this.z*vec.z;
+		//[native code]
 	};
+
 	/**
 	 Calculates the cross product of this and another Vector3.
 	 This method does not modify the vectors.
@@ -80,15 +99,16 @@ function Vector3() {
 	this.getCross = function(vec) {
 		//[native code]
 	};
+
 	/**
 	 Calculates the length of this Vector3.
 	 This method does not modify the vector.
 	 @return {Number}
 	*/
 	this.getLength = function() {
-		//[native code] does something like:
-		return Math.sqrt(this.getDot(this));
+		//[native code]
 	};
+
 	/**
 	 Calculates the direction of this Vector3.
 	 This method does not modify the vector.
@@ -97,6 +117,7 @@ function Vector3() {
 	this.getNormalized = function() {
 		//[native code]
 	};
+
 	/**
 	 Calculates the linear interpolation between this and another Vector3.
 	 This method does not modify the vectors.
@@ -107,67 +128,58 @@ function Vector3() {
 	this.getInterpolation = function(vec, t) {
 		//[native code]
 	};
+
 	/**
 	 Adds another to this Vector3 and stores the result in this Vector3.
 	 @param {Vector3} vec
-	 @return {Vector3}
+	 @returns {Vector3} its self as result
 	*/
 	this.add = function(vec) {
 		//[native code]
 	};
+
 	/**
 	 Subtracts another from this Vector3 and stores the result in this Vector3.
 	 @param {Vector3} vec
-	 @return {Vector3}
+	 @returns {Vector3} its self as result
 	*/
 	this.sub = function(vec) {
 		//[native code]
 	};
+
 	/**
 	 Multiplies this Vector3 with another or a Number and stores the result in this Vector3.
 	 @param {Vector3|Number} vec
-	 @return {Vector3}
+	 @returns {Vector3} its self as result
 	*/
 	this.mult = function(vec) {
 		//[native code]
 	};
+
 	/**
 	 Divides this Vector3 by another or a Number and stores the result in this Vector3.
 	 @param {Vector3|Number} vec
-	 @return {Vector3}
+	 @returns {Vector3} its self as result
 	*/
 	this.divide = function(vec) {
 		//[native code]
 	};
+
 	/**
 	 Calculates the cross product of this and another Vector3 and stores the result in this Vector3.
 	 @param {Vector3} vec
-	 @return {Vector3}
+	 @returns {Vector3} its self as result
 	*/
 	this.cross = function(vec) {
 		//[native code]
 	};
+
 	/**
 	 Normalizes this Vector3.
-	 @return {Vector3}
+	 @returns {Vector3} its self as result
 	*/
 	this.normalize = function() {
 		//[native code]
 	};
-	/**
-	 Convertes Vector3 to a Array
-	 @return {Array} [x, y, z]
-	*/
-	this.toJSON = function() {
-		//[native code] does something like:
-		return [this.x, this.y, this.z];
-	};
-	/**
-	 Convertes Vector3 to a String
-	 @return {String} 'x y z'
-	*/
-	this.toString = function() {
-		//[native code] does something like:
-		return this.x+' '+this.y+' '+this.z;
-	};
+
 }

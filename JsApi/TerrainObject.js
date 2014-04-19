@@ -6,9 +6,6 @@
  @property width {Integer} The number of cells along the width axis
  @property length {Integer} The number of cells along the length axis
  @property bitDepth {Integer} The number of bits per height value
- @property {Number} angularFriction Rolling friction
- @property {Number} linearFriction Sliding friction
- @property {Number} restitution Coefficient of restitution
 */
 function TerrainObject(){
 
