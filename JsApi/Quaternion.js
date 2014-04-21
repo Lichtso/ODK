@@ -131,7 +131,7 @@ function Quaternion(){
 	 This method does not modify the quaternions.
 	 @param {Quaternion} quaternion Quaternion to interpolate to
 	 @param {Number} t Interpolation from 0.0 (only self) to 1.0 (only other)
-	 @return {Quaternion}
+	 @returns {Quaternion}
 	*/
 	this.getInterpolation = function(){
 		//[native code]

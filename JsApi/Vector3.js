@@ -16,7 +16,7 @@ function Vector3() {
 
 	/**
 	 Convertes Vector3 to a String
-	 @return {String} 'x y z'
+	 @returns {String} 'x y z'
 	*/
 	this.toString = function() {
 		//[native code]
@@ -24,7 +24,7 @@ function Vector3() {
 
 	/**
 	 Convertes Vector3 to a Array
-	 @return {Array} [x, y, z]
+	 @returns {Array} [x, y, z]
 	*/
 	this.toJSON = function() {
 		//[native code]
@@ -33,77 +33,77 @@ function Vector3() {
 	/**
 	 Calculates the angle between this and another Vector3.
 	 This method does not modify the vectors.
-	 @param {Vector3} vec
-	 @return {Number} radians
+	 @param {Vector3} vec other Vector3
+	 @returns {Number} radians
 	*/
-	this.getAngle = function(vec) {
+	this.getAngle = function() {
 		//[native code]
 	};
 
 	/**
 	 Calculates the sum of this and another Vector3.
 	 This method does not modify the vectors.
-	 @param {Vector3} vec
-	 @return {Vector3}
+	 @param {Vector3} vec other Vector3
+	 @returns {Vector3}
 	*/
-	this.getSum = function(vec) {
+	this.getSum = function() {
 		//[native code]
 	};
 
 	/**
 	 Calculates the difference between this and another Vector3.
 	 This method does not modify the vectors.
-	 @param {Vector3} vec
-	 @return {Vector3}
+	 @param {Vector3} vec other Vector3
+	 @returns {Vector3}
 	*/
-	this.getDiff = function(vec) {
+	this.getDiff = function() {
 		//[native code]
 	};
 
 	/**
 	 Calculates the product of this and another Vector3 or a Number.
 	 This method does not modify the vectors.
-	 @param {Vector3|Number} vec
-	 @return {Vector3}
+	 @param {Vector3|Number} factor factor
+	 @returns {Vector3}
 	*/
-	this.getProduct = function(vec) {
+	this.getProduct = function() {
 		//[native code]
 	};
 
 	/**
 	 Calculates the quotient of this and another Vector3 or a Number.
 	 This method does not modify the vectors.
-	 @param {Vector3|Number} vec
-	 @return {Vector3}
+	 @param {Vector3|Number} vec other Vector3
+	 @returns {Vector3}
 	*/
-	this.getQuotient = function(vec) {
+	this.getQuotient = function() {
 		//[native code]
 	};
 
 	/**
 	 Calculates the dot product of this and another Vector3.
 	 This method does not modify the vectors.
-	 @param {Vector3} vec
-	 @return {Number}
+	 @param {Vector3} vec other Vector3
+	 @returns {Number}
 	*/
-	this.getDot = function(vec) {
+	this.getDot = function() {
 		//[native code]
 	};
 
 	/**
 	 Calculates the cross product of this and another Vector3.
 	 This method does not modify the vectors.
-	 @param {Vector3} vec
-	 @return {Vector3}
+	 @param {Vector3} vec other Vector3
+	 @returns {Vector3}
 	*/
-	this.getCross = function(vec) {
+	this.getCross = function() {
 		//[native code]
 	};
 
 	/**
 	 Calculates the length of this Vector3.
 	 This method does not modify the vector.
-	 @return {Number}
+	 @returns {Number}
 	*/
 	this.getLength = function() {
 		//[native code]
@@ -112,7 +112,7 @@ function Vector3() {
 	/**
 	 Calculates the direction of this Vector3.
 	 This method does not modify the vector.
-	 @return {Vector3}
+	 @returns {Vector3}
 	*/
 	this.getNormalized = function() {
 		//[native code]
@@ -123,54 +123,54 @@ function Vector3() {
 	 This method does not modify the vectors.
 	 @param {Vector3} vec Vector3 to interpolate to
 	 @param {Number} t Interpolation from 0.0 (only self) to 1.0 (only other)
-	 @return {Vector3}
+	 @returns {Vector3}
 	*/
-	this.getInterpolation = function(vec, t) {
+	this.getInterpolation = function() {
 		//[native code]
 	};
 
 	/**
 	 Adds another to this Vector3 and stores the result in this Vector3.
-	 @param {Vector3} vec
+	 @param {Vector3} vec other Vector3
 	 @returns {Vector3} its self as result
 	*/
-	this.add = function(vec) {
+	this.add = function() {
 		//[native code]
 	};
 
 	/**
 	 Subtracts another from this Vector3 and stores the result in this Vector3.
-	 @param {Vector3} vec
+	 @param {Vector3} vec other Vector3
 	 @returns {Vector3} its self as result
 	*/
-	this.sub = function(vec) {
+	this.sub = function() {
 		//[native code]
 	};
 
 	/**
 	 Multiplies this Vector3 with another or a Number and stores the result in this Vector3.
-	 @param {Vector3|Number} vec
+	 @param {Vector3|Number} vec other Vector3
 	 @returns {Vector3} its self as result
 	*/
-	this.mult = function(vec) {
+	this.mult = function() {
 		//[native code]
 	};
 
 	/**
 	 Divides this Vector3 by another or a Number and stores the result in this Vector3.
-	 @param {Vector3|Number} vec
+	 @param {Vector3|Number} vec other Vector3
 	 @returns {Vector3} its self as result
 	*/
-	this.divide = function(vec) {
+	this.divide = function() {
 		//[native code]
 	};
 
 	/**
 	 Calculates the cross product of this and another Vector3 and stores the result in this Vector3.
-	 @param {Vector3} vec
+	 @param {Vector3} vec other Vector3
 	 @returns {Vector3} its self as result
 	*/
-	this.cross = function(vec) {
+	this.cross = function() {
 		//[native code]
 	};
 

@@ -14,7 +14,7 @@ function TerrainObject(){
 	 @param {Integer} x From 0 to width-1
 	 @param {Integer} y From 0 to length-1
 	 @param {Number} [value] New value at x, y
-	 @return {Number} Current value at x, y
+	 @returns {Number} Current value at x, y
 	*/
 	this.accessCell = function(){
 		//[native code]

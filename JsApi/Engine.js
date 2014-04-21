@@ -1,7 +1,6 @@
 /**
  Engine
  @class Globally Accessible singleton, can't be instantiated.
- @property {Number} animationFactor (READONLY) Seconds elapsed since the last game tick
  @property {Boolean} gamePaused Is the game paused. See onpause()
  @property {String} levelID Path to the current loaded container (level)
 */
@@ -12,7 +11,7 @@ function Engine(){
 	 
 	 @param {Matrix4} transformation Where the container is inserted
 	 @param {String} path 'Container.xml'
-	 @return {Array} List of the loaded objects or null on failture
+	 @returns {Array} List of the loaded objects or null on failture
 	*/
 	function loadContainer(transformation, path) {
 		//[native code]
@@ -31,7 +30,7 @@ function Engine(){
 	 Loads a module if necessary.
 	 
 	 @param {String} path '../Package/File.js' or 'File.js'
-	 @return {Object} The module
+	 @returns {Object} The module
 	*/
 	function require(path) {
 		//[native code]
@@ -41,7 +40,7 @@ function Engine(){
 	 Localizes a given string in the selected language.
 	 
 	 @param {String} key The key in the language table.
-	 @return {String} The localize value in the language table.
+	 @returns {String} The localize value in the language table.
 	*/
 	function localizeString(key) {
 		//[native code]
@@ -55,7 +54,7 @@ function Engine(){
 	 @param {String} localData Stores arbitrary data in the level file (can only access the loaded level).
 	 @param {String} globalData Stores arbitrary data globally, can be accesed from everywhere.
 	 @param {String} description Stores a human readable description of the save game, can be accesed from everywhere.
-	 @return {Boolean} Success
+	 @returns {Boolean} Success
 	*/
 	function saveLevel(localData, globalData, description) {
 		//[native code]
@@ -67,7 +66,7 @@ function Engine(){
 	 
 	 @param {String} key 'Gravity', 'Ambient', 'FogColor' or 'FogDistance'
 	 @param {Number|Vector3} [value] The new value
-	 @return {Number|Vector3} The value of the key now (probably after being overwritten)
+	 @returns {Number|Vector3} The value of the key now (probably after being overwritten)
 	*/
 	function accessSceneProperty(key, value) {
 		//[native code]

@@ -7,7 +7,7 @@
  @param {Vector3} PointB The point relative to the second object, where the ball joint is placed
  @extends PhysicLink
 */
-function HingePhysicLink(){
+function PointPhysicLink(){
 
 	/**
 	 Can set the pointA via a Vector3,
