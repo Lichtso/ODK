@@ -1,0 +1,26 @@
+= Class: PositionalLight
+Can't be constructed. Objects are created by loading containers.
+
+=== Parent Class
+link:LightObject.html[LightObject]
+
+=== Property: omniDirectional
+_Is readonly_ +
+_Type:_ Boolean +
+Wether the light is emitted in all directions or not.
+
+
+
+== Method: setBounds
+Sets the bounds for this light object.
+
+=== Parameter: omniDirectional
+_Type:_ Boolean +
+Wether the light is emitted in all directions or not.
+
+=== Parameter: range
+_Type:_ Number +
+The range of the light source
+
+
+

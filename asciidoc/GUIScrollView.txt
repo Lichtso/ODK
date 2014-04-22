@@ -1,0 +1,36 @@
+= Class: GUIScrollView
+GUIScrollView
+
+=== Parent Class
+link:GUIFramedView.html[GUIFramedView]
+
+=== Constructor: parent
+_Type:_ GUIView +
+The parent view (master view is GUIScreenView())
+
+=== Property: sliderX
+_Type:_ Boolean +
+Determines if slider is visible)
+
+=== Property: sliderY
+_Type:_ Boolean +
+Determines if slider is visible)
+
+=== Property: scrollX
+_Type:_ Integer +
+Scroll amount x
+
+=== Property: scrollY
+_Type:_ Integer +
+Scroll amount y
+
+=== Property: contentWidth
+_Type:_ Integer +
+Self explaining :)
+
+=== Property: contentHeight
+_Type:_ Integer +
+See above
+
+
+

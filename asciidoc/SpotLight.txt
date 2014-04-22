@@ -1,0 +1,25 @@
+= Class: SpotLight
+Can't be constructed. Objects are created by loading containers.
+
+=== Parent Class
+link:LightObject.html[LightObject]
+
+=== Property: cutoff
+_Type:_ Number +
+The spotlight's cutoff (0 - PI/2)
+
+
+
+== Method: setBounds
+Sets the bounds for this light object.
+
+=== Parameter: cutoff
+_Type:_ Number +
+The spotlight's cutoff (0 - PI/2)
+
+=== Parameter: range
+_Type:_ Number +
+The range of the light source
+
+
+

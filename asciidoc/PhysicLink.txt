@@ -1,0 +1,32 @@
+= Class: PhysicLink
+Abstract class, can't be instantiated.
+
+=== Parent Class
+link:BaseLink.html[BaseLink]
+
+=== Property: burstImpulse
+_Type:_ Number +
+The amount of force needed to destroy the link
+
+=== Property: collisionDisabled
+_Type:_ Boolean +
+Wether the linked object collide or not (Useful for arrows stuck in walls etc.)
+
+=== Property: appliedForceObjectA
+_Type:_ Number +
+The linear force applied on objectA
+
+=== Property: appliedTorqueObjectA
+_Type:_ Number +
+The angular force applied on objectA
+
+=== Property: appliedForceObjectB
+_Type:_ Number +
+The linear force applied on objectB
+
+=== Property: appliedTorqueObjectB
+_Type:_ Number +
+The angular force applied on objectB
+
+
+

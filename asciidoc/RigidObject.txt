@@ -1,0 +1,128 @@
+= Class: RigidObject
+Can't be constructed. Objects are created by loading containers.
+
+=== Parent Class
+link:MatterObject.html[MatterObject]
+
+
+
+== Method: angularVelocity
+Can set the angular velocity via a Vector3, +
+or get the angular velocity as a cloned instance.
+
+=== Parameter: angularVelocity
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The new angular velocity
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+The angular velocity of this object
+
+
+
+== Method: linearVelocity
+Can set the linear velocity via a Vector3, +
+or get the linear velocity as a cloned instance.
+
+=== Parameter: linearVelocity
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The new linear velocity
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+The linear velocity of this object
+
+
+
+== Method: angularFactor
+Can set the angular factor via a Vector3, +
+or get the angular factor as a cloned instance.
+
+=== Parameter: angularFactor
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The new angular factor
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+The angular factor of this object
+
+
+
+== Method: linearFactor
+Can set the linear factor via a Vector3, +
+or get the linear factor as a cloned instance.
+
+=== Parameter: linearFactor
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The new linear factor
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+The linear factor of this object
+
+
+
+== Method: applyImpulseAtPoint
+Applies an impulse at a given point relative the the object's transformation. +
+The vector is measured relative to world space. +
+(Applies a linear and an angular impulse)
+
+=== Parameter: impulse
+_Type:_ link:Vector3.html[Vector3] +
+The impulse to be applied
+
+=== Parameter: point
+_Type:_ link:Vector3.html[Vector3] +
+The point where the impulse will be applied
+
+
+
+== Method: applyAngularImpulse
+Applies an angular impulse at the center of mass.
+
+=== Parameter: angularImpulse
+_Type:_ link:Vector3.html[Vector3] +
+The angular impulse to be applied
+
+
+
+== Method: applyLinearImpulse
+Applies a linear impulse at the center of mass. +
+The vector is measured relative to world space.
+
+=== Parameter: linearImpulse
+_Type:_ link:Vector3.html[Vector3] +
+The linear impulse to be applied
+
+
+
+== Method: findBoneByPath
+Gets a child node of the object's skeleton by it's name. +
+Returns undefined if the node is not found. +
+The whole path needs to be specified (i.e. ['Back','Hip','Thigh_Right','Shin_Right']).
+
+=== Returns:
+_Type:_ BoneObject +
+The node
+
+
+
+== Method: textureAnimationTime
+Can set the animation time (like a playhead) in seconds, +
+or get the animation time.
+
+=== Parameter: animationTime
+_Is optional_ +
+_Type:_ Number +
+Time in seconds elapsed since the start point of the animation
+
+=== Returns:
+_Type:_ Number +
+The time in seconds elapsed since the start point of the animation
+
+
+

@@ -1,0 +1,12 @@
+= Class: GUICheckBox
+Can be used like GUIButton, but is displayed as checkbox
+
+=== Parent Class
+link:GUIButton.html[GUIButton]
+
+=== Constructor: parent
+_Type:_ GUIView +
+The parent view (master view is GUIScreenView())
+
+
+

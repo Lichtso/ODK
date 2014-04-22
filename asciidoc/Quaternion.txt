@@ -1,0 +1,256 @@
+= Class: Quaternion
+Quaternion
+
+=== Constructor: quaternion
+_Type:_ link:Quaternion.html[Quaternion] +
+Copy a Quaternion
+
+=== Constructor: array
+_Type:_ Number[3] +
+Array containing yaw, pitch, roll.
+
+=== Constructor: array
+_Type:_ Number[4] +
+Array containing x, y, z, w.
+
+=== Constructor: map
+_Type:_ Object +
+Map with keys: "x", "y", "z" (for yaw, pitch, roll)
+
+=== Constructor: map
+_Type:_ Object +
+Map with keys: "x", "y", "z", "w"
+
+=== Constructor: yaw, pitch, roll
+_Types:_ Number, Number, Number +
+
+=== Constructor: x, y, z, w
+_Types:_ Number, Number, Number, Number +
+
+=== Constructor: vector, angle
+_Types:_ link:Vector3.html[Vector3], Number +
+
+=== Property: x
+_Type:_ Number +
+X-Value
+
+=== Property: y
+_Type:_ Number +
+Y-Value
+
+=== Property: z
+_Type:_ Number +
+Z-Value
+
+=== Property: w
+_Type:_ Number +
+W-Value
+
+
+
+== Method: toString
+Convertes Quaternion to a String
+
+=== Returns:
+_Type:_ String +
+'x y z w'
+
+
+
+== Method: toJSON
+Convertes Vector3 to a Array
+
+=== Returns:
+_Type:_ Array +
+x, y, z, w
+
+
+
+== Method: getAngle
+Gets angle between Quaternion and another Quaternion, +
+or the angle of this Quaternion +
+This method does not modify the quaternions.
+
+=== Parameter: quaternion
+_Is optional_ +
+_Type:_ link:Quaternion.html[Quaternion] +
+The quaternion between which the angle is calculated
+
+=== Returns:
+_Type:_ Number +
+The calculated angle 
+
+
+
+== Method: getAxis
+Gets axis of quaternion
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+Vector3 representation of axis
+
+
+
+== Method: getInverse
+Gets inverse quaternion
+
+=== Returns:
+_Type:_ link:Quaternion.html[Quaternion] +
+Inverse Quaternion
+
+
+
+== Method: getSum
+Gets the sum of this quaternion and another. +
+This method does not modify the quaternions.
+
+=== Parameter: quaternion
+_Type:_ link:Quaternion.html[Quaternion] +
+The quaternion which is added
+
+=== Returns:
+_Type:_ link:Quaternion.html[Quaternion] +
+The resulting quaternion
+
+
+
+== Method: getDifference
+Gets the difference between this quaternion and another. +
+This method does not modify the quaternions.
+
+=== Parameter: quaternion
+_Type:_ link:Quaternion.html[Quaternion] +
+The quaternion which is subtracted
+
+=== Returns:
+_Type:_ link:Quaternion.html[Quaternion] +
+The resulting quaternion
+
+
+
+== Method: getProduct
+Multiplies quaternion with another quaternion or a scalar. +
+You have to pass at least one of those arguments, but you can't pass both. +
+This method does not modify the quaternion(s).
+
+=== Parameter: quaternion
+_Is optional_ +
+_Type:_ link:Quaternion.html[Quaternion] +
+The quaternion to multiply with
+
+=== Parameter: scalar
+_Is optional_ +
+_Type:_ Number +
+The scalar to multiply with
+
+=== Returns:
+_Type:_ link:Quaternion.html[Quaternion] +
+The resulting quaternion
+
+
+
+== Method: getDotProduct
+Gets dot product of this quaternion and another. +
+This method does not modify the quaternions.
+
+=== Parameter: quaternion
+_Type:_ link:Quaternion.html[Quaternion] +
+The quaternion needed to calculate the dot product
+
+=== Returns:
+_Type:_ Number +
+The dot product
+
+
+
+== Method: getLength
+Gets the length of the quaternion. +
+This method does not modify the quaternions.
+
+=== Returns:
+_Type:_ Number +
+Length of the quaternion
+
+
+
+== Method: getNormalized
+Gets the normalized quaternion. +
+This method does not modify the quaternions.
+
+=== Returns:
+_Type:_ link:Quaternion.html[Quaternion] +
+The normalized quaternion
+
+
+
+== Method: getInterpolation
+Calculates the spherical linear interpolation between this and another Quaternion. +
+This method does not modify the quaternions.
+
+=== Parameter: quaternion
+_Type:_ link:Quaternion.html[Quaternion] +
+Quaternion to interpolate to
+
+=== Parameter: t
+_Type:_ Number +
+Interpolation from 0.0 (only self) to 1.0 (only other)
+
+
+
+== Method: add
+Perfoms quaternion addition on this instance.
+
+=== Parameter: quaternion
+_Type:_ link:Quaternion.html[Quaternion] +
+Quaternion to add
+
+=== Returns:
+_Type:_ link:Quaternion.html[Quaternion] +
+its self as result
+
+
+
+== Method: sub
+Perfoms quaternion subtraction on this instance.
+
+=== Parameter: quaternion
+_Type:_ link:Quaternion.html[Quaternion] +
+Quaternion to subtract
+
+=== Returns:
+_Type:_ link:Quaternion.html[Quaternion] +
+its self as result
+
+
+
+== Method: mult
+Perfoms quaternion multiplication on this instance.
+
+=== Parameter: quaternion
+_Type:_ link:Quaternion.html[Quaternion] +
+Quaternion to muliply with
+
+=== Returns:
+_Type:_ link:Quaternion.html[Quaternion] +
+its self as result
+
+
+
+== Method: invert
+Inverts this instance.
+
+=== Returns:
+_Type:_ link:Quaternion.html[Quaternion] +
+its self as result
+
+
+
+== Method: normalize
+Normalizes this instance.
+
+=== Returns:
+_Type:_ link:Quaternion.html[Quaternion] +
+its self as result
+
+
+

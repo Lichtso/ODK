@@ -1,0 +1,23 @@
+= Class: PhysicObject
+Can't be constructed. Objects are created by loading containers.
+
+=== Parent Class
+link:BaseObject.html[BaseObject]
+
+=== Property: collisionShape
+_Type:_ String +
+Name of the collision shape as declared in the collision shapes file
+
+
+
+== Method: collisionShapeInfo
+Generates a hash map containing information about the collision shape. +
+Contains the shape's type as well as type specific information as declared in +
+CollisionShapes.xsd.
+
+=== Returns:
+_Type:_ Object +
+The shape's information as a hash map
+
+
+

@@ -1,0 +1,20 @@
+= Class: GUIProgressBar
+GUIProgressBar
+
+=== Parent Class
+link:GUIRect.html[GUIRect]
+
+=== Constructor: parent
+_Type:_ GUIView +
+The parent view (master view is GUIScreenView())
+
+=== Property: orientation
+_Type:_ String +
+"vertical", "horizontal"
+
+=== Property: value
+_Type:_ Number +
+The current progress of the progress bar
+
+
+

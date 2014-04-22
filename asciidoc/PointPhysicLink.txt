@@ -1,0 +1,42 @@
+= Class: PointPhysicLink
+Represents a ball joint.
+
+=== Parent Class
+link:PhysicLink.html[PhysicLink]
+
+=== Constructor: objectA, objectB, frameA, frameB
+_Types:_ RigidObject, RigidObject, link:Vector3.html[Vector3], link:Vector3.html[Vector3] +
+The both objects to link together and two Vector3 as description of the position of the joint relative to each object
+
+
+
+== Method: pointA
+Can set the pointA via a Vector3, +
+or get the pointA as a cloned instance.
+
+=== Parameter: pointA
+_Is optional_ +
+_Type:_ link:Matrix4.html[Matrix4] +
+The new pointA vector
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the pointA vector
+
+
+
+== Method: pointB
+Can set the pointB via a Vector3, +
+or get the pointB as a cloned instance.
+
+=== Parameter: pointB
+_Is optional_ +
+_Type:_ link:Matrix4.html[Matrix4] +
+The new pointB vector
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the pointB vector
+
+
+

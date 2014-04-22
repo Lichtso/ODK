@@ -1,0 +1,32 @@
+= Class: GUISlider
+GUISlider
+
+=== Parent Class
+link:GUIRect.html[GUIRect]
+
+=== Constructor: parent
+_Type:_ GUIView +
+The parent view (master view is GUIScreenView())
+
+=== Property: orientation
+_Type:_ String +
+"vertical", "horizontal"
+
+=== Property: value
+_Type:_ Number +
+Current value of the slider
+
+=== Property: enabled
+_Type:_ Boolean +
+If the slider is enabled for interaction
+
+=== Property: steps
+_Type:_ Integer +
+The resolution of the slider
+
+=== Property: onchange
+_Type:_ Function +
+Anonymous function that is called on change
+
+
+

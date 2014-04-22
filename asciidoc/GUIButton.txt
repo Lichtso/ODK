@@ -1,0 +1,40 @@
+= Class: GUIButton
+GUIButton
+
+=== Parent Class
+link:GUIFramedView.html[GUIFramedView]
+
+=== Constructor: parent
+_Type:_ GUIView +
+The parent view (master view is GUIScreenView())
+
+=== Property: sizeAlignment
+_Type:_ String +
+"none", "height", "width", "all"
+
+=== Property: paddingX
+_Type:_ Integer +
+Horizontal padding
+
+=== Property: paddingY
+_Type:_ Integer +
+Vertical padding
+
+=== Property: enabled
+_Type:_ Boolean +
+Wether the button is enabled for user input or not
+
+=== Property: state
+_Type:_ String +
+"released", "highlighted", "pressed"
+
+=== Property: type
+_Type:_ String +
+"normal", "delete", "add", "edit", "lockable"
+
+=== Property: onclick
+_Type:_ Function +
+Anonymous function that is called when this element is clicked
+
+
+

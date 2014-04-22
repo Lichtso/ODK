@@ -1,0 +1,22 @@
+= Class: BaseLink
+Links two objects together, doesn't alter the physics.
+
+=== Parent Class
+link:BaseClass.html[BaseClass]
+
+=== Constructor: objectA, objectB
+_Types:_ BaseObject, BaseObject +
+The both objects to link together
+
+=== Property: objectA
+_Is readonly_ +
+_Type:_ BaseObject +
+The first object
+
+=== Property: objectB
+_Is readonly_ +
+_Type:_ BaseObject +
+The second object
+
+
+

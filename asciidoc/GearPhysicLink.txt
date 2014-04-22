@@ -1,0 +1,47 @@
+= Class: GearPhysicLink
+Represents two gears. Doesn't fix the objects in place, you are free to place them wherever you want.
+
+=== Parent Class
+link:PhysicLink.html[PhysicLink]
+
+=== Constructor: objectA, objectB, axisA, axisB, ratio
+_Types:_ RigidObject, RigidObject, link:Vector3.html[Vector3], link:Vector3.html[Vector3], Number +
+The both objects to link together, two Vector3 as description of the axis of the joint relative to each object +
+and the ratio of the gears radii (objectA to objectB). 1.0 means that they rotate equally.
+
+=== Property: ratio
+_Type:_ Number +
+The ratio of the gears radii (objectA to objectB). 1 means that they rotate equally.
+
+
+
+== Method: axisA
+Can set the axisA via a Vector3, +
+or get the axisA as a cloned instance.
+
+=== Parameter: axisA
+_Is optional_ +
+_Type:_ link:Matrix4.html[Matrix4] +
+The new axisA vector
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the axisA vector
+
+
+
+== Method: axisB
+Can set the axisB via a Vector3, +
+or get the axisB as a cloned instance.
+
+=== Parameter: axisB
+_Is optional_ +
+_Type:_ link:Matrix4.html[Matrix4] +
+The new axisB vector
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the axisB vector
+
+
+

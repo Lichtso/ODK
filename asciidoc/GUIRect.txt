@@ -1,0 +1,43 @@
+= Class: GUIRect
+Prototype for all GUI elements, can't be constructed.
+
+=== Property: x
+_Type:_ Integer +
+Position x
+
+=== Property: y
+_Type:_ Integer +
+Position y
+
+=== Property: width
+_Type:_ Integer +
+Size along the x axis form the center to the border
+
+=== Property: height
+_Type:_ Integer +
+Size along the y axis form the center to the border
+
+=== Property: visible
+_Type:_ Boolean +
+Determines if element is visible
+
+=== Property: focused
+_Type:_ Boolean +
+Determines if element is focused
+
+=== Property: parent
+_Type:_ GUIRect +
+The parent element
+
+
+
+== Method: delete
+Deletes this element (and all of it's children).
+
+
+
+== Method: updateContent
+Updates this elements content, useful when the content is changed directly.
+
+
+

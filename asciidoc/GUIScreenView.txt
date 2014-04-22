@@ -1,0 +1,16 @@
+= Class: GUIScreenView
+Represents the screen canvas. Globally accessible singleton, does not need to be constructed.
+
+=== Parent Class
+link:GUIView.html[GUIView]
+
+=== Property: focus
+_Type:_ GUIView +
+The element which is currently focused
+
+=== Property: modal
+_Type:_ GUIView +
+The current modal view (if any)
+
+
+

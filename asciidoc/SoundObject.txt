@@ -1,0 +1,28 @@
+= Class: SoundObject
+Can't be constructed. Objects are created by loading containers.
+
+=== Parent Class
+link:BaseObject.html[BaseObject]
+
+=== Property: soundTrack
+_Type:_ String +
+The name of the sound resource
+
+=== Property: timeOffset
+_Type:_ Number +
+Current time of player (in seconds)
+
+=== Property: volume
+_Type:_ Number +
+The volume of the sound object (between 0.0 and 1.0)
+
+=== Property: isPlaying
+_Type:_ Boolean +
+Wether the sound object is playing or not
+
+=== Property: mode
+_Type:_ String +
+"looping", "hold", "dispose"
+
+
+

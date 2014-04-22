@@ -1,0 +1,67 @@
+= Class: HingePhysicLink
+Represents a hinge.
+
+=== Parent Class
+link:PhysicLink.html[PhysicLink]
+
+=== Constructor: objectA, objectB, frameA, frameB
+_Types:_ RigidObject, RigidObject, link:Matrix4.html[Matrix4], link:Matrix4.html[Matrix4] +
+The both objects to link together and two Matrix4 as description of the axis of the joint relative to each object
+
+=== Property: hingeAngle
+_Is readonly_ +
+_Type:_ Number +
+The current angle between both objects (measured relative to the initial position)
+
+=== Property: angularLimitMin
+_Type:_ Number +
+The minimal hingeAngle as a hard limit
+
+=== Property: angularLimitMax
+_Type:_ Number +
+The maximal hingeAngle as a hard limit
+
+=== Property: angularMotorEnabled
+_Type:_ Boolean +
+Activates the motor around the axis if set to true
+
+=== Property: angularMotorVelocity
+_Type:_ Number +
+The velocity of the motor around the axis
+
+=== Property: angularMotorForce
+_Type:_ Number +
+The maximal force of the motor around the axis
+
+
+
+== Method: frameA
+Can set the frameA via a Matrix4, +
+or get the frameA as a cloned instance.
+
+=== Parameter: frameA
+_Is optional_ +
+_Type:_ link:Matrix4.html[Matrix4] +
+The new frameA matrix
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the frameA matrix
+
+
+
+== Method: frameB
+Can set the frameB via a Matrix4, +
+or get the frameB as a cloned instance.
+
+=== Parameter: frameB
+_Is optional_ +
+_Type:_ link:Matrix4.html[Matrix4] +
+The new frameB matrix
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the frameB matrix
+
+
+

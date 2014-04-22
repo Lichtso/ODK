@@ -1,0 +1,42 @@
+= Class: CamObject
+Can't be constructed. Objects are created by loading containers.
+
+=== Parent Class
+link:BaseObject.html[BaseObject]
+
+=== Property: fov
+_Type:_ Number +
+The camera's field of view in radians
+
+=== Property: near
+_Type:_ Number +
+The camera's near plane
+
+=== Property: far
+_Type:_ Number +
+The camera's far plane
+
+=== Property: isMainCam
+_Type:_ Boolean +
+Is this CamObject as the main camera
+
+
+
+== Method: getViewRay
+Gets a ray pointing away from the camera beginning at a certain point on the screen. +
+The ray is represented as a hash map, containing two vectors, .origin and .direction. 
+
+=== Parameter: x
+_Type:_ Number +
+The x value of the starting point
+
+=== Parameter: y
+_Type:_ Number +
+The y value of the satrting point
+
+=== Returns:
+_Type:_ Object +
+A hash map respresenting the ray
+
+
+

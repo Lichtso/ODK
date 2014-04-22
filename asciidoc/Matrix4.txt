@@ -1,0 +1,235 @@
+= Class: Matrix4
+Matrix4
+
+=== Constructor: matrix
+_Type:_ link:Matrix4.html[Matrix4] +
+Copy a Matrix4
+
+=== Constructor: array
+_Type:_ Number[16] +
+Array containing all 16 elements.
+
+
+
+== Method: x
+Can set x via a Vector3, +
+or get x as a cloned instance.
+
+=== Parameter: x
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The x vector
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+A clone of x vector
+
+
+
+== Method: y
+Can set y via a Vector3, +
+or get y as a cloned instance.
+
+=== Parameter: y
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The y vector
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+A clone of y vector
+
+
+
+== Method: z
+Can set z via a Vector3, +
+or get z as a cloned instance.
+
+=== Parameter: z
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The z vector
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+A clone of z vector
+
+
+
+== Method: w
+Can set w via a Vector3, +
+or get w as a cloned instance.
+
+=== Parameter: w
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The w vector
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+A clone of w vector
+
+
+
+== Method: rotation
+Can set the rotation via a Quaternion, +
+or get the rotation as a cloned instance.
+
+=== Parameter: w
+_Is optional_ +
+_Type:_ link:Quaternion.html[Quaternion] +
+The rotation quaternion
+
+=== Returns:
+_Type:_ link:Quaternion.html[Quaternion] +
+A clone of the rotation quaternion
+
+
+
+== Method: toString
+Gets string representation of matrix.
+
+=== Returns:
+_Type:_ String +
+a11 - a44
+
+
+
+== Method: toJSON
+Gets JSON representation of matrix.
+
+=== Returns:
+_Type:_ Array +
+[a11 - a44]
+
+
+
+== Method: setIdentity
+Changes the matrix' structure to an indentity matrix.
+
+
+
+== Method: getInverse
+Gets the inverse matrix. +
+This method does not modify the matrix.
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+Inverse matrix
+
+
+
+== Method: getProduct
+Perfoms matrix mutiplication with another matrix and returns the result. +
+This method does not modify the matrix.
+
+=== Parameter: matrix
+_Type:_ link:Matrix4.html[Matrix4] +
+The matrix to multiply with
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+Result of multiplication
+
+
+
+== Method: getRotated
+Rotates a vector using the matrix and returns the result. +
+This method does not modify the matrix or the vector.
+
+=== Parameter: vector
+_Type:_ link:Vector3.html[Vector3] +
+The vector to rotate
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+The rotated vector
+
+
+
+== Method: getTransformed
+Transfoms a vector using the matrix and returns the result. +
+This method does not modify the matrix or the vector.
+
+=== Parameter: vector
+_Type:_ link:Vector3.html[Vector3] +
+The vector to transform
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+The transformated vector
+
+
+
+== Method: mult
+Multiplies this matrix with another.
+
+=== Parameter: matrix
+_Type:_ link:Matrix4.html[Matrix4] +
+the matrix to multiply with
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+its self as result
+
+
+
+== Method: scale
+Scales the matrix using a vector.
+
+=== Parameter: vector
+_Type:_ link:Vector3.html[Vector3] +
+The vector to scale with
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+its self as result
+
+
+
+== Method: rotate
+Changes the rotation of this matrix using a quaternion or a Vector3 and an angle.
+
+=== Parameter: quaternion
+_Is optional_ +
+_Type:_ link:Quaternion.html[Quaternion] +
+The quaternion to perform the rotation with
+
+=== Parameter: vector
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The vector to perform the rotation with, must be passed together with an angle
+
+=== Parameter: angle
+_Is optional_ +
+_Type:_ Number +
+The angle to be passed together with the vector
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+its self as result
+
+
+
+== Method: translate
+Translates the matrix using a Vector3.
+
+=== Parameter: vector
+_Type:_ link:Vector3.html[Vector3] +
+The Vector representing the translation
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+its self as result
+
+
+
+== Method: invert
+Inverts this instance.
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+its self as result
+
+
+

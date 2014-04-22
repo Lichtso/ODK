@@ -1,0 +1,27 @@
+= Class: TransformLink
+Links a parent manipulating the transformation of a child.
+
+=== Parent Class
+link:BaseLink.html[BaseLink]
+
+
+
+== Method: transformation
+Can set a transformation via a Matrix4, +
+or get a transformation as a cloned instance.
+
+=== Parameter: index
+_Type:_ Integer +
+The index of the transformation
+
+=== Parameter: transformation
+_Is optional_ +
+_Type:_ link:Matrix4.html[Matrix4] +
+The transformation matrix
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the transformation matrix
+
+
+

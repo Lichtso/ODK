@@ -1,0 +1,55 @@
+= Class: BaseObject
+Can't be constructed. Objects are created by loading containers.
+
+=== Parent Class
+link:BaseClass.html[BaseClass]
+
+=== Property: linkCount
+_Type:_ Integer +
+Gets the number of connected links
+
+
+
+== Method: transformation
+Can set the transformation via a Matrix4, +
+or get the transformation as a cloned instance.
+
+=== Parameter: transformation
+_Is optional_ +
+_Type:_ link:Matrix4.html[Matrix4] +
+The transformation matrix
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the transformation matrix
+
+
+
+== Method: getTransformUpLink
+Returns the TransformLink to this object's parent (if any)
+
+=== Returns:
+_Type:_ TransformLink +
+Link to the parent or undefined, if object has no parent
+
+
+
+== Method: getBoneUpLink
+Returns the BoneLink to this object's parent (if any)
+
+=== Returns:
+_Type:_ BoneLink +
+Link to the parent or undefined, if object has no parent
+
+
+
+== Method: iterateLinks
+Iterates the connected BaseLinks.
+
+=== Parameter: callback
+_Is optional_ +
+_Type:_ Function +
+Callback function called for each link
+
+
+

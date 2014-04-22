@@ -1,0 +1,36 @@
+= Class: TerrainObject
+Can't be constructed. Objects are created by loading containers.
+
+=== Parent Class
+link:MatterObject.html[MatterObject]
+
+
+
+== Method: accessCell
+Can get or set the height value of the height field.
+
+=== Parameter: x
+_Type:_ Integer +
+From 0 to width-1
+
+=== Parameter: y
+_Type:_ Integer +
+From 0 to length-1
+
+=== Parameter: value
+_Is optional_ +
+_Type:_ Number +
+New value at x, y
+
+=== Returns:
+_Type:_ Number +
+Current value at x, y
+
+
+
+== Method: updateModel
+Updates the terrain and uploads the new values to the GPU. +
+(Not resource friendly, handle with care! Only update when all operations are done!)
+
+
+

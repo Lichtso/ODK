@@ -1,0 +1,14 @@
+= Class: BaseClass
+Prototype class for all Objects and Links to inherit from, can't be constructed
+
+=== Property: scriptClass
+_Type:_ String +
+The path of the script file containing the Object's class
+
+
+
+== Method: delete
+Deletes the instance immediately.
+
+
+

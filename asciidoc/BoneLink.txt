@@ -1,0 +1,35 @@
+= Class: BoneLink
+Links the skeletal animation of one parent objects model to the child objects.
+
+=== Parent Class
+link:BaseLink.html[BaseLink]
+
+=== Property: bone
+_Type:_ String +
+The name of the bone in the COLLADA file
+
+
+
+== Method: getBoneChildren
+Gets the bones children
+
+
+
+== Method: getRelativeMat
+Gets the bones relative matrix.
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the relative matrix
+
+
+
+== Method: getAbsoluteMat
+Gets the bones absolute matrix.
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the absolute matrix
+
+
+

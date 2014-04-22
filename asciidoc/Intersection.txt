@@ -1,0 +1,72 @@
+= Class: Intersection
+Globally Accessible singleton, can't be instantiated.
+
+
+
+== Method: rayCast
+Tests all objects against a ray
+
+=== Parameter: origin
+_Type:_ link:Vector3.html[Vector3] +
+A vector representing the origin of the ray
+
+=== Parameter: direction
+_Type:_ link:Vector3.html[Vector3] +
+A vector representing the direction of the ray
+
+=== Parameter: filterMask
+_Type:_ Integer +
+Default is 0xFFFF
+
+=== Parameter: nearest
+_Type:_ Boolean +
+If true then only the first object in the direction of the ray will be returned
+
+=== Returns:
+_Type:_ Object +
+A hash map containing the objects that intersect with the ray, the hit points and hit normals
+
+
+
+== Method: aabbIntersection
+Tests all objects against a AABB
+
+=== Parameter: min
+_Type:_ link:Vector3.html[Vector3] +
+The minimum position of the AABB
+
+=== Parameter: may
+_Type:_ link:Vector3.html[Vector3] +
+The maximum position of the AABB
+
+=== Parameter: filterMask
+_Type:_ Integer +
+Default is 0xFFFF
+
+=== Returns:
+_Type:_ BaseObject[] +
+A array containing the objects that intersect with the AABB
+
+
+
+== Method: sphereIntersection
+Tests all objects against a sphere
+
+=== Parameter: center
+_Type:_ link:Vector3.html[Vector3] +
+The center position of the sphere
+
+=== Parameter: radius
+_Type:_ Number +
+The radius of the sphere
+
+=== Parameter: filterMask
+_Type:_ Integer +
+Default is 0xFFFF
+
+=== Returns:
+_Type:_ BaseObject[] +
+A array containing the objects that intersect with the sphere
+
+
+

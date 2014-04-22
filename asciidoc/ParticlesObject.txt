@@ -1,0 +1,121 @@
+= Class: ParticlesObject
+Can't be constructed. Objects are created by loading containers.
+
+=== Parent Class
+link:PhysicObject.html[PhysicObject]
+
+=== Property: maxParticles
+_Type:_ Integer +
+(Readonly) The maximum number of particles
+
+=== Property: texture
+_Type:_ String +
+The filename of the used texture
+
+=== Property: transformAligned
+_Type:_ Boolean +
+Wether the particles are aligned towards the camera or towards their own transformation
+
+=== Property: systemLife
+_Type:_ Number +
+The lifetime of the particle system in seconds (or -1.0 for eternal life)
+
+=== Property: lifeMin
+_Type:_ Number +
+The minimum lifetime of a particle in seconds
+
+=== Property: lifeMax
+_Type:_ Number +
+The maximum lifetime of a particle in seconds
+
+=== Property: sizeMin
+_Type:_ Number +
+The minimum size of a particle
+
+=== Property: sizeMax
+_Type:_ Number +
+The maximum size of a particle
+
+
+
+== Method: force
+Can set the global force (e.g. gravity) via a Vector3, +
+or get the gloal force as a cloned instance.
+
+=== Parameter: force
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The gloabl force to be applied
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+A clone of the system's global force
+
+
+
+== Method: posMin
+Can set the minimum position via a Vector3, +
+or get the minimum position as a cloned instance. +
+The min. and max. position define a box in which the particles are spawned.
+
+=== Parameter: position
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The minimum position
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+A clone of the system's minimum position
+
+
+
+== Method: posMax
+Can set the maximum position via a Vector3, +
+or get the maximum position as a cloned instance. +
+The min. and max. position define a box in which the particles are spawned.
+
+=== Parameter: position
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The maximum position
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+A clone of the system's maximum position
+
+
+
+== Method: dirMin
+Can set the minimum direction via a Vector3, +
+or get the minimum direction as a cloned instance. +
+The min. and max. direction define a vector space, the particles will be spawned +
+with a constant velocity that is a member of this vector space.
+
+=== Parameter: direction
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The minimum direction
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+A clone of the system's minimum direction
+
+
+
+== Method: dirMax
+Can set the maximum direction via a Vector3, +
+or get the maximum direction as a cloned instance. +
+The min. and max. direction define a vector space, the particles will be spawned +
+with a constant velocity that is a member of this vector space.
+
+=== Parameter: direction
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The maximum direction
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+A clone of the system's maximum direction
+
+
+

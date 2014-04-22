@@ -1,0 +1,98 @@
+= Class: Animation
+Globally accessible singleton, does not need to be constructed.
+
+=== Property: factor
+_Is readonly_ +
+_Type:_ Number +
+Seconds elapsed since the last game tick
+
+
+
+== Method: addFrames
+Adds a set of frames to a objects animation track
+
+=== Parameter: object
+_Type:_ Object +
+The object whichs property shall be animated
+
+=== Parameter: property
+_Type:_ String +
+The name of the property to animate
+
+=== Parameter: looping
+_Type:_ Boolean +
+If set to true, frames won't be deleted but rotate in the queue
+
+
+
+== Method: deleteFrames
+Deletes a set of frames from a objects animation track
+
+=== Parameter: object
+_Type:_ Object +
+The object of the animated property
+
+=== Parameter: property
+_Type:_ String +
+The name of the animated property
+
+=== Parameter: first
+_Type:_ Integer +
+The index of the first frame to be deleted
+
+=== Parameter: length
+_Type:_ Integer +
+The number of frames to be deleted
+
+
+
+== Method: getTrackInfo
+Generates a hash map containing information about a animation track. +
+Contains the animations time in seconds, if it is looping and the frames left to animate.
+
+=== Parameter: object
+_Type:_ Object +
+The object of the animated property
+
+=== Parameter: property
+_Type:_ String +
+The name of the animated property
+
+=== Returns:
+_Type:_ Object +
+The animation track's information as a hash map
+
+
+
+== Method: startTimer
+Starts a new timer which fires a callback function in the defined intervals. +
+The callback function must return true; to be called again, else the timer will stop. +
+It can also stop its self by calling stopTimer(this); while being fired.
+
+=== Parameter: callback
+_Type:_ Function +
+This function will be called everytime the timer fires
+
+=== Parameter: time
+_Type:_ Number +
+The length of the intervals in seconds
+
+=== Returns:
+_Type:_ Function +
+Returns the callback function as identifier for this timer
+
+
+
+== Method: stopTimer
+Stops a existing timer returned by startTimer().
+
+=== Parameter: callback
+_Type:_ Function +
+The callback function as identifier for the timer
+
+=== Returns:
+_Type:_ Boolean +
+Returns true on success or false if the timer was not found
+
+
+

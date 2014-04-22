@@ -1,0 +1,208 @@
+= Class: Vector3
+3D vector
+
+=== Constructor: vector
+_Type:_ link:Vector3.html[Vector3] +
+Copy a Vector3
+
+=== Constructor: array
+_Type:_ Number[3] +
+Array containing x, y, z.
+
+=== Constructor: map
+_Type:_ Object +
+Map with keys: "x", "y", "z"
+
+=== Constructor: x, y, z
+_Types:_ Number, Number, Number +
+
+=== Property: x
+_Type:_ Number +
+X-Coord
+
+=== Property: y
+_Type:_ Number +
+Y-Coord
+
+=== Property: z
+_Type:_ Number +
+Z-Coord
+
+
+
+== Method: toString
+Convertes Vector3 to a String
+
+=== Returns:
+_Type:_ String +
+'x y z'
+
+
+
+== Method: toJSON
+Convertes Vector3 to a Array
+
+=== Returns:
+_Type:_ Array +
+x, y, z
+
+
+
+== Method: getAngle
+Calculates the angle between this and another Vector3. +
+This method does not modify the vectors.
+
+=== Parameter: vec
+_Type:_ link:Vector3.html[Vector3] +
+other Vector3
+
+=== Returns:
+_Type:_ Number +
+radians
+
+
+
+== Method: getSum
+Calculates the sum of this and another Vector3. +
+This method does not modify the vectors.
+
+=== Parameter: vec
+_Type:_ link:Vector3.html[Vector3] +
+other Vector3
+
+
+
+== Method: getDiff
+Calculates the difference between this and another Vector3. +
+This method does not modify the vectors.
+
+=== Parameter: vec
+_Type:_ link:Vector3.html[Vector3] +
+other Vector3
+
+
+
+== Method: getProduct
+Calculates the product of this and another Vector3 or a Number. +
+This method does not modify the vectors.
+
+
+
+== Method: getQuotient
+Calculates the quotient of this and another Vector3 or a Number. +
+This method does not modify the vectors.
+
+
+
+== Method: getDot
+Calculates the dot product of this and another Vector3. +
+This method does not modify the vectors.
+
+=== Parameter: vec
+_Type:_ link:Vector3.html[Vector3] +
+other Vector3
+
+
+
+== Method: getCross
+Calculates the cross product of this and another Vector3. +
+This method does not modify the vectors.
+
+=== Parameter: vec
+_Type:_ link:Vector3.html[Vector3] +
+other Vector3
+
+
+
+== Method: getLength
+Calculates the length of this Vector3. +
+This method does not modify the vector.
+
+
+
+== Method: getNormalized
+Calculates the direction of this Vector3. +
+This method does not modify the vector.
+
+
+
+== Method: getInterpolation
+Calculates the linear interpolation between this and another Vector3. +
+This method does not modify the vectors.
+
+=== Parameter: vec
+_Type:_ link:Vector3.html[Vector3] +
+Vector3 to interpolate to
+
+=== Parameter: t
+_Type:_ Number +
+Interpolation from 0.0 (only self) to 1.0 (only other)
+
+
+
+== Method: add
+Adds another to this Vector3 and stores the result in this Vector3.
+
+=== Parameter: vec
+_Type:_ link:Vector3.html[Vector3] +
+other Vector3
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+its self as result
+
+
+
+== Method: sub
+Subtracts another from this Vector3 and stores the result in this Vector3.
+
+=== Parameter: vec
+_Type:_ link:Vector3.html[Vector3] +
+other Vector3
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+its self as result
+
+
+
+== Method: mult
+Multiplies this Vector3 with another or a Number and stores the result in this Vector3.
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+its self as result
+
+
+
+== Method: divide
+Divides this Vector3 by another or a Number and stores the result in this Vector3.
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+its self as result
+
+
+
+== Method: cross
+Calculates the cross product of this and another Vector3 and stores the result in this Vector3.
+
+=== Parameter: vec
+_Type:_ link:Vector3.html[Vector3] +
+other Vector3
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+its self as result
+
+
+
+== Method: normalize
+Normalizes this Vector3.
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+its self as result
+
+
+

@@ -1,0 +1,23 @@
+= Class: Keyboard
+Globally accessible singleton, does not need to be constructed.
+
+=== Property: keyCount
+_Is readonly_ +
+_Type:_ Integer +
+Number of available keys
+
+
+
+== Method: isKeyPressed
+Determines if a key is pressed.
+
+=== Parameter: keycode
+_Type:_ Integer +
+SDL keycode
+
+=== Returns:
+_Type:_ Boolean +
+True if the key is pressed
+
+
+

@@ -1,0 +1,59 @@
+= Class: ConeTwistPhysicLink
+Represents a three axis rotation constraint.
+
+=== Parent Class
+link:PhysicLink.html[PhysicLink]
+
+=== Constructor: objectA, objectB, frameA, frameB
+_Types:_ RigidObject, RigidObject, link:Matrix4.html[Matrix4], link:Matrix4.html[Matrix4] +
+The both objects to link together and two Matrix4 as description of the axis of the joint relative to each object
+
+=== Property: swingSpanA
+_Type:_ Number +
+Defines the max angle on the X axis
+
+=== Property: swingSpanB
+_Type:_ Number +
+Defines the max angle on the Y axis
+
+=== Property: twistSpan
+_Type:_ Number +
+Defines the max angle on the Z axis
+
+=== Property: twistAngle
+_Is readonly_ +
+_Type:_ Number +
+The current angle around the axis between both objects (measured relative to the initial position)
+
+
+
+== Method: frameA
+Can set the frameA via a Matrix4, +
+or get the frameA as a cloned instance.
+
+=== Parameter: frameA
+_Is optional_ +
+_Type:_ link:Matrix4.html[Matrix4] +
+The new frameA matrix
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the frameA matrix
+
+
+
+== Method: frameB
+Can set the frameB via a Matrix4, +
+or get the frameB as a cloned instance.
+
+=== Parameter: frameB
+_Is optional_ +
+_Type:_ link:Matrix4.html[Matrix4] +
+The new frameB matrix
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the frameB matrix
+
+
+

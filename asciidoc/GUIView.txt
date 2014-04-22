@@ -1,0 +1,27 @@
+= Class: GUIView
+GUIView +
+@class 
+
+=== Parent Class
+link:GUIRect.html[GUIRect]
+
+=== Constructor: parent
+_Type:_ GUIView +
+The parent view (master view is GUIScreenView())
+
+=== Property: childCount
+_Type:_ Integer +
+Gets the number of children
+
+
+
+== Method: iterateChildren
+Iterates the children GUIRects.
+
+=== Parameter: callback
+_Is optional_ +
+_Type:_ Function +
+Callback function called for each child
+
+
+

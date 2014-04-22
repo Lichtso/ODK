@@ -1,0 +1,47 @@
+= Class: GUILabel
+A simple text label
+
+=== Parent Class
+link:GUIRect.html[GUIRect]
+
+=== Constructor: parent
+_Type:_ GUIView +
+The parent view (master view is GUIScreenView())
+
+=== Property: sizeAlignment
+_Type:_ String +
+"left", "middle", "right"
+
+=== Property: textAlignment
+_Type:_ String +
+"left", "middle", "right"
+
+=== Property: text
+_Type:_ String +
+The text of the label
+
+=== Property: font
+_Type:_ String +
+The path of the used font
+
+=== Property: fontHeight
+_Type:_ Integer +
+The height of the used font
+
+
+
+== Method: color
+Can set the color via a quaternion representing the colors, +
+or get the colors as a cloned instance.
+
+=== Parameter: color4
+_Is optional_ +
+_Type:_ link:Quaternion.html[Quaternion] +
+The colors as a quaternion (RGBA)
+
+=== Returns:
+_Type:_ link:Quaternion.html[Quaternion] +
+A copy of the color quaternion
+
+
+

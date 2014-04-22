@@ -1,0 +1,23 @@
+= Class: DirectionalLight
+Can't be constructed. Objects are created by loading containers.
+
+=== Parent Class
+link:LightObject.html[LightObject]
+
+
+
+== Method: bounds
+Can set the bounds via a Vector3, +
+or get the bounds as a cloned instance.
+
+=== Parameter: bounds
+_Is optional_ +
+_Type:_ link:Matrix4.html[Matrix4] +
+The new bounds vector
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the bounds vector
+
+
+

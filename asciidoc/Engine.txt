@@ -1,0 +1,107 @@
+= Class: Engine
+Globally Accessible singleton, can't be instantiated.
+
+=== Property: gamePaused
+_Type:_ Boolean +
+Is the game paused. See onpause()
+
+=== Property: levelID
+_Type:_ String +
+Path to the current loaded container (level)
+
+
+
+== Method: loadContainer
+Loads a container and inserts its objects in the level.
+
+=== Parameter: transformation
+_Type:_ link:Matrix4.html[Matrix4] +
+Where the container is inserted
+
+=== Parameter: path
+_Type:_ String +
+'Container.xml'
+
+=== Returns:
+_Type:_ Array +
+List of the loaded objects or null on failture
+
+
+
+== Method: log
+Prints a message on the console and std::out.
+
+=== Parameter: data
+_Type:_ Object +
+to be printed
+
+
+
+== Method: getScript
+Loads a script module if necessary.
+
+=== Parameter: path
+_Type:_ String +
+'../Package/File.js' or 'File.js'
+
+=== Returns:
+_Type:_ Object +
+The script modules export property
+
+
+
+== Method: localizeString
+Localizes a given string in the selected language.
+
+=== Parameter: key
+_Type:_ String +
+The key in the language table.
+
+=== Returns:
+_Type:_ String +
+The localize value in the language table.
+
+
+
+== Method: saveLevel
+Saves the current loaded container (level),  +
+localData and globalData are additional data,  +
+you can also pass null if you don't want to store additional information.
+
+=== Parameter: localData
+_Type:_ String +
+Stores arbitrary data in the level file (can only access the loaded level).
+
+=== Parameter: globalData
+_Type:_ String +
+Stores arbitrary data globally, can be accesed from everywhere.
+
+=== Parameter: description
+_Type:_ String +
+Stores a human readable description of the save game, can be accesed from everywhere.
+
+=== Returns:
+_Type:_ Boolean +
+Success
+
+
+
+== Method: accessSceneProperty
+Gives you access to the properties of the scene. +
+Returns the value of the given key and overwrites it, if a second parameter is given.
+
+=== Parameter: key
+_Type:_ String +
+"Gravity", "Ambient", "FogColor" or "FogDistance"
+
+=== Parameter: value
+ 18: _Is optional_ +
+_Type:_ link:Vector3.html[Vector3]|Number +
+For the keys "Gravity", "Ambient" and "FogColor" a Vector3 else a Number
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3]|Number +
+The value of the key now (probably after being overwritten)
+
+
+

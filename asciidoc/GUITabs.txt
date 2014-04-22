@@ -1,0 +1,32 @@
+= Class: GUITabs
+GUITabs
+
+=== Parent Class
+link:GUIView.html[GUIView]
+
+=== Constructor: parent
+_Type:_ GUIView +
+The parent view (master view is GUIScreenView())
+
+=== Property: sizeAlignment
+_Type:_ String +
+"none", "height", "width", "all"
+
+=== Property: orientation
+_Type:_ String +
+"left", "bottom", "right", "top", "vertical", "horizontal"
+
+=== Property: selected
+_Type:_ Integer +
+Index of selected child view
+
+=== Property: deactivatable
+_Type:_ Boolean +
+Determines if it is possible to not have any tab selected
+
+=== Property: onchange
+_Type:_ Function +
+Anonymous function that is called when the active tab is changed
+
+
+

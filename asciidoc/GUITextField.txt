@@ -1,0 +1,36 @@
+= Class: GUITextField
+GUITextField
+
+=== Parent Class
+link:GUIFramedView.html[GUIFramedView]
+
+=== Constructor: parent
+_Type:_ GUIView +
+The parent view (master view is GUIScreenView())
+
+=== Property: cursorX
+_Type:_ Integer +
+The relative x position of the cursor
+
+=== Property: enabled
+_Type:_ Boolean +
+If the text field is enabled for input
+
+=== Property: text
+_Type:_ String +
+The text inside the text field
+
+=== Property: onchange
+_Type:_ Function +
+Anonymous function that is called when the text changes
+
+=== Property: onfocus
+_Type:_ Function +
+Anonymous function that is called when this element is focused
+
+=== Property: onblur
+_Type:_ Function +
+Anonymous function that is called when this element loses focus
+
+
+

@@ -1,0 +1,17 @@
+= Class: Mouse
+Globally accessible singleton, does not need to be constructed.
+
+=== Property: x
+_Type:_ Integer +
+X-Coordinate of mouse pointer
+
+=== Property: y
+_Type:_ Integer +
+Y-Coordinate of mouse pointer
+
+=== Property: isFixed
+_Type:_ Boolean +
+Determines if the mouse is fixed in the center of the screen
+
+
+

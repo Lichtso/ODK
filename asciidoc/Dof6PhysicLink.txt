@@ -1,0 +1,205 @@
+= Class: Dof6PhysicLink
+Represents a three axis linear and three axis angular constraint.
+
+=== Parent Class
+link:PhysicLink.html[PhysicLink]
+
+=== Constructor: objectA, objectB, frameA, frameB
+_Types:_ RigidObject, RigidObject, link:Matrix4.html[Matrix4], link:Matrix4.html[Matrix4] +
+The both objects to link together and two Matrix4 as description of the axis of the joint relative to each object
+
+
+
+== Method: frameA
+Can set the frameA via a Matrix4 +
+or get the frameA as a cloned instance.
+
+=== Parameter: frameA
+_Is optional_ +
+_Type:_ link:Matrix4.html[Matrix4] +
+The new frameA matrix
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the frameA matrix
+
+
+
+== Method: frameB
+Can set the frameB via a Matrix4 +
+or get the frameB as a cloned instance.
+
+=== Parameter: frameB
+_Is optional_ +
+_Type:_ link:Matrix4.html[Matrix4] +
+The new frameB matrix
+
+=== Returns:
+_Type:_ link:Matrix4.html[Matrix4] +
+A copy of the frameB matrix
+
+
+
+== Method: springStiffness
+Can set the stiffness of a spring, +
+or get the current value. +
+A value below or equal to 0.0 deactivates the spring.
+
+=== Parameter: index
+_Is optional_ +
+_Type:_ Integer +
+The index of the spring
+
+=== Parameter: stiffness
+_Is optional_ +
+_Type:_ Number +
+The new stiffness
+
+=== Returns:
+_Type:_ Number +
+The stiffness
+
+
+
+== Method: springDamping
+Can set the damping of a spring, +
+or get the current value.
+
+=== Parameter: index
+_Is optional_ +
+_Type:_ Integer +
+The index of the spring
+
+=== Parameter: damping
+_Is optional_ +
+_Type:_ Number +
+The new damping
+
+=== Returns:
+_Type:_ Number +
+The damping
+
+
+
+== Method: springEquilibrium
+Can set the equilibrium point of a spring, +
+or get the current value.
+
+=== Parameter: index
+_Is optional_ +
+_Type:_ Integer +
+The index of the spring
+
+=== Parameter: equilibrium
+_Is optional_ +
+_Type:_ Number +
+The new equilibrium point
+
+=== Returns:
+_Type:_ Number +
+The equilibrium point
+
+
+
+== Method: motorEnabled
+Can enable or disable a motor.
+
+=== Parameter: index
+_Is optional_ +
+_Type:_ Integer +
+The index of the motor
+
+=== Returns:
+_Type:_ Boolean +
+Ture if the motor is enabled
+
+
+
+== Method: motorVelocity
+Can set or get the velocity of a motor.
+
+=== Parameter: index
+_Is optional_ +
+_Type:_ Integer +
+The index of the motor
+
+=== Returns:
+_Type:_ Number +
+The velocity of the motor
+
+
+
+== Method: motorForce
+Can set or get the force of a motor.
+
+=== Parameter: index
+_Is optional_ +
+_Type:_ Integer +
+The index of the motor
+
+=== Returns:
+_Type:_ Number +
+The force of the motor
+
+
+
+== Method: angularLimitMin
+Can set the lower angular limit via a Vector3 +
+or get the lower angular limit as a cloned instance.
+
+=== Parameter: frameA
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The new lower angular limit
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+A copy of the lower angular limit
+
+
+
+== Method: angularLimitMax
+Can set the upper angular limit via a Vector3 +
+or get the upper angular limit as a cloned instance.
+
+=== Parameter: frameA
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The new upper angular limit
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+A copy of the upper angular limit
+
+
+
+== Method: linearLimitMin
+Can set the lower linear limit via a Vector3 +
+or get the lower linear limit as a cloned instance.
+
+=== Parameter: frameA
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The new lower linear limit
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+A copy of the lower linear limit
+
+
+
+== Method: linearLimitMax
+Can set the upper linear limit via a Vector3 +
+or get the upper v limit as a cloned instance.
+
+=== Parameter: frameA
+_Is optional_ +
+_Type:_ link:Vector3.html[Vector3] +
+The new upper linear limit
+
+=== Returns:
+_Type:_ link:Vector3.html[Vector3] +
+A copy of the upper linear limit
+
+
+

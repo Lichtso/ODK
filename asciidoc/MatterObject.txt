@@ -1,0 +1,46 @@
+= Class: MatterObject
+Can't be constructed. Objects are created by loading containers.
+
+=== Parent Class
+link:PhysicObject.html[PhysicObject]
+
+=== Property: integrity
+_Type:_ Number +
+If the integrity drops below 0, the object will be deleted. 
+
+=== Property: angularFriction
+_Type:_ Number +
+Rolling friction
+
+=== Property: linearFriction
+_Type:_ Number +
+Sliding friction
+
+=== Property: restitution
+_Type:_ Number +
+Coefficient of restitution
+
+
+
+== Method: attachDecal
+Attachs a quadratic decal with 1 unit edge length.
+
+=== Parameter: life
+_Type:_ Number +
+The lifetime of the decal in seconds
+
+=== Parameter: transformation
+_Type:_ link:Matrix4.html[Matrix4] +
+Where the decal is inserted (relative to this MatterObject)
+
+=== Parameter: diffuse
+_Type:_ String +
+Path of the diffuse texture
+
+=== Parameter: heightmap
+_Is optional_ +
+_Type:_ String +
+Path of the optional heightmap texture
+
+
+
