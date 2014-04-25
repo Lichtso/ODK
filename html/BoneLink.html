@@ -740,14 +740,25 @@ asciidoc.install();
 <div class="paragraph"><p><a href="BaseLink.html">BaseLink</a></p></div>
 </div>
 <div class="sect2">
+<h3 id="_constructor_parent_child_bone">Constructor: parent, child, bone</h3>
+<div class="paragraph"><p><em>Types:</em> RigidObject, BaseObject, String<br />
+The both objects to link together and the name of the bone</p></div>
+</div>
+<div class="sect2">
 <h3 id="_property_bone">Property: bone</h3>
 <div class="paragraph"><p><em>Type:</em> String<br />
 The name of the bone in the COLLADA file</p></div>
 </div>
 <div class="sect1">
-<h2 id="_method_getbonechildren">Method: getBoneChildren</h2>
+<h2 id="_method_iteratebonechildren">Method: iterateBoneChildren</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Gets the bones children</p></div>
+<div class="paragraph"><p>Iterates the bones children.</p></div>
+<div class="sect2">
+<h3 id="_parameter_callback">Parameter: callback</h3>
+<div class="paragraph"><p><em>Is optional</em><br />
+<em>Type:</em> Function<br />
+Callback function called for each child</p></div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -764,11 +775,11 @@ A copy of the relative matrix</p></div>
 <div class="sect1">
 <h2 id="_method_getabsolutemat">Method: getAbsoluteMat</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Gets the bones absolute matrix.</p></div>
+<div class="paragraph"><p>Gets the bones inverse absolute matrix.</p></div>
 <div class="sect2">
 <h3 id="_returns_2">Returns:</h3>
 <div class="paragraph"><p><em>Type:</em> <a href="Matrix4.html">Matrix4</a><br />
-A copy of the absolute matrix</p></div>
+A copy of the inverse absolute matrix</p></div>
 </div>
 </div>
 </div>
@@ -776,7 +787,7 @@ A copy of the absolute matrix</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-04-20 20:00:09 CEST
+Last updated 2014-04-25 11:28:27 CEST
 </div>
 </div>
 </body>

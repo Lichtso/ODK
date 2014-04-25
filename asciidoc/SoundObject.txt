@@ -4,6 +4,10 @@ Can't be constructed. Objects are created by loading containers.
 === Parent Class
 link:BaseObject.html[BaseObject]
 
+=== Constructor: transformation, soundTrack
+_Types:_ link:Matrix4.html[Matrix4], String +
+Creates a new SoundObject with the given parameters
+
 === Property: soundTrack
 _Type:_ String +
 The name of the sound resource

@@ -4,6 +4,10 @@ Can't be constructed. Objects are created by loading containers.
 === Parent Class
 link:BaseObject.html[BaseObject]
 
+=== Constructor: transformation
+_Type:_ link:Matrix4.html[Matrix4] +
+Creates a new CamObject with the given parameter
+
 === Property: fov
 _Type:_ Number +
 The camera's field of view in radians

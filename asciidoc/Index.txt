@@ -41,15 +41,15 @@ link:GUIRect.html[GUIRect] +
 
 === GUI Views
 link:GUIView.html[GUIView] +
-link:GUIFramedView.html[GUIFramedView] +
 link:GUIScreenView.html[GUIScreenView] +
+link:GUIFramedView.html[GUIFramedView] +
 link:GUIScrollView.html[GUIScrollView] +
 
 === GUI Input
 link:GUIButton.html[GUIButton] +
 link:GUICheckBox.html[GUICheckBox] +
-link:GUISlider.html[GUISlider] +
 link:GUITabs.html[GUITabs] +
+link:GUISlider.html[GUISlider] +
 link:GUITextField.html[GUITextField] +
 
 === GUI Output

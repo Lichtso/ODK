@@ -6,7 +6,7 @@ link:GUIFramedView.html[GUIFramedView]
 
 === Constructor: parent
 _Type:_ GUIView +
-The parent view (master view is GUIScreenView())
+The parent view
 
 === Property: sliderX
 _Type:_ Boolean +

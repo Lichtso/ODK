@@ -4,6 +4,10 @@ Links a parent manipulating the transformation of a child.
 === Parent Class
 link:BaseLink.html[BaseLink]
 
+=== Constructor: objectA, objectB, bone
+_Types:_ BaseObject, BaseObject, link:Matrix4.html[Matrix4], ... +
+The both objects to link together and one or more matrices as transformation stack
+
 
 
 == Method: transformation

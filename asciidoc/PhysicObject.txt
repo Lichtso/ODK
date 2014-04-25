@@ -4,6 +4,10 @@ Can't be constructed. Objects are created by loading containers.
 === Parent Class
 link:BaseObject.html[BaseObject]
 
+=== Constructor: transformation, collisionShape
+_Types:_ link:Matrix4.html[Matrix4], String +
+Creates a new PhysicObject with the given parameters
+
 === Property: collisionShape
 _Type:_ String +
 Name of the collision shape as declared in the collision shapes file

@@ -4,9 +4,9 @@ GUIImage
 === Parent Class
 link:GUIRect.html[GUIRect]
 
-=== Constructor: parent, imagePath, 
+=== Constructor: parent, image
 _Types:_ GUIView, String +
-The parent view (master view is GUIScreenView()) and the path to the image file.
+The parent view and the path to the image file
 
 === Property: sizeAlignment
 _Type:_ String +

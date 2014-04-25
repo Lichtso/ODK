@@ -4,6 +4,10 @@ Can't be constructed. Objects are created by loading containers.
 === Parent Class
 link:PhysicObject.html[PhysicObject]
 
+=== Constructor: transformation, maxParticles, texture, collisionShape
+_Types:_ link:Matrix4.html[Matrix4], Number, String, String +
+Creates a new ParticlesObject with the given parameters
+
 === Property: maxParticles
 _Type:_ Integer +
 (Readonly) The maximum number of particles

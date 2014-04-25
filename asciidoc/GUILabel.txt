@@ -10,11 +10,11 @@ The parent view (master view is GUIScreenView())
 
 === Property: sizeAlignment
 _Type:_ String +
-"left", "middle", "right"
+"none", "width", "height", "all"
 
 === Property: textAlignment
 _Type:_ String +
-"left", "middle", "right"
+"left", "center", "right"
 
 === Property: text
 _Type:_ String +

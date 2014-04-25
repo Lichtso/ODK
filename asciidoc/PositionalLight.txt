@@ -4,6 +4,10 @@ Can't be constructed. Objects are created by loading containers.
 === Parent Class
 link:LightObject.html[LightObject]
 
+=== Constructor: transformation, omniDirectional, range
+_Types:_ link:Matrix4.html[Matrix4], Boolean, Number +
+Creates a new PositionalLight with the given parameters
+
 === Property: omniDirectional
 _Is readonly_ +
 _Type:_ Boolean +

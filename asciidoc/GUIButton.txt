@@ -6,11 +6,11 @@ link:GUIFramedView.html[GUIFramedView]
 
 === Constructor: parent
 _Type:_ GUIView +
-The parent view (master view is GUIScreenView())
+The parent view
 
 === Property: sizeAlignment
 _Type:_ String +
-"none", "height", "width", "all"
+"none", "width", "height", "all"
 
 === Property: paddingX
 _Type:_ Integer +

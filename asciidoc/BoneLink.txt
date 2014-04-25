@@ -4,14 +4,23 @@ Links the skeletal animation of one parent objects model to the child objects.
 === Parent Class
 link:BaseLink.html[BaseLink]
 
+=== Constructor: parent, child, bone
+_Types:_ RigidObject, BaseObject, String +
+The both objects to link together and the name of the bone
+
 === Property: bone
 _Type:_ String +
 The name of the bone in the COLLADA file
 
 
 
-== Method: getBoneChildren
-Gets the bones children
+== Method: iterateBoneChildren
+Iterates the bones children.
+
+=== Parameter: callback
+_Is optional_ +
+_Type:_ Function +
+Callback function called for each child
 
 
 
@@ -25,11 +34,11 @@ A copy of the relative matrix
 
 
 == Method: getAbsoluteMat
-Gets the bones absolute matrix.
+Gets the bones inverse absolute matrix.
 
 === Returns:
 _Type:_ link:Matrix4.html[Matrix4] +
-A copy of the absolute matrix
+A copy of the inverse absolute matrix
 
 
 

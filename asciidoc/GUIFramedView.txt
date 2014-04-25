@@ -6,7 +6,7 @@ link:GUIView.html[GUIView]
 
 === Constructor: parent
 _Type:_ GUIView +
-The parent view (master view is GUIScreenView())
+The parent view
 
 === Property: innerShadow
 _Type:_ Integer +

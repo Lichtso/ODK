@@ -26,11 +26,6 @@ Anonymous function that is called when the text changes
 
 === Property: onfocus
 _Type:_ Function +
-Anonymous function that is called when this element is focused
-
-=== Property: onblur
-_Type:_ Function +
-Anonymous function that is called when this element loses focus
-
+Anonymous function that is called when this element becomes focused or loses focus
 
 

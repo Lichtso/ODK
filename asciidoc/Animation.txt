@@ -8,62 +8,6 @@ Seconds elapsed since the last game tick
 
 
 
-== Method: addFrames
-Adds a set of frames to a objects animation track
-
-=== Parameter: object
-_Type:_ Object +
-The object whichs property shall be animated
-
-=== Parameter: property
-_Type:_ String +
-The name of the property to animate
-
-=== Parameter: looping
-_Type:_ Boolean +
-If set to true, frames won't be deleted but rotate in the queue
-
-
-
-== Method: deleteFrames
-Deletes a set of frames from a objects animation track
-
-=== Parameter: object
-_Type:_ Object +
-The object of the animated property
-
-=== Parameter: property
-_Type:_ String +
-The name of the animated property
-
-=== Parameter: first
-_Type:_ Integer +
-The index of the first frame to be deleted
-
-=== Parameter: length
-_Type:_ Integer +
-The number of frames to be deleted
-
-
-
-== Method: getTrackInfo
-Generates a hash map containing information about a animation track. +
-Contains the animations time in seconds, if it is looping and the frames left to animate.
-
-=== Parameter: object
-_Type:_ Object +
-The object of the animated property
-
-=== Parameter: property
-_Type:_ String +
-The name of the animated property
-
-=== Returns:
-_Type:_ Object +
-The animation track's information as a hash map
-
-
-
 == Method: startTimer
 Starts a new timer which fires a callback function in the defined intervals. +
 The callback function must return true; to be called again, else the timer will stop. +

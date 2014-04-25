@@ -4,6 +4,10 @@ Can't be constructed. Objects are created by loading containers.
 === Parent Class
 link:LightObject.html[LightObject]
 
+=== Constructor: transformation, bounds
+_Types:_ link:Matrix4.html[Matrix4], link:Vector3.html[Vector3] +
+Creates a new DirectionalLight with the given parameters
+
 
 
 == Method: bounds

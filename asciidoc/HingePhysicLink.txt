@@ -8,18 +8,18 @@ link:PhysicLink.html[PhysicLink]
 _Types:_ RigidObject, RigidObject, link:Matrix4.html[Matrix4], link:Matrix4.html[Matrix4] +
 The both objects to link together and two Matrix4 as description of the axis of the joint relative to each object
 
-=== Property: hingeAngle
+=== Property: angularPos
 _Is readonly_ +
 _Type:_ Number +
 The current angle between both objects (measured relative to the initial position)
 
 === Property: angularLimitMin
 _Type:_ Number +
-The minimal hingeAngle as a hard limit
+The minimal angularPos as a hard limit
 
 === Property: angularLimitMax
 _Type:_ Number +
-The maximal hingeAngle as a hard limit
+The maximal angularPos as a hard limit
 
 === Property: angularMotorEnabled
 _Type:_ Boolean +

@@ -4,6 +4,10 @@ Can't be constructed. Objects are created by loading containers.
 === Parent Class
 link:LightObject.html[LightObject]
 
+=== Constructor: transformation, cutoff, range
+_Types:_ link:Matrix4.html[Matrix4], Number, Number +
+Creates a new SpotLight with the given parameters
+
 === Property: cutoff
 _Type:_ Number +
 The spotlight's cutoff (0 - PI/2)
