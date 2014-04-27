@@ -745,20 +745,30 @@ asciidoc.install();
 The parent view</p></div>
 </div>
 <div class="sect2">
-<h3 id="_property_innershadow">Property: innerShadow</h3>
-<div class="paragraph"><p><em>Type:</em> Integer<br />
-The size of the inner shadow</p></div>
-</div>
-<div class="sect2">
 <h3 id="_property_cornerradius">Property: cornerRadius</h3>
 <div class="paragraph"><p><em>Type:</em> Integer<br />
 The corner radius (for rounded corners)</p></div>
 </div>
+<div class="sect2">
+<h3 id="_property_edgegradientborder">Property: edgeGradientBorder</h3>
+<div class="paragraph"><p><em>Type:</em> Number<br />
+The gray scale factor at the border</p></div>
+</div>
+<div class="sect2">
+<h3 id="_property_edgegradientcenter">Property: edgeGradientCenter</h3>
+<div class="paragraph"><p><em>Type:</em> Number<br />
+The gray scale factor at the center</p></div>
+</div>
+<div class="sect2">
+<h3 id="_property_decorationtype">Property: decorationType</h3>
+<div class="paragraph"><p><em>Type:</em> String<br />
+"monochrome", "brushedSteel", "stipple"</p></div>
+</div>
 <div class="sect1">
 <h2 id="_method_topcolor">Method: topColor</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Can set the color via a quaternion representing the colors,<br />
-or get the colors as a cloned instance.</p></div>
+<div class="paragraph"><p>Can set the color via a quaternion representing the color,<br />
+or get the color as a cloned instance.</p></div>
 <div class="sect2">
 <h3 id="_parameter_color4">Parameter: color4</h3>
 <div class="paragraph"><p><em>Is optional</em><br />
@@ -775,8 +785,8 @@ A copy of the color quaternion</p></div>
 <div class="sect1">
 <h2 id="_method_bottomcolor">Method: bottomColor</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Can set the color via a quaternion representing the colors,<br />
-or get the colors as a cloned instance.</p></div>
+<div class="paragraph"><p>Can set the color via a quaternion representing the color,<br />
+or get the color as a cloned instance.</p></div>
 <div class="sect2">
 <h3 id="_parameter_color4_2">Parameter: color4</h3>
 <div class="paragraph"><p><em>Is optional</em><br />
@@ -793,8 +803,8 @@ A copy of the color quaternion</p></div>
 <div class="sect1">
 <h2 id="_method_bordercolor">Method: borderColor</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Can set the color via a quaternion representing the colors,<br />
-or get the colors as a cloned instance.</p></div>
+<div class="paragraph"><p>Can set the color via a quaternion representing the color,<br />
+or get the color as a cloned instance.</p></div>
 <div class="sect2">
 <h3 id="_parameter_color4_3">Parameter: color4</h3>
 <div class="paragraph"><p><em>Is optional</em><br />
@@ -808,11 +818,29 @@ A copy of the color quaternion</p></div>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_method_innershadowcolor">Method: innerShadowColor</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Can set the color via a quaternion representing the color,<br />
+or get the color as a cloned instance.</p></div>
+<div class="sect2">
+<h3 id="_parameter_color4_4">Parameter: color4</h3>
+<div class="paragraph"><p><em>Is optional</em><br />
+<em>Type:</em> <a href="Quaternion.html">Quaternion</a><br />
+The colors as a quaternion (RGBA)</p></div>
+</div>
+<div class="sect2">
+<h3 id="_returns_4">Returns:</h3>
+<div class="paragraph"><p><em>Type:</em> <a href="Quaternion.html">Quaternion</a><br />
+A copy of the color quaternion</p></div>
+</div>
+</div>
+</div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-04-25 16:23:47 CEST
+Last updated 2014-04-27 12:28:22 CEST
 </div>
 </div>
 </body>
