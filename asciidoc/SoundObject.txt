@@ -25,8 +25,8 @@ _Type:_ Boolean +
 Wether the sound object is playing or not
 
 === Property: mode
-_Type:_ String +
-"looping", "hold", "dispose"
+_Type:_ Number +
+0 for looping, 1 for keep alive, 2 for dispose when finished
 
 
 

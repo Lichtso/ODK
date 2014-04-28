@@ -21,8 +21,8 @@ _Type:_ Number +
 The gray scale factor at the center
 
 === Property: decorationType
-_Type:_ String +
-"monochrome", "brushedSteel", "stipple"
+_Type:_ Number +
+0 for monochrome, 1 for brushed steel, 2 for stipple
 
 
 

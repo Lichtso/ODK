@@ -9,8 +9,8 @@ _Type:_ GUIView +
 The parent view
 
 === Property: orientation
-_Type:_ String +
-"vertical", "horizontal"
+_Type:_ Number +
+3 for vertical, 12 for horizontal
 
 === Property: value
 _Type:_ Number +
