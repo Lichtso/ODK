@@ -1,6 +1,6 @@
 ODK
 ===
 
-The Olypsum-Engine Developer Kit contains:
-* Documentaion of the JS API: asciidoc/ and html/
-* XSD files describing the level format: LevelFormat/
+[See online documentation](http://lichtso.github.io/ODK/html/Index.html)
+
+[Download a copy](http://gamefortec.net/posts/7)
