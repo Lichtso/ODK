@@ -1,5 +1,0 @@
-var NewtonPhysicLink = function(){
-	
-	//TODO
-
-}
